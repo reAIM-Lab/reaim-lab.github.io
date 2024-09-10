@@ -1,13 +1,6 @@
 ---
 layout: article
-titles:
-  # @start locale config
-  en      : &EN       reAIM Lab Members
-  en-GB   : *EN
-  en-US   : *EN
-  en-CA   : *EN
-  en-AU   : *EN
-  # @end locale config
+title: Group
 key: group
 ---
 

@@ -1,13 +1,6 @@
 ---
 layout: article
-titles:
-  # @start locale config
-  en      : &EN   Teaching
-  en-GB   : *EN
-  en-US   : *EN
-  en-CA   : *EN
-  en-AU   : *EN
-  # @end locale config
+title: Teaching
 key: teaching
 ---
 

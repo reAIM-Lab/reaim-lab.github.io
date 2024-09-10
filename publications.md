@@ -1,13 +1,6 @@
 ---
 layout: article
-titles:
-  # @start locale config
-  en      : &EN       Publications
-  en-GB   : *EN
-  en-US   : *EN
-  en-CA   : *EN
-  en-AU   : *EN
-  # @end locale config
+title: Publications
 key: publications
 ---
 

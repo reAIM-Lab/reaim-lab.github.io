@@ -2,6 +2,16 @@ header:
 
   - titles:
       # @start locale config
+      en      : &EN       research
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      # @end locale config
+    url: /research.html
+  
+  - titles:
+      # @start locale config
       en      : &EN       group
       en-GB   : *EN
       en-US   : *EN
@@ -19,6 +29,16 @@ header:
       en-AU   : *EN
       # @end locale config
     url: /publications.html
+
+  - titles:
+      # @start locale config
+      en      : &EN       teaching
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      # @end locale config
+    url: /teaching.html
 
   - titles:
       # @start locale config

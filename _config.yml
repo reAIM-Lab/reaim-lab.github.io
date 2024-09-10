@@ -20,7 +20,7 @@ text_skin: "cuimc" # "default" (default), "dark", "forest", "ocean", "chocolate"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
-title   : reAIM Lab
+title   : reAIM
 description: > # this means to ignore newlines until "Language & timezone"
   Lab website for reAIM at Columbia University.
 
@@ -35,7 +35,7 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 ##############################
 author:
   type      : Organization
-  name      : reaim Lab
+  name      : reaim
   url       : https://reaim-lab.github.io
   avatar    : # path or url of avatar image (square)
   bio       : We are reAIM, a lab focused on machine learning for healthcare housed at the Department of Biomedical Informatics at Columbia University in the City of New York.

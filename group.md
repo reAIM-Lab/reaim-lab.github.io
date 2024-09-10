@@ -4,16 +4,16 @@ title: Group
 key: group
 ---
 
-## Principal Investigator
+### Principal Investigator
 
 
 
-## Postdoctoral Researchers
+### Postdoctoral Researchers
 
 Jiayu Jing
 
 
-## Doctoral Students
+### Doctoral Students
 
 Young Sang Choi
 
@@ -23,11 +23,11 @@ Yuta Kobayashi
 
 Ziling Jing
 
-## Masters and Undergraduate Researchers
+### Masters and Undergraduate Researchers
 
 Kevin Zhang
 
-## Lab Alumni
+### Lab Alumni
 
 **Xinghe (Ziggy) Chen**, masters thesis, 2024 &#8594; first position: doctoral program at the College of Computing and Data Science (CCDS) at Nanyang Technological University (NTU).
 

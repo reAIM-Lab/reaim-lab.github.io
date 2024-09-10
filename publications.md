@@ -8,7 +8,7 @@ Please refer to Dr. Joshi's [Google Scholar page](https://scholar.google.com/cit
 
 <span style="color: #003087;">**Navy text**</span> denotes reAIM authors.
 
-## Selected Publications
+### Selected Publications
 
 [<span style="color: #003087;">Joshi, Shalmali</span>, Junzhe Zhang, and Elias Bareinboim. "Towards safe policy learning under partial identifiability: A causal approach." In *Proceedings of the AAAI Conference on Artificial Intelligence*, vol. 38, no. 12, pp. 13004-13012. 2024.](https://ojs.aaai.org/index.php/AAAI/article/view/29198)
 
@@ -16,11 +16,11 @@ Please refer to Dr. Joshi's [Google Scholar page](https://scholar.google.com/cit
 
 [Chen, Irene Y., Emma Pierson, Sherri Rose, <span style="color: #003087;">Shalmali Joshi</span>, Kadija Ferryman, and Marzyeh Ghassemi. "Ethical machine learning in healthcare." *Annual review of biomedical data science* 4, no. 1 (2021): 123-144.](https://www.annualreviews.org/content/journals/10.1146/annurev-biodatasci-092820-114757)
 
-## Preprints
+### Preprints
 
 [Ho, Joyce C., <span style="color: #003087;">Shalmali Joshi</span>, Eduardo Valverde, Kathryn Wood, Kendra J. Grubb, Miguel A. Leal, and Vicki Stover Hertzberg. "Machine learning is more accurate and biased than risk scoring tools in the prediction of postoperative atrial fibrillation after cardiac surgery." *medRxiv* (2024): 2024-07.](https://www.medrxiv.org/content/medrxiv/early/2024/07/07/2024.07.05.24310013.full.pdf)
 
-## 2024
+### 2024
 
 [Finnerty, Molly T., Atif Khan, Kai You, Rui Wang, Gyojeong Gu, Deborah Layman, Qingxian Chen et al. "Prevalence and incidence measures for schizophrenia among commercial health insurance and medicaid enrollees." *Schizophrenia* 10, no. 1 (2024): 68.]()
 
@@ -31,7 +31,7 @@ Please refer to Dr. Joshi's [Google Scholar page](https://scholar.google.com/cit
 
 [<span style="color: #003087;">Choi, Young Sang</span>, <span style="color: #003087;">Shalmali Joshi</span>, Linyuan Jing, and Pierre Elias. "Does Multimodality Help in Deep Learning-Based Structural Heart Disease Detection?." In *Medical Imaging with Deep Learning (MIDL) 2024* (Short Paper Track).](https://openreview.net/pdf?id=sMiSQP8zmr)
 
-## 2023
+### 2023
 
 [Zhang, Haoran, Harvineet Singh, Marzyeh Ghassemi, and <span style="color: #003087;">Shalmali Joshi</span>. "Why did the Model Fail?": Attributing Model Performance Changes to Distribution Shifts." *International Conference on Machine Learning  (ICML)* 2023.](https://proceedings.mlr.press/v202/zhang23ai/zhang23ai.pdf)
 

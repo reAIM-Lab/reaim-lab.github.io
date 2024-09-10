@@ -14,7 +14,7 @@ Machine Learning (ML) has transformative potential for applications in health an
 
 #### Prerequisites
 
-- Machine Learning (COMS W 4771-001) or equivalent (BINF G 4002) with grade B or higher.
+- Machine Learning (COMS 4771) or equivalent (BINF 4002) with grade B or higher.
 - Familiarity with Python and one or more of: Pytorch, Tensorflow, JAX.
 - Basic knowledge of probability, statistics, and linear algebra.
 

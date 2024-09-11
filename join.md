@@ -6,7 +6,7 @@ key: join
 
 Thank you for your interest in joining reAIM!
 
-The best way to get in contact with the lab is by emailing Professor Joshi at `sj3261[at]cumc[dot]columbia[dot]edu` or one of the current [doctoral students]({{ site.baseurl }}/group.html). While we are always excited by the prospect of new collaborators, our email inboxes can get busy, particularly during application season. <span style="color: #003087;">**<u>Please read the following page before in its entirety before reaching out to us.</u>**</span>
+The best way to get in contact with the lab is by emailing Professor Joshi at `sj3261[at]cumc[dot]columbia[dot]edu` or one of the current [doctoral students]({{ site.baseurl }}/group.html). While we are always excited by the prospect of new collaborators, our email inboxes can get busy, particularly during application season. We apologize in advance for any delays in response. <span style="color: #003087;">**<u>Please read the following page before in its entirety before reaching out to us.</u>**</span>
 
 Dr. Joshi is an Assistant Professor at the [Department of Biomedical Informatics (DBMI)](https://www.dbmi.columbia.edu/faculty/), an affiliate of the [Department of Computer Science](https://www.cs.columbia.edu/people/affiliates/), and a member of the [Data Science Institute (DSI)](https://datascience.columbia.edu/people/shalmali-joshi/). Consequently, there are several avenues for students and researchers to join our lab:
 
@@ -34,7 +34,7 @@ If you are a **current** masters or undergraduate student at Columbia University
 - Your research interests and how they align with reAIM, goals for the rotation, and the amount of time you can commit to research.
 - Contact information for references.
 - Your unofficial Columbia and undergraduate (if applicable) transcripts.
-- Title your email "\[reAIM\] Research Rotation Inquiry for Current Columbia {Undergraduate / Masters} Student"
+- Title your email "\[reAIM\] Research Rotation Inquiry for Current Columbia {Undergraduate, Masters} Student"
 
 ### Visiting Researchers
 

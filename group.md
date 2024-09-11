@@ -4,57 +4,94 @@ title: Group
 key: group
 ---
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .profile-container {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
 
-<style>
-.profile-container {
-  display: flex;
-  align-items: flex-start;
-}
+        .avatar-container {
+            width: 225px;
+            height: 225px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-.avatar-container {
-  width: 225px;
-  height: 225px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-right: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+        .avatar-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
 
-.avatar-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
+        .profile-info {
+            flex: 1;
+            max-width: 1500px;
+        }
 
-.profile-info {
-  flex: 1;
-  max-width: 1500px;
-}
+        .profile-info p {
+            margin: 0;
+            font-size: 1em;
+        }
 
-.profile-info p {
-  margin: 0;
-  font-size: 1em;
-}
+        .profile-info .email {
+            margin-bottom: 5px;
+        }
 
-.profile-info .email {
-  margin-bottom: 5px;
-}
+        .profile-info .email span {
+            font-family: monospace;
+            font-size: 0.75em;
+            background-color: #f0f0f0;
+            padding: 2px 4px;
+        }
 
-.profile-info .email span {
-  font-family: monospace;
-  font-size: 0.75em;
-  background-color: #f0f0f0;
-  padding: 2px 4px;
-}
+        @media (max-width: 1200px) {
+            .profile-info p {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .profile-info p {
+                font-size: 0.9em;
+            }
+
+            .profile-info .email {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .profile-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .avatar-container {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .profile-info p {
+                font-size: 0.8em;
+            }
+        }
 </style>
 
 
 
 
-### Principal Investigator
+<h3>Principal Investigator</h3>
 
 <div style="margin-top: 1.5em;"></div>
 
@@ -76,7 +113,7 @@ key: group
 </div>
 
 
-### Postdoctoral Researchers
+<h3>Postdoctoral Researchers</h3>
 
 <div style="margin-top: 1.5em;"></div>
 
@@ -116,7 +153,7 @@ key: group
   </div>
 </div>
 
-### Doctoral Students 
+<h3>Doctoral Students </h3>
 
 <div style="margin-top: 1.5em;"></div>
 
@@ -132,7 +169,7 @@ key: group
       <a href="https://scholar.google.com/citations?hl=en&user=cX-zhzAAAAAJ" style="text-decoration: none; color: #6CACE4;">Google Scholar</a>
     </p>
     <p>
-      Young is a doctoral student in Biomedical Informatics advised by Dr. Shalmali Joshi and Dr. Pierre Elias. His research is on the intersection of multimodal learning with clinical informatics. Previously, he was a researcher at the National Cancer Center-Korea, received a master's degree at Cornell Tech, and graduated from NYU with a degree in Mathematics. He can be found drinking copious amounts of coffee during his free time. 
+      Young is a doctoral student in Biomedical Informatics advised by Dr. Shalmali Joshi and <a href="https://pierreelias.github.io/Elias_Bio.html" style="text-decoration: none; color: #6CACE4;">Dr. Pierre Elias</a>. His research is on the intersection between multimodal learning with clinical informatics. Previously, he was a researcher at the National Cancer Center-Korea, received a master's degree at Cornell Tech, and graduated from NYU with a degree in Mathematics. He can be found drinking copious amounts of coffee during his free time. 
     </p>
   </div>
 </div>
@@ -194,7 +231,7 @@ key: group
   </div>
 </div>
 
-### Master's and Undergraduate Researchers
+<h3>Master's and Undergraduate Researchers</h3>
 
 <div style="margin-top: 1.5em;"></div>
 
@@ -215,8 +252,15 @@ key: group
   </div>
 </div>
 
-### Lab Alumni
+<h3>Lab Alumni</h3>
 
-**Xinghe (Ziggy) Chen**, masters thesis, 2024 &#8594; first position: doctoral program at the College of Computing and Data Science (CCDS) at Nanyang Technological University (NTU).
+<ul>
+<li><b>Xinghe (Ziggy) Chen, M.S.</b>, Master's Thesis (CS), 2024.</li>
+<ul>
+<li>First position: Doctoral program at the College of Computing and Data Science (CCDS) at Nanyang Technological University (NTU).</li>
+</ul>
 
-**Haoqing (Terese) Wang**, masters research, 2024 &#8594; first position: doctoral program in Biomedical Engineering at the University of Southern California (USC).
+<li><b>Haoqing (Terese) Wang, M.S.</b>, Masters Research (CS), 2024.</li>
+<ul>
+<li>First position: Doctoral program in Biomedical Engineering at the University of Southern California (USC).</li>
+</ul>

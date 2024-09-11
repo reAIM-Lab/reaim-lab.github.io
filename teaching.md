@@ -6,7 +6,7 @@ key: teaching
 
 ### Advanced Machine Learning for Health and Medicine (BINF 4008 / COMS 4995)
 
-**\[[Fall 2023](https://reaim-lab.github.io/binf4008.html)\]**
+**\[[Fall 2023]({{ site.baseurl }}/binf4008.html)\]**
 
 *Tentatively offered in the fall semester of every other year.*
 

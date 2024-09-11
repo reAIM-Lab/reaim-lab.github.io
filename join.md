@@ -22,13 +22,13 @@ Given the individual nature of the degree and our lab's focus on machine learnin
 
 ### Postdoctoral Researchers
 
-- Postdoctoral openings via DBMI will be posted on our website and the [DBMI Careers](https://www.dbmi.columbia.edu/dbmi-careers/) page.
+- Postdoctoral openings via the Department of Biomedical Informatics will be posted on our website and the [DBMI Careers](https://www.dbmi.columbia.edu/dbmi-careers/) page.
 - Postdoctoral researchers can also join DBMI via the Department's [National Library of Medicine (NLM) Training Grant](https://www.dbmi.columbia.edu/postdoctoral-fellowship-degree/) if they are U.S. Citizens or Permanent Residents. The NLM fellowship gives two years of support.
-- The [Data Science Institute](https://datascience.columbia.edu/research/postdoctoral-researchers/) has a postdoctoral fellows program. The fellowship does not have citizenship requirements and supports researchers for two years via year-long renewable appointments.
+- The [Data Science Institute](https://datascience.columbia.edu/research/postdoctoral-researchers/) also hosts postdoctoral fellows. The program does not have citizenship requirements and supports researchers for two years via year-long renewable appointments.
 
-### Masters and Undergraduate Students
+### Master's and Undergraduate Students
 
-If you are a **current** masters or undergraduate student at Columbia University interested in rotating in our lab, please reach out to Dr. Joshi with the following:
+If you are a **current** master's or undergraduate student at Columbia University interested in rotating in our lab, please reach out to Dr. Joshi with the following:
 
 - Your program, major, expected year of graduation, and grades at any courses relevant to Machine Learning (e.g. Linear Algebra, Probability and Statistics, Optimization, etc.).
 - Your research interests and how they align with reAIM, goals for the rotation, and the amount of time you can commit to research.

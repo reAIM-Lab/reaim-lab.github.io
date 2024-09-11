@@ -42,16 +42,6 @@ header:
 
   - titles:
       # @start locale config
-      en      : &EN       contact
-      en-GB   : *EN
-      en-US   : *EN
-      en-CA   : *EN
-      en-AU   : *EN
-      # @end locale config
-    url: /contact.html
-
-  - titles:
-      # @start locale config
       en      : &EN       join us!
       en-GB   : *EN
       en-US   : *EN

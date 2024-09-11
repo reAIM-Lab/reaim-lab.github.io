@@ -6,7 +6,7 @@ key: index
 
 
 
-<img align="right" width="600px" src= "assets/images/reaim_index_photo.jpg" style="padding-left: 75px"/>
+<!-- <img align="right" width="600px" src= "assets/images/reaim_index_photo.jpg" style="padding-left: 75px"/> -->
 
 <html lang="en">
 <head>

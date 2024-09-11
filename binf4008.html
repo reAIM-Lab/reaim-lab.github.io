@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Advanced Machine Learning for Health and Medicine</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+<h1>BINF GU 4008 Section 3 / COMS 4995 Section 14: Advanced Machine Learning for Health and Medicine</h1>
+
+<div id="header">
+    <b>Fall 2023, Columbia University</b><br>
+</div>
+
+<br>
+
+<h2><b><font color="red"> IMPORTANT NOTICE: From September 15th onwards, our course will meet on Fridays 2p-4p at Uris 306 (not ENG 253).</font></b></h2>
+    
+<br>
+<h4><u>Staff:</u></h4>
+<b>Instructor:</b> <a href="https://shalmalijoshi.github.io/reAIM/">Shalmali Joshi </a> <br>
+<b>Teaching Assistant:</b> <a href="https://youngsangchoi.github.io">Young Sang Choi</a><br>
+
+<br>
+
+<h4><u>Logistics:</u></h4>
+<b>Contact:</b> <a href="https://courseworks2.columbia.edu/courses/185810">Courseworks</a><br>
+<b>Time:</b> Friday 2:00pm - 4:00pm<br>
+<b>Location:</b> <a href="https://operations.cufo.columbia.edu/content/uris-hall">Uris 306, 3022 Broadway, New York, NY 10027</a><br>
+<b>Office Hours:</b> Shalmali Joshi: Thursdays 9:00a-10:00a at 622 W 168th St, PH-20, 402; Young Sang Choi: Fridays 4:00pm - 5:00pm, Uris 306<br>
+
+<br>
+
+
+<h4><u>Pre-reqs:</u></h4>
+<ul>
+<li>Machine Learning (COMS W 4771-001) or equivalent (BINF G 4002) with grade B or higher</li>
+<li>Familiarity with Python and one or more of: Pytorch, Tensorflow, JAX</li>
+<li>Basic knowledge of probability, statistics, and linear algebra</li>
+</ul>
+
+<h4><u>Course Description:</u></h4>
+
+Machine Learning (ML) has transformative potential for applications in health and medicine. The complexity of healthcare and medicine has highlighted foundational challenges in ML such as lack of generalization, robustness, safety, inequity, and statistical interpretability. Traditional ways of measuring the utility of ML models often do not reflect clinical/medical benefits resulting in technical innovations in ML methods.<br>
+
+Exciting opportunities have opened up for methodological progress in Machine Learning motivated by health and medicine applications. The availability of large de-identified multi-institutional datasets for healthcare and medicine from around the world has accelerated progress in ML for health. These data are from healthcare providers and are patient-facing as opposed to traditional medical data, which is well-curated and collected for specific tasks. Patient-facing datasets are rife with some of the most complex statistical artifacts that require innovative ML solutions to improve over the state-of-the-art in health and medicine.<br>
+
+In this course, you will learn about complexities that make health and medicine data unique and how it opens up opportunities for advanced AI. You will learn advanced Machine Learning methods useful in health and medicine applications, for example, time-series modeling, reinforcement learning, probabilistic modeling, causal inference, foundation models, unsupervised learning, and self-supervised learning. I will further provide an overview of challenges such as fairness, interpretability, generalization, robustness, safety, and policy implications of ML in health and medicine. The course will train students to map real-world challenges of working with health and medical data to statistical challenges that require new and advanced ML methods.<br>
+
+<br>
+
+<b>Objective:</b>
+<br>
+By the end of this course you will be able to:
+<ul>
+
+    <li>Get a foundational overview of state-of-the-art ML in healthcare</li>
+    <li>Distill challenges in health and medicine data to technical challenges to address using ML</li>
+    <li>Develop new ML methods focused on health/medicine tasks</li>
+    <li>Better equipped to evaluate and validate of ML in health and medicine</li>
+</ul>
+
+<br>
+
+
+
+    
+<h4><u>Course Material:</u></h4>
+Course material will largely consist of lecture notes and research papers. No textbook is required, some textbook chapters may be provided as additional reading. <br>
+<hr>
+<span class="menu">
+<a href="#schedule">Schedule and Content</a> |
+<a href="#grading">Format and Grading</a> |
+<a href="#Psets">Homework Assignments</a> |
+<a href="#projects">Final projects</a>
+
+</span>
+<hr>
+
+<a name="schedule">
+   <h3>Schedule and Content</h3>
+   <font color="red"> Note that schedule and content is subject to minor changes. Slides and notes will be posted on Courseworks.</font>
+</a>
+
+<table border="1" cellpadding="5" cellspacing="0">
+  <tr>
+    <th>Class</th>
+    <th>Date</th>
+    <th>Topic</th>
+    <th>Reading Assignments</th>
+      <th>Reflection Questions</th>
+      <th>Projects/Homework timelines</th>
+      <!--th>Scribe</th-->
+  </tr>
+
+    <tr>
+        <td>
+        1
+        </td>
+        <td>
+        <s>9/8</s><br>
+            9/7 (Thu)<br>
+            6-8 PM<br>
+            at Uris 140
+        </td>
+        <td>
+            1.1 Introduction to health and medicine data<br>
+            1.2 History of AI/ML in health<br>
+            1.3 Statistical challenges in health and medicine data<br>
+        </td>
+        <td>
+            <a href="https://www.healthaffairs.org/doi/full/10.1377/hlthaff.2014.0041">1. Big Data In Health Care: Using Analytics To Identify And Manage High-Risk And High-Cost Patients</a><br>
+            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7233077/">2. A Review of Challenges and Opportunities in Machine Learning for Health</a><br>
+        </td>
+        <td>
+            No reflection questions
+        </td>
+        <td>
+            Homework #1 out by midnight today
+        </td>
+        <!--td>
+            No scribe
+        </td-->
+
+    </tr>
+
+    <tr>
+        <td>
+        2
+        </td>
+        <td>
+        9/15
+        </td>
+        <td>
+            2.1 Supervised Learning in Healthcare<br>
+            2.2 Preventing data leakage<br>
+            2.3 Learning with noisy labels<br>
+            2.4 Positive and Unlabeled Learning<br>
+            2.5 Shortcut Learning<br>
+        </td>
+        <td>
+            <a href="https://www.nature.com/articles/s41591-022-01894-0">1. Prospective, multi-site study of patient outcomes after implementation of the TREWS machine learning-based early warning system for sepsis</a><br>
+            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4419996/">2. Using Anchors to Estimate Clinical State without Labeled Data</a><br>
+            <a href="https://dl.acm.org/doi/abs/10.1145/2783258.2788613">3. Intelligible Models for HealthCare: Predicting Pneumonia Risk and Hospital 30-day Readmission</a><br>
+        </td>
+        <td>
+            Reflection questions #1 due before class.<br>
+        </td>
+        <td>
+            Homework #1 continues<br>
+        </td>
+        <!--td>
+            Scribe: TBD
+        </td-->
+
+    </tr>
+
+    <tr>
+        <td>
+        3
+        </td>
+        <td>
+        9/22
+        </td>
+        <td>
+            3.1 Medical Imaging modalities<br>
+            3.2 Convolutional Neural Networks, ResNet, ViT<br>
+            3.3 Common tasks in medical imaging<br>
+            3.4 State-of-the-art deep neural networks in medical imaging<br>
+        </td>
+        <td>
+            <a href="https://pubs.rsna.org/doi/full/10.1148/radiol.2018180694">1. Mammographic Breast Density Assessment Using Deep Learning: Clinical Implementation</a><br>
+            <a href="https://www.nature.com/articles/s41551-020-00682-w">2. Data-efficient and weakly supervised computational pathology on whole-slide images</a><br>
+        </td>
+        <td>
+            Reflection questions #2 due before class.<br>
+        </td>
+        <td>
+            Homework #1 continues<br>
+        </td>
+        <!--td>
+            Scribe: TBD
+        </td-->
+
+    </tr>
+
+    <tr>
+        <td>
+        4
+        </td>
+        <td>
+        9/29
+        </td>
+        <td>
+            5.1 Time-series modeling in health<br>
+            5.2 Factorial switching dynamic models<br>
+            5.3 State-space models<br>
+            5.4 Deep learning for time-series modeling (RNN, LSTM, Attention)<br>
+        </td>
+        <td>
+            <a href="https://ojs.aaai.org/index.php/AAAI/article/view/9209">1. A Multivariate Timeseries Modeling Approach to Severity of Illness Assessment
+and Forecasting in ICU with Sparse, Heterogeneous Clinical Data</a><br>
+            <a href="https://proceedings.neurips.cc/paper_files/paper/2008/file/170c944978496731ba71f34c25826a34-Paper.pdf">2. Probabilistic detection of short events, with
+application to critical care monitoring</a><br>
+        </td>
+        <td>
+            Reflection questions #3 due before class.<br>
+
+        </td>
+        <td>
+            Homework #2 ongoing<br>
+            Project proposals due<br>
+        </td>
+        <!--td>
+            Scribe: TBD
+        </td-->
+
+    </tr>
+
+    <tr>
+        <td>
+        5
+        </td>
+        <td>
+        10/6
+        </td>
+        <td>
+            4.1 Survival Modeling Basics<br>
+            4.2 Censoring<br>
+            4.3 Survival Modeling using Deep Learning<br>
+        </td>
+        <td>
+            <a href="https://www.andrew.cmu.edu/user/georgech/Introduction%20to%20Survival%20Analysis%20Math.pdf">1. An Introduction to Survival Analysis Math</a><br>
+            <a href="http://proceedings.mlr.press/v56/Ranganath16.html">2. Deep Survival Analysis</a><br>
+        </td>
+        <td>
+            Reflection questions #4 due before class.<br>
+        </td>
+        <td>
+            Homework #1 due<br>
+            Homework #2 out by midnight today<br>
+        </td>
+        <!--td>
+            Scribe: TBD
+        </td-->
+
+    </tr>
+
+    <tr>
+        <td>
+        6
+        </td>
+        <td>
+        10/13
+        </td>
+        <td>
+            6.1 Causal Inference in Healthcare<br>
+            6.2 Introduction to Structural Causal Models, Potential Outcomes framework<br>
+            6.3 Causal view of structural biases in the data<br>
+            6.4 Average Treatment Effect, Conditional Average Treatment Effect, Effect of Treatment on the Treated<br>
+            6.5 Causal Machine Learning<br>
+        </td>
+        <td>
+            <a href="https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/">1. Chapters 1, 2, and 3 of What If book by Miguel Hernan and James Robins</a><br>
+            <a href="https://www.medrxiv.org/content/10.1101/2022.04.30.22274520v2">2. Death by Round Numbers: Glass-Box Machine Learning Uncovers Biases in Medical Practice</a><br>
+        </td>
+        <td>
+            Reflection questions #5 due before class.<br>
+        </td>
+        <td>
+            Homework #2 ongoing<br>
+        </td>
+        <!--td>
+            Scribe: TBD
+        </td-->
+
+    </tr>
+
+    <tr>
+        <td>
+        7
+        </td>
+        <td>
+        10/20
+        </td>
+        <td>
+            7.1 Overview of Markov Decision Processes<br>
+            7.2 Offline Off-policy Evaluation and Learning<br>
+            7.3 Model based RL, Causal view of RL<br>
+            7.4 Causal view of Off-policy RL<br>
+            7.5 Applications in Healthcare<br>
+        </td>
+        <td>
+            <a href="http://auai.org/uai2017/proceedings/papers/209.pdf">1. A Reinforcement Learning Approach to Weaning of Mechanical Ventilation in
+Intensive Care Units</a><br>
+            <a href="https://arxiv.org/abs/1805.12298">2. Evaluating Reinforcement Learning Algorithms in Observational Health Settings</a><br>
+            <a href="https://proceedings.neurips.cc/paper/2018/hash/3a09a524440d44d7f19870070a5ad42f-Abstract.html">3. Confounding-Robust Policy Improvement</a><br>
+        </td>
+        <td>
+            Reflection questions #6 due before class.<br>
+        </td>
+        <td>
+            Homework #2 due<br>
+            Homework #3 out by midnight today<br>
+        </td>
+        <!--td>
+            Scribe: TBD
+        </td-->
+
+    </tr>
+
+     <tr>
+        <td>
+        8
+        </td>
+        <td>
+        10/27
+        </td>
+        <td>
+            8.1 Generalization of Machine Learning<br>
+            8.2 Distribution Shifts: Types of distribution shifts<br>
+            8.3 Domain adaptation, transfer learning<br>
+            8.4 Causal view of distribution shift<br>
+            8.5 Algorithms for robustness in Supervised Learning, Reinforcement Learning<br>
+            <font color="blue"><b>8.6 Guest Lecture: Harvineet Singh, PhD (Postdoctoral Fellow, UCSF on Responsible ML for Health)</b></font><br>
+        </td>
+        <td>
+            <a href="https://www.nejm.org/doi/full/10.1056/NEJMc2104626">1.The Clinician and Dataset Shift in Artificial Intelligence</a><br>
+            <a href="https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2803492?resultClick=1">2. Factors Associated With Variability in the Performance of a Proprietary Sepsis Prediction Model Across 9 Networked Hospitals in the US</a><br>
+        </td>
+        <td>
+            Reflection questions #7 due before class.<br>
+        </td>
+        <td>
+            Homework #3 ongoing<br>
+        </td>
+        <!--td>
+            Scribe: TBD
+        </td-->
+
+    </tr>
+
+    <tr>
+        <td>
+        9
+        </td>
+        <td>
+        11/3
+        </td>
+        <td>
+            9.1 Self-supervised Learning in Health<br>
+            9.2 Contrastive Learning and Meta-Learning in Health<br>
+            <font color="blue"><b>9.3 Guest Lecture: Pranav Rajpurkar, PhD Stanford (Assistant Professor, Harvard University, DBMI)</b></font><br>
+        </td>
+        <td>
+            <a href="https://www.nature.com/articles/s41551-022-00914-1">1. Self-supervised learning in medicine and healthcare</a><br>
+            <a href="https://proceedings.mlr.press/v151/agrawal22a">2. Leveraging Time Irreversibility with Order-Contrastive Pre-training </a><br>
+        </td>
+        <td>
+            Reflection questions #8 due before class.<br>
+        </td>
+        <td>
+            Homework #3 ongoing<br>
+        </td>
+        <!--td>
+            Scribe: TBD
+        </td-->
+
+    </tr>
+
+    <tr>
+        <td>
+        10
+        </td>
+        <td>
+        11/10
+        </td>
+        <td>
+            10.1 Foundation Models Basics<br>
+            10.2 Overview of Large Language Models, Foundation Models in Healthcare (Unimodal, Multimodal)<br>
+            10.3 Discussion of metrics, evaluation, future directions<br>
+            <font color="blue"><b>10.4 Guest Lecture: Monica Agarwal, PhD MIT</b></font><br>
+        </td>
+        <td>
+            <a href="https://www.worldscientific.com/doi/abs/10.1142/9789811215636_0027">1. Clinical Concept Embeddings Learned from Massive Sources of Multimodal Medical Data</a><br>
+            <a href="https://universeg.csail.mit.edu/">2. UniverSeg: Universal Medical Image Segmentation</a><br>
+            <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5171557/">3. Aspiring to Unintended Consequences of Natural Language Processing: A Review of Recent Developments in Clinical and Consumer-Generated Text Processing</a><br>
+            <a href="https://arxiv.org/abs/2306.11547">4. Event Stream GPT: A Data Pre-processing and Modeling Library for Generative, Pre-trained Transformers over Continuous-time Sequences of Complex Events</a><br>
+            <a href="https://www.biorxiv.org/content/10.1101/2023.03.29.534834v1">5. Optional: Leveraging medical Twitter to build a visual–language foundation model for pathology AI </a><br>
+        </td>
+        <td>
+            Reflection questions #9 due before class.<br>
+        </td>
+        <td>
+            Homework #3 due<br>
+        </td>
+        <!--td>
+            Scribe: TBD
+        </td-->
+
+    </tr>
+
+    <tr>
+        <td>
+        11
+        </td>
+        <td>
+        11/17
+        </td>
+        <td>
+            11.1 Interpretability for Health and Medicine<br>
+            11.2 Conceptual overview of methods, ideas<br>
+            11.3 Challenges of viewing interpretability narrowly<br>
+            <b><font color="blue">11.4 Guest lecture: Daksh Mittal (PhD student, Columbia Business School) and Yuanzhe Ma,(PhD student IE/OR) on Uncertainty quantification for interpretability in deep learning<br></font><b><br>
+        </td>
+        <td>
+            <a href="https://arxiv.org/pdf/2210.10769">1. “Why did the Model Fail?”: Attributing Model Performance Changes to
+Distribution Shifts</a><br>
+            <a href="https://www.sciencedirect.com/science/article/pii/S2589750021002089">2. The false hope of current approaches to explainable artificial intelligence in health care </a><br>
+        </td>
+        <td>
+            Reflection questions #10 due before class.<br>
+        </td>
+        <td>
+            Projects ongoing<br>
+        </td>
+        <!--td>
+            Scribe: TBD
+        </td-->
+    </tr>
+
+    <tr>
+        <td>
+        12
+        </td>
+        <td>
+        12/1
+        </td>
+        <td>
+            12.1 Ethics, Safety, and Equity of ML in Healthcare<br>
+            12.2 Modeling frameworks for safe and equitable ML in healthcare<br>
+            12.3 Regulation of ML/AI in Healthcare<br>
+            <font color="blue"><b>12.4 Guest Lecture: Adarsh Subbaswamy PhD; (Staff Fellow (Regulatory Scientist) at the U.S. FDA<br>
+                in the Division of Imaging Diagnostics and Software Reliability <br>
+                at the Center for Devices and Radiological Health)</b></font><br>
+        </td>
+        <td>
+            <a href="https://www.annualreviews.org/doi/abs/10.1146/annurev-biodatasci-092820-114757">1. Ethical Machine Learning in Healthcare</a><br>
+            <a href="https://www.thelancet.com/journals/landig/article/PIIS2589-7500(20)30065-0/fulltext">2. Ethical limitations of algorithmic fairness solutions in health care machine learning </a><br>
+            <a href="https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-software-medical-device">3. Artificial Intelligence and Machine Learning in Software as a Medical Device</a><br>
+            <a href="https://arxiv.org/pdf/2109.06312.pdf">4. Learning-to-defer for sequential medical decision-making under uncertainty</a>
+        </td>
+        <td>
+            Reflection questions #11 due before class.<br>
+        </td>
+        <td>
+            Projects ongoing<br>
+        </td>
+        <!---td>
+            Scribe: TBD
+        </td-->
+    </tr>
+
+    <tr>
+        <td>
+        13, 14
+        </td>
+        <td>
+        12/8, 12/15
+        </td>
+        <td>
+            Project Presentations
+        </td>
+        <td>
+            N/A
+        </td>
+        <td>
+            No reflection questions. Classroom discussion encouraged.<br>
+        </td>
+        <td>
+            Project reports due<br>
+        </td>
+        <!--td>
+            Scribe: None
+        </td-->
+    </tr>
+
+</table>
+<br>
+<hr>
+
+<a name="grading">
+    </a>
+   <h3>Format and Grading</h3>
+    Lectures held once a week (5 points for participation in-person)<br>
+    <br>
+    Homeworks:<br>
+    <ul>
+        <li>Problem Sets: Each homework is a mini-project divided into 3 problem-based questions (3 homeworks, 30 points)</li>
+        <li>Reading assignments: Reading will be assigned prior to each lecture. Students will be expected to answer reflection questions associated with all reading assignments submitted prior to the lecture (15 points for completing reading assignments and corresponding questions).</li>
+        <li>Final project - Each individual will propose and execute their own project. Project proposals due end of week 4, final projects in NeurIPS paper format (8 pages excluding references) due end of the semester (50 points).</li>
+    </ul>
+
+
+<a name="#Psets"></a>
+<h3>Homework Assignments</h3>
+Homeworks will be assigned on Courseworks. Homeworks will be due 3 weeks after they are assigned. We have ensured ample time for all homeworks.
+However, we are allowing two slack days usable over the semester. If you are using a slack day for a homework, mention this on your homework submission (otherwise the TA will assume late submission).
+You are free to use the slack days for any of the homeworks. No slack days for project submission is allowed (unless you have a medical emergency, in which case please contact the instructor).<br>
+
+<hr>
+
+<a name="projects"></a>
+<h3>Projects</h3>
+
+The goal of the projects is to identify a meaningful problem in health and medicine that can be addressed using Machine Learning. The project can be a new method, a new application, or a new dataset. Each type of project requires careful consideration of:
+<ul>
+    <li>What is the health or medicine problem?</li>
+    <li>Why is it an important?</li>
+    <li>What is the current state of the art?</li>
+    <li>What is the gap in the current state of the art?</li>
+    <li>Why is Machine Learning a good solution to address this gap?</li>
+    <li>In what ways do you expect ML to address existing limitations?</li>
+    <li>Are existing ML methods good enough to address your problem?</li>
+    <li>If yes, what application-specific considerations are crucial for successfully addressing the problem?</li>
+    <li>If no, what new methods are needed to address the problem?</li>
+    <li>What is your methodological advancement to address this issue?</li>
+    <li>What is a good evaluation of i) the validity of the method, ii) the relevance to the health/medicine problem, iii) utility to the applicaiton of interest</li>
+    <li>What are the limitations of your method? What are the considerations before I can declare that my method is the best out there?</li>
+    <li>What are the future directions that you think might improve on your proposal?</li>
+</ul>
+
+The project can be done individually or in groups of 2 students maximum. The project will be presented in class at the end of the semester. The project report will be in NeurIPS paper format (8 pages excluding references).<br>
+Potential sources of data (list is not exhaustive)
+    <ul>
+        <li><a href="https://physionet.org/content/mimiciv/">MIMIC-IV (X-ray and ICU data)</a></li>
+        <li><a href="https://physionet.org/content/eicu-crd/2.0/">eICU</a></li>
+        <li><a href="https://www.ngsci.org">Nightingale Open Data</a></li>
+        <li><a href="https://stanfordaimi.azurewebsites.net/datasets/8cbd9ed4-2eb9-4565-affc-111cf4f7ebe2">Stanford X-ray data</a></li>
+        <li><a href="https://bimcv.cipf.es/bimcv-projects/padchest/">PadChest</a></li>
+    </ul>
+    Instructor(s) will work with students to manage (temporary) data access to above data sources. Other data sources/tasks can be used in consultation with the instructor. Students will work closely with the instructor to scope the project and frequently update the instructor on progress on their projects at office hours. Please see the "Format and Grading" section for more details on the project.<br>
+
+</body>
+</html>

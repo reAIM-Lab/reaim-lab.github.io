@@ -1,46 +1,127 @@
 ---
 layout: article
-title: 
+title: Open Positions at reAIM
 key: join
 ---
 
 
 
-<div style="display: flex; align-items: flex-start; flex-wrap: wrap;">
-  <div style="flex: 1; min-width: 0; margin-right: 40px;">
 
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            .custom-h1 {
-                font-size: 2.2em; 
-                font-weight: bold;
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
             }
-        </style>
-    </head>
-    <body>
-        <span class="custom-h1">Open Positions at reAIM</span>
-    </body>
-    </html>
-    <p>
-      Thank you for your interest in joining reAIM!
 
-    The best way to get in contact with the lab is by emailing Professor Joshi at <code>sj3261[at]cumc[dot]columbia[dot]edu</code> or one of the current <a href="{{ site.baseurl }}/group.html">doctoral students</a>. While we are always excited by the prospect of new collaborators, our email inboxes can get quite busy, particularly during application season. We apologize in advance for any delays in response. <span style="color: #003087;"><b><u>Please read the following page before in its entirety before reaching out to us.</u></b></span>
+            .image-container {
+                width: 100%;
+                max-width: 300px;
+                margin-bottom: 20px;
+                text-align: center;
+                float: none;
+            }
 
-    </p>
-    <p>
-    Dr. Joshi is an Assistant Professor at the <a href="https://www.dbmi.columbia.edu/faculty/">Department of Biomedical Informatics (DBMI)</a>, an affiliate of the <a href="https://www.cs.columbia.edu/people/affiliates/">Department of Computer Science</a>, and a member of the <a href="https://datascience.columbia.edu/people/shalmali-joshi/">Data Science Institute (DSI)</a>. Consequently, there are several avenues for students and researchers to join our lab:
-    </p>
-  </div>
-  <div style="flex: 0 0 auto; width: 300px; position: relative;">
-    <img src="{{ "/assets/images/reaim_group_photo_2024.jpg" | relative_url }}" alt="Group Photo" style="width: 100%; height: auto; display: block;">
-    <p style="text-align: center; margin-top: 5px;">reAIM @ <a href="https://en.wikipedia.org/wiki/New_York_Botanical_Garden">NYBG</a>, Spring 2024</p>
-  </div>
-</div>
+            .text-container {
+                width: 100%;
+                text-align: center;
+                float: none;
+            }
+        }
 
-### Doctoral Students
+        .container {
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .text-container {
+            flex: 1;
+            min-width: 0;
+            margin-right: 20px;
+            overflow: hidden;
+        }
+
+        .image-container {
+            flex: 0 0 auto;
+            width: 400px;
+            position: relative;
+            float: right;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text-container">
+            <!-- <span class="custom-h1" style="font-size: 2.2em; font-weight: bold;">Open Positions at reAIM</span> -->
+            <p>
+                Thank you for your interest in joining reAIM!
+                The best way to get in contact with the lab is by emailing Professor Joshi at <code>sj3261[at]cumc[dot]columbia[dot]edu</code> or one of the current <a href="{{ site.baseurl }}/group.html">doctoral students</a>. While we are always excited by the prospect of new collaborators, our email inboxes can get quite busy, particularly during application season. We apologize in advance for any delays in response. <span style="color: #003087;"><b><u>Please read the following page in its entirety before reaching out to us.</u></b></span>
+            </p>
+            <p>
+                Dr. Joshi is an Assistant Professor at the <a href="https://www.dbmi.columbia.edu/faculty/">Department of Biomedical Informatics (DBMI)</a>, an affiliate of the <a href="https://www.cs.columbia.edu/people/affiliates/">Department of Computer Science</a>, and a member of the <a href="https://datascience.columbia.edu/people/shalmali-joshi/">Data Science Institute (DSI)</a>. Consequently, there are several avenues for students and researchers to join our lab:
+            </p>
+
+            <h3>Doctoral Students</h3>
+
+            <p>Doctoral students can join reAIM via the following programs:</p>
+            <ul>
+                <li><a href="https://www.dbmi.columbia.edu/phd-in-biomedical-informatics/">Biomedical Informatics</a> located in the <a href="https://www.gsas.cuimc.columbia.edu/phd-programs">Graduate School of Arts and Science</a> at the Columbia University Irving Medical Center.</li>
+                <li><a href="https://www.cs.columbia.edu/education/phd/">Computer Science</a> at the <a href="https://www.gradengineering.columbia.edu/academics/graduate/doctoral">Fu Foundation School of Engineering and Applied Science</a>.</li>
+            </ul>
+
+            <p>Given the individual nature of the degree and our lab's focus on machine learning to a wide range of topics relevant to healthcare, thesis work will be driven by the student's research regardless of which program they join. The key difference is in core coursework and milestones: <a href="https://www.dbmi.columbia.edu/courses/">DBMI students</a> will take classes on symbolic methods, clinical informatics, and healthcare delivery, while <a href="https://www.cs.columbia.edu/education/phd/requirements/">Computer Science</a> students will take courses in algorithms and systems. Students in both departments will take electives according to their research interests. We will allocate desk space and resources at our offices located at the <a href="https://universitylife.columbia.edu/content/maps-locations">medical center (CUIMC) campus</a> regardless of which department the student joins.</p>
+
+            <p><span style="color: #003087;"><strong>Please note your interest in working with Dr. Shalmali Joshi in your application.</strong></span></p>
+
+            <h3>Postdoctoral Researchers</h3>
+
+            <ul>
+                <li>Postdoctoral openings via the Department of Biomedical Informatics will be posted on our website and the <a href="https://www.dbmi.columbia.edu/dbmi-careers/">DBMI Careers</a> page.</li>
+                <li>Postdoctoral researchers can also join DBMI via the Department's <a href="https://www.dbmi.columbia.edu/postdoctoral-fellowship-degree/">National Library of Medicine (NLM) Training Grant</a> if they are U.S. Citizens or Permanent Residents. The NLM fellowship gives two years of support.</li>
+                <li>The <a href="https://datascience.columbia.edu/research/postdoctoral-researchers/">Data Science Institute</a> also hosts postdoctoral fellows. The program does not have citizenship requirements and supports researchers for two years via year-long renewable appointments.</li>
+            </ul>
+
+            <h3>Master's and Undergraduate Students</h3>
+
+            <p>If you are a <strong>current</strong> master's or undergraduate student at Columbia University interested in rotating in our lab, please reach out to Dr. Joshi with the following:</p>
+            <ul>
+                <li>Your program, major, expected year of graduation, and grades at any courses relevant to Machine Learning (e.g. Linear Algebra, Probability and Statistics, Optimization, etc.).</li>
+                <li>Your research interests and how they align with reAIM, goals for the rotation, and the amount of time you can commit to research.</li>
+                <li>Contact information for references.</li>
+                <li>Your unofficial Columbia and undergraduate (if applicable) transcripts.</li>
+                <li>Title your email "[reAIM] Research Rotation Inquiry for Current Columbia {Undergraduate, Masters} Student"</li>
+            </ul>
+
+            <h3>Visiting Researchers and Outside Collaborators</h3>
+
+            <p>Please contact Dr. Joshi if you are an external researcher interested in visiting or collaborating with our lab.</p>
+        </div>
+        <div class="image-container">
+            <img src="{{ '/assets/images/reaim_group_photo_2024.jpg' | relative_url }}" alt="Group Photo">
+            <p style="text-align: center; margin-top: 5px;">reAIM @ <a href="https://en.wikipedia.org/wiki/New_York_Botanical_Garden">NYBG</a>, Spring 2024</p>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+<!-- ### Doctoral Students
 
 Doctoral students can join reAIM via the following programs:
 - [Biomedical Informatics](https://www.dbmi.columbia.edu/phd-in-biomedical-informatics/) located in the [Graduate School of Arts and Science](https://www.gsas.cuimc.columbia.edu/phd-programs) at the Columbia University Irving Medical Center.
@@ -68,4 +149,5 @@ If you are a **current** master's or undergraduate student at Columbia Universit
 
 ### Visiting Researchers and Outside Collaborators
 
-Please contact Dr. Joshi if you are an external researcher interested in visiting or collaborating with our lab.
+Please contact Dr. Joshi if you are an external researcher interested in visiting or collaborating with our lab. -->
+

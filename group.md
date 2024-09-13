@@ -103,8 +103,8 @@ key: group
     <p style="font-size: 1.17em; font-weight: bold; margin: 0;">Shalmali Joshi, Ph.D.</p>
     <p class="email">
       <span>sj3261[at]cumc[dot]columbia[dot]edu</span> &bull; 
-      <a href="https://shalmalijoshi.github.io/reAIM/" style="text-decoration: none; color: #6CACE4;">Personal Website</a> &bull; 
-      <a href="https://scholar.google.com/citations?user=x5wW5WIAAAAJ" style="text-decoration: none; color: #6CACE4;">Google Scholar</a>
+      <a href="https://shalmalijoshi.github.io/reAIM/" style="text-decoration: none; color: #0077C8;">Personal Website</a> &bull; 
+      <a href="https://scholar.google.com/citations?user=x5wW5WIAAAAJ" style="text-decoration: none; color: #0077C8;">Google Scholar</a>
     </p>
     <p>
       Dr. Joshi is an Assistant Professor at Columbia University, Department of Biomedical Informatics where she leads the reAIM Lab. She works to advance Machine Learning (ML) and Artificial Intelligence (AI) methods with the goal of advancing clinical health and medicine for all. 
@@ -125,8 +125,8 @@ key: group
     <p style="font-size: 1.17em; font-weight: bold; margin: 0;">Jiayu Yao, Ph.D.</p>
     <p class="email">
       <span>jy3491[at]columbia[dot]edu</span> &bull; 
-      <a href="https://yaojiayu0826.github.io/" style="text-decoration: none; color: #6CACE4;">Personal Website</a> &bull; 
-      <a href="https://scholar.google.com/citations?user=WNoNASEAAAAJ&hl" style="text-decoration: none; color: #6CACE4;">Google Scholar</a>
+      <a href="https://yaojiayu0826.github.io/" style="text-decoration: none; color: #0077C8;">Personal Website</a> &bull; 
+      <a href="https://scholar.google.com/citations?user=WNoNASEAAAAJ&hl" style="text-decoration: none; color: #0077C8;">Google Scholar</a>
     </p>
     <p>
       Insert bio here. Make it punchy and fun.
@@ -144,8 +144,8 @@ key: group
     <p style="font-size: 1.17em; font-weight: bold; margin: 0;">Vincent Jeanselme, Ph.D.</p>
     <p class="email">
       <span>vincent[dot]jeanselme[at]gmail[dot]com</span> &bull; 
-      <a href="https://jeanselme.github.io/" style="text-decoration: none; color: #6CACE4;">Personal Website</a> &bull; 
-      <a href="https://scholar.google.com/citations?user=CnN1SlcAAAAJ" style="text-decoration: none; color: #6CACE4;">Google Scholar</a>
+      <a href="https://jeanselme.github.io/" style="text-decoration: none; color: #0077C8;">Personal Website</a> &bull; 
+      <a href="https://scholar.google.com/citations?user=CnN1SlcAAAAJ" style="text-decoration: none; color: #0077C8;">Google Scholar</a>
     </p>
     <p>
       Insert bio here. Make it punchy and fun.
@@ -165,11 +165,11 @@ key: group
     <p style="font-size: 1.17em; font-weight: bold; margin: 0;">Young Sang Choi, M.S.</p>
     <p class="email">
       <span>young[dot]sang[dot]choi[at]columbia[dot]edu</span> &bull; 
-      <a href="https://youngsangchoi.github.io/" style="text-decoration: none; color: #6CACE4;">Personal Website</a> &bull; 
-      <a href="https://scholar.google.com/citations?hl=en&user=cX-zhzAAAAAJ" style="text-decoration: none; color: #6CACE4;">Google Scholar</a>
+      <a href="https://youngsangchoi.github.io/" style="text-decoration: none; color: #0077C8;">Personal Website</a> &bull; 
+      <a href="https://scholar.google.com/citations?hl=en&user=cX-zhzAAAAAJ" style="text-decoration: none; color: #0077C8;">Google Scholar</a>
     </p>
     <p>
-      Young is a doctoral student in Biomedical Informatics advised by Dr. Shalmali Joshi and <a href="https://pierreelias.github.io/Elias_Bio.html" style="text-decoration: none; color: #6CACE4;">Dr. Pierre Elias</a>. His research is on the intersection between multimodal learning with clinical informatics. Previously, he was a researcher at the National Cancer Center-Korea, received a master's degree at Cornell Tech, and graduated from NYU with a degree in Mathematics. He can be found drinking copious amounts of coffee during his free time. 
+      Young is a doctoral student in Biomedical Informatics advised by Dr. Shalmali Joshi and <a href="https://pierreelias.github.io/Elias_Bio.html" style="text-decoration: none; color: #0077C8;">Dr. Pierre Elias</a>. His research is on the intersection between multimodal learning with clinical informatics. Previously, he was a researcher at the National Cancer Center-Korea, received a master's degree at Cornell Tech, and graduated from NYU with a degree in Mathematics. He can be found drinking copious amounts of coffee during his free time. 
     </p>
   </div>
 </div>
@@ -184,8 +184,8 @@ key: group
     <p style="font-size: 1.17em; font-weight: bold; margin: 0;">Aparajita Kashyap, M.A.</p>
     <p class="email">
       <span>ak4885[at]cumc[dot]columbia[dot]edu</span> &bull; 
-      <a href="https://aparakashyap.github.io/" style="text-decoration: none; color: #6CACE4;">Personal Website</a> &bull; 
-      <a href="https://scholar.google.com/citations?user=0g2q-j8AAAAJ&hl=en" style="text-decoration: none; color: #6CACE4;">Google Scholar</a>
+      <a href="https://aparakashyap.github.io/" style="text-decoration: none; color: #0077C8;">Personal Website</a> &bull; 
+      <a href="https://scholar.google.com/citations?user=0g2q-j8AAAAJ&hl=en" style="text-decoration: none; color: #0077C8;">Google Scholar</a>
     </p>
     <p>
       Insert bio here. Make it punchy and fun.
@@ -203,8 +203,8 @@ key: group
     <p style="font-size: 1.17em; font-weight: bold; margin: 0;">Yuta Kobayashi, M.S.</p>
     <p class="email">
       <span>yk3043[at]cumc[dot]columbia[dot]edu</span> &bull; 
-      <a href="" style="text-decoration: none; color: #6CACE4;">Personal Website</a> &bull; 
-      <a href="" style="text-decoration: none; color: #6CACE4;">Google Scholar</a>
+      <a href="" style="text-decoration: none; color: #0077C8;">Personal Website</a> &bull; 
+      <a href="" style="text-decoration: none; color: #0077C8;">Google Scholar</a>
     </p>
     <p>
       Insert bio here. Make it punchy and fun.
@@ -222,8 +222,8 @@ key: group
     <p style="font-size: 1.17em; font-weight: bold; margin: 0;">Zilin Jing, B.Sc.</p>
     <p class="email">
       <span>zj2398[at]columbia[dot]edu</span> &bull; 
-      <a href="" style="text-decoration: none; color: #6CACE4;">Personal Website</a> &bull; 
-      <a href="" style="text-decoration: none; color: #6CACE4;">Google Scholar</a>
+      <a href="" style="text-decoration: none; color: #0077C8;">Personal Website</a> &bull; 
+      <a href="" style="text-decoration: none; color: #0077C8;">Google Scholar</a>
     </p>
     <p>
       Insert bio here. Make it punchy and fun.
@@ -243,8 +243,8 @@ key: group
     <p style="font-size: 1.17em; font-weight: bold; margin: 0;">Kevin Zhang</p>
     <p class="email">
       <span>kyz2005[at]columbia[dot]edu</span> &bull; 
-      <a href="" style="text-decoration: none; color: #6CACE4;">Personal Website</a> &bull; 
-      <a href="" style="text-decoration: none; color: #6CACE4;">Google Scholar</a>
+      <a href="" style="text-decoration: none; color: #0077C8;">Personal Website</a> &bull; 
+      <a href="" style="text-decoration: none; color: #0077C8;">Google Scholar</a>
     </p>
     <p>
       Insert bio here. Make it punchy and fun.

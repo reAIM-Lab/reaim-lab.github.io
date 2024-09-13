@@ -14,7 +14,7 @@ key: index
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .custom-h1 {
-            font-size: 2.2em; 
+            font-size: 3em; 
             font-weight: bold;
         }
     </style>
@@ -23,7 +23,6 @@ key: index
     <span class="custom-h1">Welcome!</span>
 </body>
 </html>
-
 
 ### We are the <span style="color: #003087;"><u>re</u>liable <u>A</u>rtificial <u>I</u>ntelligence for Health and <u>M</u>edicine (reAIM)</span> lab led by [Professor Shalmali Joshi](https://shalmalijoshi.github.io/reAIM/) in the [Department of Biomedical Informatics (DBMI)](https://www.dbmi.columbia.edu/) at Columbia University in the City of New York.
 

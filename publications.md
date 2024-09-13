@@ -79,7 +79,7 @@ Please refer to Dr. Joshi's <a href="https://scholar.google.com/citations?hl=en&
 
 <div class="publication">
   <div class="text">
-    <a href="https://link-to-publication3.com" target="_blank">
+    <a href="https://www.medrxiv.org/content/10.1101/2024.07.05.24310013v1" target="_blank">
       <strong>Machine Learning is More Accurate and Biased than Risk Scoring Tools in the Prediction of Postoperative Atrial Fibrillation After Cardiac Surgery</strong>
     </a><br>
     <strong>Joyce C. Ho, <span style="color: #003087;">Shalmali Joshi</span>, Eduardo Valverde, Kathryn Wood, Kendra J. Grubb, Miguel A. Leal, and Vicki Stover Hertzberg</strong><br>
@@ -88,27 +88,6 @@ Please refer to Dr. Joshi's <a href="https://scholar.google.com/citations?hl=en&
 </div>
 
 <h3>2024</h3>
-
-<!-- <div class="publication">
-  <div class="text">
-    <a href="https://link-to-publication3.com" target="_blank">
-      <strong>Title of Publication 3</strong>
-    </a><br>
-    <strong>Authors of Publication 3</strong><br>
-    <i>Journal of Publication 3</i><br>
-  </div>
-</div> -->
-
-<!-- <div class="publication">
-  <div class="text">
-    <a href="https://link-to-publication3.com" target="_blank">
-      <strong>Title of Publication 3</strong>
-    </a><br>
-    <strong>Authors of Publication 3</strong><br>
-    <i>Journal of Publication 3</i><br>
-  </div>
-</div> -->
-
 
 <div class="publication">
   <div class="text">

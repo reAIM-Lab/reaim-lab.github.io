@@ -169,7 +169,7 @@ key: group
       <a href="https://scholar.google.com/citations?hl=en&user=cX-zhzAAAAAJ" style="text-decoration: none; color: #0077C8;">Google Scholar</a>
     </p>
     <p>
-      Young is a doctoral student in Biomedical Informatics advised by Dr. Shalmali Joshi and <a href="https://pierreelias.github.io/Elias_Bio.html" style="text-decoration: none; color: #0077C8;">Dr. Pierre Elias</a>. His research is on the intersection between multimodal learning with clinical informatics. Previously, he was a researcher at the National Cancer Center-Korea, received a master's degree at Cornell Tech, and graduated from NYU with a degree in Mathematics. He can be found drinking copious amounts of coffee during his free time. 
+      Young is a doctoral student in Biomedical Informatics advised by Dr. Shalmali Joshi and <a href="https://pierreelias.github.io/Elias_Bio.html" style="text-decoration: none; color: #0077C8;">Dr. Pierre Elias</a>. His research focuses on the intersection between multimodal learning with clinical informatics. Previously, he was a researcher at the National Cancer Center-Korea, received a master's degree at Cornell Tech, and graduated from NYU with a degree in Mathematics. He can be found drinking copious amounts of coffee during his free time. 
     </p>
   </div>
 </div>

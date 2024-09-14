@@ -137,7 +137,7 @@ Please refer to Dr. Joshi's <a href="https://scholar.google.com/citations?hl=en&
 <div class="publication">
   <div class="text">
     <a href="https://proceedings.mlr.press/v202/zhang23ai/zhang23ai.pdf" target="_blank">
-      <strong>Why Did the Model Fail?: Attributing Model Performance Changes to Distribution Shifts</strong>
+      <strong>"Why Did the Model Fail?": Attributing Model Performance Changes to Distribution Shifts</strong>
     </a><br>
     <strong>Haoran Zhang, Harvineet Singh, Marzyeh Ghassemi, and <span style="color: #003087;">Shalmali Joshi</span></strong><br>
     <i>International Conference on Machine Learning (ICML) 2023</i><br>

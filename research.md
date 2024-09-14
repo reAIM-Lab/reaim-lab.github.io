@@ -14,6 +14,7 @@ key: research
   .publication img {
     width: 500px;
     margin-right: 20px;
+    border-radius: 10px;
   }
 
   .publication .text {
@@ -28,6 +29,7 @@ key: research
     .publication img {
       margin-right: 0;
       margin-bottom: 10px;
+      border-radius: 10px;
     }
   }
 </style>

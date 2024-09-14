@@ -58,6 +58,7 @@ key: join
         .image-container img {
             width: 100%;
             height: auto;
+            border-radius: 10px;
             display: block;
             margin: 0;
         }
@@ -68,7 +69,9 @@ key: join
         <div class="text-container">
             <!-- <span class="custom-h1" style="font-size: 2.2em; font-weight: bold;">Open Positions at reAIM</span> -->
             <p>
-                Thank you for your interest in joining reAIM!
+                Thank you for your interest in joining the reAIM lab!
+            </p>
+            <p>
                 The best way to get in contact with the lab is by emailing Professor Joshi at <code>sj3261[at]cumc[dot]columbia[dot]edu</code> or one of the current <a href="{{ site.baseurl }}/group.html">doctoral students</a>. While we are always excited by the prospect of new collaborators, our email inboxes can get quite busy, particularly during application season. We apologize in advance for any delays in response. <span style="color: #003087;"><b><u>Please read the following page in its entirety before reaching out to us.</u></b></span>
             </p>
             <p>
@@ -99,22 +102,32 @@ key: join
 
             <p>If you are a <strong>current</strong> master's or undergraduate student at Columbia University interested in rotating in our lab, please reach out to Dr. Joshi with the following:</p>
             <ul>
-                <li>Your program, major, expected year of graduation, and grades at any courses relevant to Machine Learning (e.g. Linear Algebra, Probability and Statistics, Optimization, etc.).</li>
-                <li>Your research interests and how they align with reAIM, goals for the rotation, and the amount of time you can commit to research.</li>
+                <li>Your program, major, expected year of graduation.</li>
+                <li>Your research interests and how they align with reAIM.</li>
+                <li>Your goals for the rotation.</li>
+                <li>The amount of time you can commit to research this semester.</li>
                 <li>Contact information for references.</li>
-                <li>Your unofficial Columbia and undergraduate (if applicable) transcripts.</li>
-                <li>Title your email "[reAIM] Research Rotation Inquiry for Current Columbia {Undergraduate, Masters} Student"</li>
+                <li>Grades at any courses relevant to Machine Learning (e.g. Linear Algebra, Probability and Statistics, Optimization, etc.).</li>
+                <li>Attach your unofficial Columbia and undergraduate (if applicable) transcripts.</li>
             </ul>
 
             <h3>Visiting Researchers and Outside Collaborators</h3>
 
             <p>Please contact Dr. Joshi if you are an external researcher interested in visiting or collaborating with our lab.</p>
+
+
+            <h3>For All Applicants: <span style="color: #003087;">include <code>[reAIM / AHAR]</code> to the title of your email.</span>&#42;</h3>
+
+            &#42; AHAR: All Hail <a href="https://en.wikipedia.org/wiki/List_of_Avatar:_The_Last_Airbender_characters#Supporting_characters_and_organizations/">Avatar Roku</a>.
+
         </div>
         <div class="image-container">
             <img src="{{ '/assets/images/reaim_group_photo_2024.jpg' | relative_url }}" alt="Group Photo">
             <p style="text-align: center; margin-top: 5px;">reAIM @ <a href="https://en.wikipedia.org/wiki/New_York_Botanical_Garden">NYBG</a>, Spring 2024</p>
         </div>
     </div>
+
+    
 </body>
 </html>
 

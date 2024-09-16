@@ -224,11 +224,11 @@ key: group
     <p style="font-size: 1.17em; font-weight: bold; margin: 0;">Zilin Jing, B.Sc.</p>
     <p class="email">
       <span>zj2398[at]columbia[dot]edu</span> &bull; 
-      <a href="" style="text-decoration: none; color: #0077C8;">Personal Website</a> &bull; 
-      <a href="" style="text-decoration: none; color: #0077C8;">Google Scholar</a>
+      <!-- <a href="" style="text-decoration: none; color: #0077C8;">Personal Website</a> &bull; 
+      <a href="" style="text-decoration: none; color: #0077C8;">Google Scholar</a> -->
     </p>
     <p>
-      Insert bio here. Make it punchy and fun.
+      Zilin is a doctoral student in Computer Science advised by Dr. Shalmali Joshi. He graduated from the Chinese University of Hong Kong, Shenzhen and was a visiting student at Yale University.
     </p>
   </div>
 </div>

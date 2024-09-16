@@ -190,7 +190,7 @@ key: group
       <a href="https://scholar.google.com/citations?user=0g2q-j8AAAAJ&hl=en" style="text-decoration: none; color: #0077C8;">Google Scholar</a>
     </p>
     <p>
-      Aparajita (Apara) Kashyap is a PhD student at Columbia University in the Department of Biomedical Informatics. Her research focuses on building fair and equitable models for use in healthcare settings, with a focus on mental health disorders and reproductive health disorders. At Columbia, Aparajita is coadvised by Shalmali Joshi and <a href="https://people.dbmi.columbia.edu/noemie/" style="text-decoration: none; color: #0077C8;">Noémie Elhadad</a>. Prior to her work at Columbia, Aparajita studied Biophsyics at Johns Hopkins University.
+      Aparajita (Apara) Kashyap is a PhD student at Columbia University in the Department of Biomedical Informatics. Her research focuses on building fair and equitable models for use in healthcare settings, with a focus on mental health disorders and reproductive health disorders. At Columbia, Aparajita is coadvised by Shalmali Joshi and <a href="https://people.dbmi.columbia.edu/noemie/" style="text-decoration: none; color: #0077C8;">Noémie Elhadad</a>. Prior to her work at Columbia, Aparajita studied Biophysics at Johns Hopkins University.
     </p>
   </div>
 </div>

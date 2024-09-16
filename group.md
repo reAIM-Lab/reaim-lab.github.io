@@ -209,7 +209,7 @@ key: group
       <a href="https://scholar.google.com/citations?user=ePjRZKcAAAAJ" style="text-decoration: none; color: #0077C8;">Google Scholar</a>
     </p>
     <p>
-      Yuta is a doctoral student in Biomedical Informatics advised by Dr. Shalmali Joshi. He received his bachelor's degree at Johns Hopkins University majoring in computer science and biomedical engineering, advised by Dr. Archana Venkataraman. Currently, his research focuses on utilizing tools from causal inference and reinforcement learning to detect and mitigate algorithmic bias in AI models for healthcare.
+      Yuta is a doctoral student in Biomedical Informatics advised by Dr. Shalmali Joshi. He received his bachelor's degree in Computer Science and Biomedical Engineering and a master's degree in Computer Science at Johns Hopkins University, where he was advised by Dr. Archana Venkataraman. Currently, his research focuses on utilizing tools from causal inference and reinforcement learning to detect and mitigate algorithmic bias in AI models for healthcare.
     </p>
   </div>
 </div>

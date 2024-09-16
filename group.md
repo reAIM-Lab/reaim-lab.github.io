@@ -205,11 +205,11 @@ key: group
     <p style="font-size: 1.17em; font-weight: bold; margin: 0;">Yuta Kobayashi, M.S.</p>
     <p class="email">
       <span>yk3043[at]cumc[dot]columbia[dot]edu</span> &bull; 
-      <a href="" style="text-decoration: none; color: #0077C8;">Personal Website</a> &bull; 
-      <a href="" style="text-decoration: none; color: #0077C8;">Google Scholar</a>
+      <a href="https://ykobaya9.github.io/" style="text-decoration: none; color: #0077C8;">Personal Website</a> &bull; 
+      <a href="https://scholar.google.com/citations?user=ePjRZKcAAAAJ" style="text-decoration: none; color: #0077C8;">Google Scholar</a>
     </p>
     <p>
-      Insert bio here. Make it punchy and fun.
+      Yuta is a doctoral student in Biomedical Informatics advised by Dr. Shalmali Joshi. He received his bachelor's degree at Johns Hopkins University majoring in computer science and biomedical engineering, advised by Dr. Archana Venkataraman. Currently, his research focuses on utilizing tools from causal inference and reinforcement learning to detect and mitigate algorithmic bias in AI models for healthcare.
     </p>
   </div>
 </div>

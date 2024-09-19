@@ -218,18 +218,20 @@ key: group
 
 <div class="profile-container">
   <div class="avatar-container">
-    <img src="{{ "/assets/images/placeholder_headshot.jpg" | relative_url }}" alt="Avatar">
+    <img src="{{ "/assets/images/zilin_headshot.jpg" | relative_url }}" alt="Avatar">
   </div>
   <div class="profile-info">
     <p style="font-size: 1.17em; font-weight: bold; margin: 0;">Zilin Jing, B.Sc.</p>
     <p class="email">
-      <span>zj2398[at]columbia[dot]edu</span> 
+      <span>zj2398[at]columbia[dot]edu</span>  &bull; 
+      <a href="https://zilinjing.github.io/" style="text-decoration: none; color: #0077C8;">Personal Website</a> &bull; 
+      <a href="https://scholar.google.com/citations?user=q7XpLa4AAAAJ" style="text-decoration: none; color: #0077C8;">Google Scholar</a>
       <!-- &bull;  -->
       <!-- <a href="" style="text-decoration: none; color: #0077C8;">Personal Website</a> &bull; 
       <a href="" style="text-decoration: none; color: #0077C8;">Google Scholar</a> -->
     </p>
     <p>
-      Zilin is a doctoral student in Computer Science advised by Dr. Shalmali Joshi. He graduated from the Chinese University of Hong Kong, Shenzhen and was a visiting student at Yale University.
+      Zilin is a doctoral student in Computer Science advised by Dr. Shalmali Joshi. He received his bachelor degree in Computer Science and Engineering at The Chinese University of Hong Kong, Shenzhen under the supervision of Prof. Shuang Li and Prof. Hongyuan Zha and an international visiting student at Yale University through Y-VISP.
     </p>
   </div>
 </div>

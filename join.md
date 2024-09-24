@@ -72,7 +72,10 @@ key: join
                 Thank you for your interest in joining the reAIM lab!
             </p>
             <p>
-                The best way to get in contact with the lab is by emailing Professor Joshi at <code>sj3261[at]cumc[dot]columbia[dot]edu</code> or one of the current <a href="{{ site.baseurl }}/group.html">doctoral students</a>. While we are always excited by the prospect of new collaborators, our email inboxes can get quite busy, particularly during application season. We apologize in advance for any delays in response. <span style="color: #003087;"><b><u>Please read the following page in its entirety before reaching out to us.</u></b></span>
+                <span style="color: #003087;"><b><u>Please read the following page in its entirety before reaching out to us.</u></b></span>
+            </p>
+            <p>
+                The best way to get in contact with the lab is by emailing Professor Joshi at <code>sj3261[at]cumc[dot]columbia[dot]edu</code> or one of the current <a href="{{ site.baseurl }}/group.html">doctoral students</a>. While we are always excited by the prospect of new collaborators, our email inboxes can get quite busy, particularly during application season. We apologize in advance for any delays in response.
             </p>
             <p>
                 Dr. Joshi is an Assistant Professor at the <a href="https://www.dbmi.columbia.edu/faculty/">Department of Biomedical Informatics (DBMI)</a>, an affiliate of the <a href="https://www.cs.columbia.edu/people/affiliates/">Department of Computer Science</a>, and a member of the <a href="https://datascience.columbia.edu/people/shalmali-joshi/">Data Science Institute (DSI)</a>. Consequently, there are several avenues for students and researchers to join our lab:

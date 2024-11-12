@@ -14,13 +14,13 @@ key: index
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .custom-h1 {
-            font-size: 3em; 
+            font-size: 2em; 
             font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <span class="custom-h2">Welcome!</span>
+    <span class="custom-h1">Welcome!</span>
 </body>
 </html>
 

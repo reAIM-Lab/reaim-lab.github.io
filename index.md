@@ -14,7 +14,7 @@ key: index
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .custom-h1 {
-            font-size: 2em; 
+            font-size: 1em; 
             font-weight: bold;
         }
     </style>

@@ -26,4 +26,4 @@ titles:
 key: page-about
 ---
 
-We are the `reAIM` lab, housed in the [Department of Biomedical Informatics](https://www.dbmi.columbia.edu/) at Columbia University in the City of New York. Our mission is to `refocus` methodological developments in Machine Learning and Artificial Intelligence to make machine learning and artificial intelligence reliable and safe for health, medicine, and improve health inequities along the way.
+We are the `reAIM` lab, housed in the [Department of Biomedical Informatics](https://www.dbmi.columbia.edu/) at Columbia University in the City of New York. Our mission is to `refocus` methodological developments in Machine Learning and Artificial Intelligence them  reliable and robust for healthcare, medicine, and improve health inequities along the way.

@@ -75,7 +75,7 @@ key: join
                 <span style="color: #003087;"><b><u>Please read the following page in its entirety before reaching out to us.</u></b></span>
             </p>
             <p>
-                The best way to get in contact with the lab is by emailing Professor Joshi at <code>sj3261[at]cumc[dot]columbia[dot]edu</code> or one of the current <a href="{{ site.baseurl }}/group.html">doctoral students</a>. While we are always excited by the prospect of new collaborators, our email inboxes can get quite busy, particularly during application season. We apologize in advance for any delays in response.
+                Our lab is always looking for students with a strong computational background, not afraid to dive deep into multiple subfields of learning, and an interest in impactful AI for health, while contributing to methodological and human-centered advances in AI.
             </p>
             <p>
                 Dr. Joshi is an Assistant Professor at the <a href="https://www.dbmi.columbia.edu/faculty/">Department of Biomedical Informatics (DBMI)</a>, an affiliate of the <a href="https://www.cs.columbia.edu/people/affiliates/">Department of Computer Science</a>, and a member of the <a href="https://datascience.columbia.edu/people/shalmali-joshi/">Data Science Institute (DSI)</a>. Consequently, there are several avenues for students and researchers to join our lab:
@@ -90,6 +90,8 @@ key: join
             </ul>
 
             <p>Given the individual nature of the degree and our lab's focus on machine learning to a wide range of topics relevant to healthcare, thesis work will be driven by the student's research regardless of which program they join. The key difference is in core coursework and milestones: <a href="https://www.dbmi.columbia.edu/courses/">DBMI students</a> will take classes on symbolic methods, clinical informatics, and healthcare delivery, while <a href="https://www.cs.columbia.edu/education/phd/requirements/">Computer Science</a> students will take courses in algorithms and systems. Students in both departments will take electives according to their research interests. We will allocate desk space and resources at our offices located at the <a href="https://universitylife.columbia.edu/content/maps-locations">medical center (CUIMC) campus</a> regardless of which department the student joins.</p>
+
+            <p>The best way to get in contact with the lab is by emailing Professor Joshi at <code>sj3261[at]cumc[dot]columbia[dot]edu</code>. While we are always excited by the prospect of new collaborators, our email inboxes can get quite busy, particularly during application season. We may not be able to respond individually.</p>
 
             <p><span style="color: #003087;"><strong>Please note your interest in working with Dr. Shalmali Joshi in your application.</strong></span></p>
 

@@ -20,13 +20,13 @@ key: index
     </style>
 </head>
 <body>
-    <span class="custom-h1">Welcome!</span>
+    <span class="custom-h2">Welcome!</span>
 </body>
 </html>
 
-### We are the <span style="color: #003087;"><u>re</u>liable <u>A</u>rtificial <u>I</u>ntelligence for Health and <u>M</u>edicine (reAIM)</span> lab led by [Professor Shalmali Joshi](https://shalmalijoshi.github.io/reAIM/) in the [Department of Biomedical Informatics (DBMI)](https://www.dbmi.columbia.edu/) at Columbia University in the City of New York.
+### We are the <span style="color: #003087;"><u>re</u>liable <u>A</u>rtificial <u>I</u>ntelligence for Health and <u>M</u>edicine (reAIM)</span> lab, led by [Professor Shalmali Joshi](https://shalmalijoshi.github.io/reAIM/) in the [Department of Biomedical Informatics (DBMI)](https://www.dbmi.columbia.edu/) at Columbia University in the City of New York.
 
-### Our mission is to <span style="color: #003087;">refocus</span> methodological developments in machine learning and artificial intelligence to make machine learning and artificial intelligence reliable and safe for health, medicine, and improve health inequities along the way.
+### Our mission is to <span style="color: #003087;">refocus</span> methodological developments in machine learning and artificial intelligence to make the technology reliable and robust for healthcare, medicine, and address inequities along the way.
 
 ### Find out more about our [research]({{ site.baseurl }}/research.html), [group]({{ site.baseurl }}/group.html), and [publications]({{ site.baseurl }}/publications.html). 
 

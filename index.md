@@ -18,12 +18,8 @@ key: index
             font-weight: bold;
         }
     </style>
-<!-- </head>
-<body>
-    <span class="custom-h1">Welcome!</span>
-</body>
-</html> -->
-
+</head>
+  
 ### Welcome!
 
 ### We are the <span style="color: #003087;"><u>re</u>liable <u>A</u>rtificial <u>I</u>ntelligence for Health and <u>M</u>edicine (reAIM)</span> lab, led by [Professor Shalmali Joshi](https://shalmalijoshi.github.io/reAIM/) in the [Department of Biomedical Informatics (DBMI)](https://www.dbmi.columbia.edu/) at Columbia University in the City of New York.

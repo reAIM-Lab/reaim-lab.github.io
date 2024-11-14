@@ -74,7 +74,7 @@ key: group
             .profile-container {
                 flex-direction: column;
                 align-items: center;
-                text-align: center;
+                text-align: left;
             }
 
             .avatar-container {

@@ -28,7 +28,7 @@ key: join
 
             .text-container {
                 width: 100%;
-                text-align: center;
+                text-align: left;
                 float: none;
             }
         }

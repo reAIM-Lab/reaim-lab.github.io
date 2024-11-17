@@ -36,7 +36,7 @@ key: research
 
 <h3>Adaptive AI systems that address systematic biases in health and medicine observational data</h3>
 
-<strong>AI systems and ML models learned from health and medicine data can be unreliable due to biases in training data. Enabling systems that generalize to out-of-distribution data requires adaptive AI approaches where models can reason about their uncertainty and improve predictions. Even tasks like evaluating model performance on out-of-distribution data can be non-trivial under severe shifts. When used to provide insights, either for clinical operations or for scientific inference, models that cannot generalize can provide misleading insights and ultimately slow down progress. We're enabling new AI systems that are adaptive and overcome biased practices of observational health and medicine data</strong><br>
+AI systems and ML models learned from health and medicine data can be unreliable due to biases in training data. Enabling systems that generalize to out-of-distribution data requires adaptive AI approaches where models can reason about their uncertainty and improve predictions. Even tasks like evaluating model performance on out-of-distribution data can be non-trivial under severe shifts. When used to provide insights, either for clinical operations or for scientific inference, models that cannot generalize can provide misleading insights and ultimately slow down progress. We're enabling new AI systems that are adaptive and overcome biased practices of observational health and medicine data<br>
 
 <div class="publication">
   <!--img src="assets/images/joshi_aaai_2024.png" alt="Publication Image 1" /-->
@@ -50,7 +50,7 @@ key: research
 
 <h3>New capabilities for high-dimensional health and medicine data</h3>
 
-<strong>We are developing new models for scalably using EHR data for meaningful clinical tasks and identifying new methods for evaluation. Our work involves models being developed in-house as well as in collaboration with other clinical collaborators and healthcare institutions. We use deep learning, reinforcement learning, information theory, and probabilistic modeling to develop new methods.</strong><br>
+We are developing new models for scalably using EHR data for meaningful clinical tasks and identifying new methods for evaluation. Our work involves models being developed in-house as well as in collaboration with other clinical collaborators and healthcare institutions. We use deep learning, reinforcement learning, information theory, and probabilistic modeling to develop new methods.<br>
 
 <div class="publication">
   <div class="text">
@@ -64,7 +64,7 @@ key: research
 
 <h3>New computational methods to quantify and mitigate inequities in health and medicine</h3>
 
-<strong>AI and ML systems can be used to quantify biases in existing health and medicine observational data, with the goal of ultimately overcoming them using better AI systems. We approach the problem of algorithmic inequities through characterizing the entire data-generating pipeline, as opposed to myopically capturing model performance, and designing targeted bias mitigation strategies. We believe this approach is a better path that ties algorithmic fairness and inequity to broader challenges of disparities in health and medicine.</strong><br>
+AI and ML systems can be used to quantify biases in existing health and medicine observational data, with the goal of ultimately overcoming them using better AI systems. We approach the problem of algorithmic inequities through characterizing the entire data-generating pipeline, as opposed to myopically capturing model performance, and designing targeted bias mitigation strategies. We believe this approach is a better path that ties algorithmic fairness and inequity to broader challenges of disparities in health and medicine.<br>
 
 <div class="publication">
   <div class="text">

@@ -24,9 +24,18 @@ key: index
 
 ### We are the <span style="color: #003087;"><u>re</u>liable <u>A</u>rtificial <u>I</u>ntelligence for Health and <u>M</u>edicine (reAIM)</span> lab, led by [Professor Shalmali Joshi](https://shalmalijoshi.github.io/reAIM/) in the [Department of Biomedical Informatics (DBMI)](https://www.dbmi.columbia.edu/) at Columbia University in the City of New York.
 
-### Our mission is to <span style="color: #003087;">refocus</span> methodological developments in machine learning and artificial intelligence to make the technology reliable and robust for healthcare, medicine, and address inequities along the way.
+### Our group is striving to build Healthcare AI systems that are reliable, equitable, and expert reasoning agents. We strive for methodological advancements and rigorous evaluations in multimodal deep learning, probabilistic reasoning, observational causal inference, and reinforcement learning. We publish in machine learning more broadly, and at the intersection of machine learning and health and medicine. Our current health application focus is in clinical psychiatry (specifically schizophrenia), cardiology (structural heart disease detection), neurocritical ICU care, and radiology.
 
-### Find out more about our [research]({{ site.baseurl }}/research.html), [group]({{ site.baseurl }}/group.html), and [publications]({{ site.baseurl }}/publications.html). 
+### Find out more about our [research]({{ site.baseurl }}/research.html), [group]({{ site.baseurl }}/group.html), and [publications]({{ site.baseurl }}/publications.html).
+
+
+## News!
+
+- **[November 2024]**: [New JAMIA Perspective Published!]
+  - Our perspective white paper from MLHC 2023 pre-conference workshop on "Causal Inference and Machine Learning in Healthcare" has been accepted for publication at JAMIA!
+
+- **[April 2024]**: [Talk on AI and health equity](https://datascience.columbia.edu/event/data-science-day-2024/)
+  - Shalmali Joshi gave a talk on Characterizing and Operationalizing (Systemic) Algorithmic Fairness in Psychiatric Diagnosis on Data Science Day at Columbia!
 
 
 

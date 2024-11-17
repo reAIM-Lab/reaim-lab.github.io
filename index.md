@@ -24,7 +24,7 @@ key: index
 
 ### We are the <span style="color: #003087;"><u>re</u>liable <u>A</u>rtificial <u>I</u>ntelligence for Health and <u>M</u>edicine (reAIM)</span> lab, led by [Professor Shalmali Joshi](https://shalmalijoshi.github.io/reAIM/) in the [Department of Biomedical Informatics (DBMI)](https://www.dbmi.columbia.edu/) at Columbia University in the City of New York.
 
-### Our group is striving to build Healthcare AI systems that are reliable, equitable, and expert reasoning agents. We strive for methodological advancements and rigorous evaluations in multimodal deep learning, probabilistic reasoning, observational causal inference, and reinforcement learning. We publish in machine learning more broadly, and at the intersection of machine learning and health and medicine. Our current health application focus is in clinical psychiatry (specifically schizophrenia), cardiology (structural heart disease detection), neurocritical ICU care, and radiology.
+Our group is building healthcare AI systems that are reliable, equitable, and expert reasoning agents. We strive for methodological advancements and rigorous evaluations in multimodal deep learning, probabilistic reasoning, observational causal inference, and reinforcement learning. We publish in machine learning more broadly, and at the intersection of machine learning and health and medicine. Our current health application focus is in clinical psychiatry (specifically schizophrenia), cardiology (structural heart disease detection), neurocritical ICU care, and radiology.
 
 ### Find out more about our [research]({{ site.baseurl }}/research.html), [group]({{ site.baseurl }}/group.html), and [publications]({{ site.baseurl }}/publications.html).
 

@@ -31,7 +31,7 @@ How to pronounce my name: Shaal--muh--lee.
 - New computational methods to quantify and mitigate inequities in health and medicine
 - Our group's current application areas are in clinical psychiatry, cardiology, radiology, and neurocritical care.
 
-Find out more about our group's [research]({{ site.baseurl }}/research.html), [group]({{ site.baseurl }}/group.html), and [publications]({{ site.baseurl }}/publications.html).
+Find out more about our group's [research]({{ site.baseurl }}/research.html), and [publications]({{ site.baseurl }}/publications.html).
 
 ### Education
 - **PhD**, Electrical and Computer Engineering 

@@ -52,7 +52,7 @@ AI systems and ML models learned from health and medicine data can be unreliable
 
 We are developing new models for scalably using EHR data for meaningful clinical tasks and identifying new methods for evaluation. Our work involves models being developed in-house as well as in collaboration with other clinical collaborators and healthcare institutions. We use deep learning, reinforcement learning, information theory, and probabilistic modeling to develop new methods.<br>
 
-<div class="publication">
+<!--div class="publication">
   <div class="text">
     <a href="https://openreview.net/pdf?id=sMiSQP8zmr" target="_blank">
       <strong>Does multimodality help in deep learning-based structural heart disease detection?</strong>
@@ -60,7 +60,7 @@ We are developing new models for scalably using EHR data for meaningful clinical
     <strong><span style="color: #003087;">Young Sang Choi</span>, <span style="color: #003087;">Shalmali Joshi</span>, Linyuan Jing, and Pierre Elias</strong><br>
     <i>Medical Imaging with Deep Learning (MIDL) 2024 (Short Paper Track)</i><br>
   </div>
-</div>
+</div-->
 
 <h3>New computational methods to quantify and mitigate inequities in health and medicine</h3>
 

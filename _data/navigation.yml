@@ -2,6 +2,16 @@ header:
 
   - titles:
       # @start locale config
+      en      : &EN       shalmali joshi
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      # @end locale config
+    url: /shalmalijoshi.html
+
+  - titles:
+      # @start locale config
       en      : &EN       research
       en-GB   : *EN
       en-US   : *EN

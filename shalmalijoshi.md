@@ -4,18 +4,51 @@ title: Shalmali Joshi
 key: shalmalijoshi
 ---
 
-_Assistant Professor_  
-Department of Biomedical Informatics, Columbia University
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .avatar-container {
+            width: 225px;
+            height: 225px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .avatar-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+    </style>
+
+
+_Assistant Professor_
+Department of Biomedical Informatics
+
 
 _Member_
-Data Science Institute, Columbia University
+Data Science Institute
 
-_Affiliate_
-SNF Center for Precision Psychiatry and Mental Health, Columbia University
+
+_Affiliate_ 
+SNF Center for Precision Psychiatry and Mental Health
+
+Columbia University
 
 ---
 
-![Profile Picture](/assets/images/shalmali_headshot.jpg) <!-- Replace with the actual image path or URL -->
+<div class="avatar-container">
+    <img src="{{"/assets/images/shalmali_headshot.jpg" | relative_url }}" alt="Avatar">
+</div>
+<!--![Profile Picture](/assets/images/shalmali_headshot.jpg) --> <!-- Replace with the actual image path or URL -->
+
 
 ### About Me
 

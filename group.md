@@ -103,7 +103,7 @@ key: group
     <p style="font-size: 1.17em; font-weight: bold; margin: 0;">Shalmali Joshi, Ph.D.</p>
     <p class="email">
       <span>sj3261[at]cumc[dot]columbia[dot]edu</span> &bull; 
-      <a href="https://shalmalijoshi.github.io/reAIM/" style="text-decoration: none; color: #0077C8;">Personal Website</a> &bull; 
+      <a href="{{ site.baseurl }}/shalmalijoshi.html" style="text-decoration: none; color: #0077C8;">Personal Website</a> &bull; 
       <a href="https://scholar.google.com/citations?user=x5wW5WIAAAAJ" style="text-decoration: none; color: #0077C8;">Google Scholar</a>
     </p>
     <p>

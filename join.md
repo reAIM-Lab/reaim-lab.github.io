@@ -95,6 +95,8 @@ key: join
 
             <p><span style="color: #003087;"><strong>Please note your interest in working with Dr. Shalmali Joshi in your application.</strong></span></p>
 
+            <p>If you are already admitted to the PhD program at DBMI at Columbia, you are welcome to reach out to Dr. Joshi to do a rotation with reAIM lab!</p>
+
             <h3>Postdoctoral Researchers</h3>
 
             <ul>

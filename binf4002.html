@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tinos&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Machine Learning for Health and Medicine</title>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+<h1>BINF GU 4002: Machine Learning for Healthcare</h1>
+<div id="header">
+    <b>Spring 2025, Columbia University</b><br>
+</div>
+
+<h4><u>Staff:</u></h4>
+<b>Instructor:</b> <a href="https://reaim-lab.github.io/shalmalijoshi.html">Shalmali Joshi </a> <br>
+<b>Teaching Assistants:</b> <a href="https://youngsangchoi.github.io">Young Sang Choi</a> and <a href="https://ykobaya9.github.io/">Yuta Kobayashi</a><br>
+
+<br>
+
+<h4><u>Logistics:</u></h4>
+<b>Contact:</b> <a href="https://courseworks2.columbia.edu/courses/185810">Courseworks</a><br>
+<b>Time:</b> Mondays, Tuesdays 9:00a - 10:15am<br>
+<b>Location:</b> 622 W 168th St, PH-200, NY-10032<br>
+<b>Instructor Office Hours:</b> Shalmali Joshi: Fridays 10:00a-11:00a at 622 W 168th St, PH-20, 402<br>
+<b>TA Recitation and Office Hours:</b> Young Sang Choi and Yuta Kobayashi: Fridays 4:00pm - 5:00pm, at 622 W 168th St, PH-20, Collaboration Room<br>
+
+<br>
+
+
+<h4><u>Pre-reqs:</u></h4>
+<ul>
+<li>Basic knowledge of probability, statistics, and linear algebra is expected and required.</li>
+<li>Familiarity with programming with Python and versioning systems like Git is required.</li>
+
+</ul>
+
+<h4><u>Course Description:</u></h4>
+
+Machine Learning (ML) has transformative potential for applications in health and medicine. You will learn fundamentals of machine learning, deep learning, and modeling clinical and biomedicine data using machine learning.<br>
+
+<br>
+
+<b>Objective:</b>
+<br>
+By the end of this course you will be able to:
+<ul>
+
+    <li>Learn foundations of major machine learning concepts and their relevance to health and biomedicine data</li>
+    <!--li>Distill challenges in health and medicine data to technical challenges to address using ML</li-->
+    <li>Develop new ML methods focused on health/biomedicine tasks</li>
+    <li>Be better equipped to evaluate and validate of ML in healthcare and medicine</li>
+</ul>
+
+    
+<h4><u>Course Material:</u></h4>
+Course material will largely consist of lecture notes, and specific references provided for each module. No textbook is required, though some textbook chapters may be provided as additional reading.  <br>
+
+<b>Policy on Generative AI:</b> Use of generative AI for understanding concepts and reading material is allowed. We will not allow the use of generative AI for solving homeworks or doing machine learning modeling. Homework reports should not be generated using any AI tool. You will be given 0 points for the complete homework assignment if any violations are detected.
+
+<hr>
+<span class="menu">
+<a href="#schedule">Schedule and Content</a> |
+<a href="#grading">Format and Grading</a> |
+<a href="#Psets">Homework Assignments</a> |
+<a href="#exams">Final exams</a>
+
+</span>
+<hr>
+
+<a name="schedule">
+   <h3>Schedule and Content</h3>
+   <font color="red"> Note that schedule and content is subject to minor changes. Slides and notes will be posted on Courseworks.</font>
+</a>
+
+<table border="1" cellpadding="5" cellspacing="0">
+<thead>
+    <tr style="text-align: right;">
+      <th>Lecture number</th>
+      <th>Date</th>
+      <th>Day</th>
+      <th>Topic</th>
+      <th>Subtopics</th>
+      <th>Reading Materials/References</th>
+      <th>Homework timelines</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>2024-01-21</td>
+      <td>Tuesday</td>
+      <td>Intro and course logistics, MIMIC-IV access, Google Colab Credits</td>
+      <td>Colab accounts setup, data downloads, conda environment setup, etc.</td>
+      <td></td>
+      <td>Homework 0 out with instructions on setting up Colab, accessing MIMIC-IV data</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>2024-01-23</td>
+      <td>Thursday</td>
+      <td>Probability and information theory primer</td>
+      <td></td>
+      <td></td>
+      <td>Homework 0 due, Homework 1 out</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>2024-01-28</td>
+      <td>Tuesday</td>
+      <td>Linear algebra and optimization primer</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>2024-01-30</td>
+      <td>Thursday</td>
+      <td>Introduction to supervised learning</td>
+      <td>Empirical Risk Minimization, Loss functions, Model families</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>2024-02-04</td>
+      <td>Tuesday</td>
+      <td>Introduction to supervised learning</td>
+      <td>IID vs OOD, Bias-variance tradeoff, regularization</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>2024-02-06</td>
+      <td>Thursday</td>
+      <td>Empirical practices in machine learning</td>
+      <td>LOOCV, validation data, calibration, uncertainty quantification,  bootstrapping</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>2024-02-11</td>
+      <td>Tuesday</td>
+      <td>Principles of Maximum Likelihood</td>
+      <td>Logistic regression- two views, other models motivated by maximum likelihood estimation</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>2024-02-13</td>
+      <td>Thursday</td>
+      <td>Basics of probabilistic modeling and Bayesian inference</td>
+      <td>Prior, Likelihood, and Posterior. Logistic and Linear Regression</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>2024-02-18</td>
+      <td>Tuesday</td>
+      <td>Basics of probabilistic modeling and Bayesian inference</td>
+      <td>Posterior Predictive, Exponential Familities, Maximum-a-Posteriori</td>
+      <td></td>
+      <td>Homework 1 due, Homework 2 out</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>2024-02-20</td>
+      <td>Thursday</td>
+      <td>Introduction to Regression</td>
+      <td>Linear regression, other types of regression</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>2024-02-25</td>
+      <td>Tuesday</td>
+      <td>Bayesian linear regression</td>
+      <td>Derivation and connection to regularization</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>2024-02-27</td>
+      <td>Thursday</td>
+      <td>Empirical practices in machine learning - revisited</td>
+      <td>Comparing approaches to uncertainty quantification, best practices, etc.</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>2024-03-04</td>
+      <td>Tuesday</td>
+      <td>Review of basic supervised learning</td>
+      <td>Decision trees, Random Forests, XGBoost</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>2024-03-06</td>
+      <td>Thursday</td>
+      <td>Introduction to deep neural networks</td>
+      <td>Multilayer perceptron and connection to logistic and linear regression</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>2024-03-11</td>
+      <td>Tuesday</td>
+      <td>Optimization in deep neural networks</td>
+      <td>Backpropagation, stochastic gradient descent</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>2024-03-13</td>
+      <td>Thursday</td>
+      <td>Midterm</td>
+      <td>Midterm</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>No class</td>
+      <td>2024-03-18</td>
+      <td>Tuesday</td>
+      <td>Spring break</td>
+      <td>Spring break</td>
+      <td></td>
+      <td>Homework 2 due, Homework 3 out</td>
+    </tr>
+    <tr>
+      <td>No class</td>
+      <td>2024-03-20</td>
+      <td>Thursday</td>
+      <td>Spring break</td>
+      <td>Spring break</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>2024-03-25</td>
+      <td>Tuesday</td>
+      <td>Deep learning for image data</td>
+      <td>Convolutional Neural Networks</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>2024-03-27</td>
+      <td>Thursday</td>
+      <td>Deep learning for sequential data</td>
+      <td>Recurrent Neural Networks, LSTM, State-space models, Gated Recurrent Units</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>2024-04-01</td>
+      <td>Tuesday</td>
+      <td>Deep learning for networked data</td>
+      <td>Graph Neural Networks</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>2024-04-03</td>
+      <td>Thursday</td>
+      <td>Deep learning for sequential data</td>
+      <td>Transformer: Attention-based neural networks</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>2024-04-08</td>
+      <td>Tuesday</td>
+      <td>Deep learning for sequential data - contd</td>
+      <td>Training paradigms for sequence based models (e.g., Seq-2-seq, decoder-only etc)</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>2024-04-10</td>
+      <td>Thursday</td>
+      <td>Distribution shifts, generalization, and domain adaptation</td>
+      <td>Concept of generalization, types of distribution shifts, examples of implications in healthcare</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>2024-04-15</td>
+      <td>Tuesday</td>
+      <td>Distribution shifts, generalization, and domain adaptation - contd.</td>
+      <td>Focus on various methods of adaptation to overcome different types of distribution shifts</td>
+      <td></td>
+      <td>Homework 3 due, Homework 4 out</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>2024-04-17</td>
+      <td>Thursday</td>
+      <td>Unsupervised learning</td>
+      <td>History and review of classical methods, brief review of modern methods</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>2024-04-22</td>
+      <td>Tuesday</td>
+      <td>Generative modeling</td>
+      <td>Foundations of generative model, basic loss-functions and a broad overview of models</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>2024-04-24</td>
+      <td>Thursday</td>
+      <td>Foundation models -LLMs</td>
+      <td>Large-language models (Transformers but more)</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>2024-04-29</td>
+      <td>Tuesday</td>
+      <td>Foundation models - Vision-language</td>
+      <td>CLIP and other basic Vision-language models</td>
+      <td></td>
+      <td>Homework 4 due</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>2024-05-01</td>
+      <td>Thursday</td>
+      <td>Foundation models- Biological data - e.g., AlphaFold</td>
+      <td>Major foundation models for biological data</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>2024-05-05</td>
+      <td>Monday</td>
+      <td>Finals</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<hr>
+
+<a name="grading">
+    </a>
+   <h3>Format and Grading</h3>
+    Lectures held twice a week (5 points for participation in-person)<br>
+    <br>
+    Homeworks:Problem Sets: Each homework will be a combination of numeric/conceptual/computational problem and data-driven/modeling questions (4 homeworks, 40 points). A 'Homework 0' will be assigned in the first week on basics of probability and linear algebra.
+
+<a name="#Psets"></a>
+<h3>Homework Assignments (40 points)</h3>
+Homeworks will be assigned on Courseworks. Homeworks will be due 3 weeks after they are assigned. We have ensured ample time for all homeworks. However, we are allowing two slack days usable over the semester. If you are using a slack day for a homework, mention this on your homework submission (otherwise the TAs will assume late submission). You are free to use the slack days for any of the homeworks.<br>
+
+
+
+<hr>
+
+<a name="exams"></a>
+<h3>Exams</h3>
+
+There will be one mid-term (25 points) and one final exam (30 points). Both exams will be for the duration of the class. You will be allowed one A4 sized cheat sheet for formulae only. You will return the cheat sheet along with the exam for grading.
+
+</body>
+</html>

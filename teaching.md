@@ -20,6 +20,19 @@ Machine Learning (ML) has transformative potential for applications in health an
 
 ### Machine Learning For Healthcare (BINF 4002)
 
+**\[[Spring 2025]({{ site.baseurl }}/binf4002.html)\]**
+
 *Tentatively offered in the spring semester of every other year.*
 
-Further details TBA.
+Machine Learning (ML) has transformative potential for applications in health and medicine. You will learn fundamentals of machine learning, deep learning, and modeling clinical and biomedicine data using machine learning.
+
+By the end of this course you will be able to:
+
+- Learn foundations of major machine learning concepts and their relevance to health and biomedicine data
+- Develop new ML methods focused on health/biomedicine tasks
+- Be better equipped to evaluate and validate ML in healthcare and medicine
+
+#### Prerequisites
+
+- Basic knowledge of probability, statistics, and linear algebra is expected and required.
+- Familiarity with programming with Python and versioning systems like Git is required.

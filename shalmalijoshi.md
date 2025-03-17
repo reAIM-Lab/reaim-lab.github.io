@@ -50,17 +50,17 @@ key: shalmalijoshi
 
 ### About Me
 
-I am an Assistant Professor at Columbia University, Department of Biomedical Informatics where I lead the reAIM lab. I am a member of the Data Science Institute, SNF Center for Precision Psychiatry and Mental Health, and affiliated with Computer Science. Before Columbia, I was a Postdoctoral Fellow at Harvard University and the Vector Institute. I completed my PhD in Electrical and Computer Engineering from the University of Texas at Austin. My vision is to design reliable AI and ML systems  to improve clinical healthcare and inference capabilities in medicine research. I also focus on developing computational methods to quantify and mitigate algorithmic inequities using approaches that are more aligned with understanding broader health disparities. I develop methods that cut across deep learning, reinforcement learning, observational causal inference, and probabilistic modeling.  
+I am an Assistant Professor at Columbia University, Department of Biomedical Informatics where I lead the reAIM lab. I am a member of the Data Science Institute, and affiliated with the SNF Center for Precision Psychiatry and Mental Health, and Computer Science. Before Columbia, I was a Postdoctoral Fellow at Harvard University and the Vector Institute. I completed my PhD in Electrical and Computer Engineering from the University of Texas at Austin. My vision is to design AI and ML systems to improve scientific inference and predictive capabilities in the biomedical sciences and informatics, focused on challenges of generalizability, reliability, and robustness. I develop methods that cut across deep learning, reinforcement learning, observational causal inference, and probabilistic modeling.
 
 How to pronounce my name: Shaal--muh--lee.
 
 <!------->
 
 ### Research Interests
-- Adaptive AI systems that address systematic biases in health and medicine observational data
+- Adaptive AI systems for health and medicine observational data
 - New capabilities for high-dimensional health and medicine data
-- New computational methods to quantify and mitigate inequities in health and medicine
-- Our group's current application areas are in clinical psychiatry, cardiology, radiology, and neurocritical care.
+- New computational methods to improve robustness of scientific inference and predictions in health and medicine
+- Our current application areas are in psychiatry, cardiology, radiology, and neurocritical care.
 
 Find out more about our group's [research]({{ site.baseurl }}/research.html), and [publications]({{ site.baseurl }}/publications.html).
 

@@ -34,9 +34,14 @@ key: research
   }
 </style>
 
-<h3>Adaptive AI systems that address systematic biases in health and medicine observational data</h3>
+<h3>New architectures for reliable inference and predictions in high-dimensional multimodal health and biomedicine data</h3>
 
-AI systems and ML models learned from health and medicine data can be unreliable due to biases in training data. Enabling systems that generalize to out-of-distribution data requires adaptive AI approaches where models can reason about their uncertainty and improve predictions. Even tasks like evaluating model performance on out-of-distribution data can be non-trivial under severe shifts. When used to provide insights, either for clinical operations or for scientific inference, models that cannot generalize can provide misleading insights and ultimately slow down progress. We're enabling new AI systems that are adaptive and overcome biased practices of observational health and medicine data<br>
+We are developing AI models for clinical and biomedical data for meaningful downstream tasks. Brute forcing existing inductive biases and architectures can lead to unreliable scientific inference and predictions. Therefore, the lab focuses on developing data representations, learning tasks, and model architectures that will be robust to large distributional shifts, and evaluated with robust frameworks to test inferential capabilities.<br>
+
+
+<h3>Adaptive AI systems and representations to improve generalizability and robustness</h3>
+
+Enabling systems that generalize to out-of-distribution data requires adaptive AI approaches where models can improve from their mistakes. We leverage probabilistic modeling, reinforcement learning, and deep learning to overcome imperfections of observational health and medicine data and develop adaptive multimodal AI systems.<br>
 
 <div class="publication">
   <!--img src="assets/images/joshi_aaai_2024.png" alt="Publication Image 1" /-->
@@ -47,34 +52,10 @@ AI systems and ML models learned from health and medicine data can be unreliable
   </div>
 </div>
 
+<h3>New computational methods for specific applications in health and medicine</h3>
 
-<h3>New capabilities for high-dimensional health and medicine data</h3>
+Our work involves models being developed in-house as well as in collaboration with other clinical collaborators and healthcare institutions. These insights help us inform the gaps in current shortcomings of foundation models and in our ability to use AI as expert reasoning agents. Our current applications are in psychiatry, cardiology, radiology, and neurocritical care.<br>
 
-We are developing new models for scalably using EHR data for meaningful clinical tasks and identifying new methods for evaluation. Our work involves models being developed in-house as well as in collaboration with other clinical collaborators and healthcare institutions. We use deep learning, reinforcement learning, information theory, and probabilistic modeling to develop new methods.<br>
-
-<div class="publication">
-  <div class="text">
-    <a href="https://openreview.net/pdf?id=sMiSQP8zmr" target="_blank">
-      <strong>Does multimodality help in deep learning-based structural heart disease detection?</strong>
-    </a><br>
-    <strong><span style="color: #003087;">Young Sang Choi</span>, <span style="color: #003087;">Shalmali Joshi</span></strong>, Linyuan Jing, and Pierre Elias<br>
-    <i>Medical Imaging with Deep Learning (MIDL) 2024 (Short Paper Track)</i><br>
-  </div>
-</div>
-
-<h3>New computational methods to quantify and mitigate inequities in health and medicine</h3>
-
-AI and ML systems can be used to quantify biases in existing health and medicine observational data, with the goal of ultimately overcoming them using better AI systems. We approach the problem of algorithmic inequities through characterizing the entire data-generating pipeline, as opposed to myopically capturing model performance, and designing targeted bias mitigation strategies. We believe this approach is a better path that ties algorithmic fairness and inequity to broader challenges of disparities in health and medicine.<br>
-
-<div class="publication">
-  <div class="text">
-    <a href="https://www.medrxiv.org/content/10.1101/2024.07.05.24310013v1" target="_blank">
-      <strong>Machine Learning is More Accurate and Biased than Risk Scoring Tools in the Prediction of Postoperative Atrial Fibrillation After Cardiac Surgery</strong>
-    </a><br>
-    Joyce C. Ho, <strong><span style="color: #003087;">Shalmali Joshi</span></strong>, Eduardo Valverde, Kathryn Wood, Kendra J. Grubb, Miguel A. Leal, and Vicki Stover Hertzberg<br>
-    <i>medRxiv preprint</i><br>
-  </div>
-</div>
 
 <div class="publication">
   <div class="text">

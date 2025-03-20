@@ -25,7 +25,7 @@ key: index
 #### We are the <span style="color: #003087;"><u>re</u>liable <u>A</u>rtificial <u>I</u>ntelligence for Health and <u>M</u>edicine (reAIM)</span> lab, led by [Professor Shalmali Joshi]({{ site.baseurl }}/shalmalijoshi.html) in the [Department of Biomedical Informatics (DBMI)](https://www.dbmi.columbia.edu/) at Columbia University in the City of New York.
 
 
-Our group is building healthcare AI systems that are reliable, equitable, and expert reasoning agents. We strive for methodological advancements and rigorous evaluations in multimodal deep learning, probabilistic reasoning, observational causal inference, and reinforcement learning. We publish in machine learning more broadly, and at the intersection of machine learning and health and medicine. We build bespoke systems that rigorously incorporate clinical domain knowledge and expertise. We have established tight-knit collaborations with some amazing clinical researchers. Our current health application focus is in clinical psychiatry (specifically schizophrenia), cardiology (structural heart disease detection), neurocritical ICU care, and radiology.
+Our vision is to design AI and ML systems to improve scientific inference and predictive capabilities in the biomedical sciences, discovery, and informatics, focused on challenges of generalizability, reliability, and robustness of inference and prediction. We develop methods that cut across deep learning, reinforcement learning, observational causal inference, and probabilistic modeling.
 
 #### Find out more about our [research]({{ site.baseurl }}/research.html), [group]({{ site.baseurl }}/group.html), and [publications]({{ site.baseurl }}/publications.html).
 
@@ -37,9 +37,6 @@ Our group is building healthcare AI systems that are reliable, equitable, and ex
 
 - **[September 2024]**: [MLHC 2025](https://www.mlforhc.org/)
   - Shalmali Joshi will serve as the General Chair of MLHC 2025, to be held at Mayo Clinic in Rochester, MN, along with amazing colleagues and co-organizers!
-
-- **[April 2024]**: [Talk on AI and health equity](https://datascience.columbia.edu/event/data-science-day-2024/)
-  - Shalmali Joshi gave a talk on Characterizing and Operationalizing (Systemic) Algorithmic Fairness in Psychiatric Diagnosis on Data Science Day at Columbia!
 
 
 

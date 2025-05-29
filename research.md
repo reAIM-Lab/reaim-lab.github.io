@@ -34,9 +34,18 @@ key: research
   }
 </style>
 
-<h3>New architectures for reliable inference and predictions in high-dimensional multimodal health and biomedicine data</h3>
+<h3>New AI models for reliable inference and predictions in high-dimensional multimodal health and biomedicine data</h3>
 
 We are developing AI models for clinical and biomedical data for meaningful downstream tasks. Brute forcing existing inductive biases and architectures can lead to unreliable scientific inference and predictions. Therefore, the lab focuses on developing data representations, learning tasks, and model architectures that will be robust to large distributional shifts, and evaluated with robust frameworks to test inferential capabilities.<br>
+
+<div class="publication">
+  <!--img src="assets/images/joshi_aaai_2024.png" alt="Publication Image 1" /-->
+  <div class="text">
+    <a href="https://arxiv.org/pdf/2505.16953?" target="_blank"><strong>ICYM2I: The illusion of multimodal informativeness under missingness</strong></a><br>
+    <strong><span style="color: #003087;">Young Sang Choi*, Vincent Jeanselme*, Pierre Elias, Shalmali Joshi.</span></strong><br>
+    <!--i>Neural Information Processing Systems (NeurIPS) 2024</i><br-->
+  </div>
+</div>
 
 
 <h3>Adaptive AI systems and representations to improve generalizability and robustness</h3>
@@ -52,17 +61,17 @@ Enabling systems that generalize to out-of-distribution data requires adaptive A
   </div>
 </div>
 
-<h3>New computational methods for specific applications in health and medicine</h3>
+<h3>New computational methods and evaluations of foundation models in health and medicine</h3>
 
-Our work involves models being developed in-house as well as in collaboration with other clinical collaborators and healthcare institutions. These insights help us inform the gaps in current shortcomings of foundation models and in our ability to use AI as expert reasoning agents. Our current applications are in psychiatry, cardiology, radiology, and neurocritical care.<br>
+We develop and benchmark AI models in-house and in collaboration with other clinical experts and healthcare institutions. Our goal is highlight current limits and provide improvements so we can use AI models as expert reasoning agents. Our current applications are in psychiatry, cardiology, radiology, rheumatology, and neurocritical care.<br>
 
 
 <div class="publication">
   <div class="text">
-    <a href="https://proceedings.mlr.press/v202/zhang23ai/zhang23ai.pdf" target="_blank">
-      <strong>"Why did the model fail?": Attributing model performance changes to distribution shifts</strong>
+    <a href="https://arxiv.org/abs/2505.16941" target="_blank">
+      <strong>FoMoH: A clinically meaningful foundation model evaluation for structured electronic health records</strong>
     </a><br>
-    Haoran Zhang, Harvineet Singh, Marzyeh Ghassemi, and <strong><span style="color: #003087;">Shalmali Joshi</span></strong><br>
-    <i>International Conference on Machine Learning (ICML) 2023</i><br>
+    <strong><span style="color: #003087;">Chao Pang, Vincent Jeanselme, Young Sang Choi, Xinzhuo Jiang, Zilin Jing, Aparajita, Kashyap, Yuta Kobayashi, Yanwei Li, Florent Pollet, Karthik Natarajan, Shalmali Joshi</span></strong><br>
+    <!--i>International Conference on Machine Learning (ICML) 2023</i><br-->
   </div>
 </div>

@@ -60,7 +60,7 @@ How to pronounce my name: Shaal--muh--lee.
 - Adaptive AI systems for health and medicine observational data
 - New capabilities for high-dimensional health and medicine data
 - New computational methods to improve robustness of scientific inference and predictions in health and medicine
-- Our current application areas are in psychiatry, cardiology, radiology, and neurocritical care.
+- Our current application areas are in psychiatry, cardiology, radiology, rheumatology, and neurocritical care.
 
 Find out more about our group's [research]({{ site.baseurl }}/research.html), and [publications]({{ site.baseurl }}/publications.html).
 

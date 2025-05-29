@@ -31,12 +31,11 @@ Our vision is to design AI and ML systems to improve scientific inference and pr
 
 
 #### News!
+- **[May 2025]**: New Preprint!
+  - We benchmarked SOTA structured EHR foundation models on Columbia University Medical Center data. Read more <a href="https://arxiv.org/pdf/2505.16941" target="_blank"><strong><span style="color: #003087;">here</span></strong></a>!
 
 - **[November 2024]**: [New JAMIA Perspective Published!]
   - Our perspective white paper from MLHC 2023 pre-conference workshop on "Causal Inference and Machine Learning in Healthcare" has been accepted for publication at JAMIA!
-
-- **[September 2024]**: [MLHC 2025](https://www.mlforhc.org/)
-  - Shalmali Joshi will serve as the General Chair of MLHC 2025, to be held at Mayo Clinic in Rochester, MN, along with amazing colleagues and co-organizers!
 
 
 

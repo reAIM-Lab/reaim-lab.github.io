@@ -29,13 +29,14 @@ Our vision is to design AI and ML systems to improve scientific inference and pr
 
 #### Find out more about our [research]({{ site.baseurl }}/research.html), [group]({{ site.baseurl }}/group.html), and [publications]({{ site.baseurl }}/publications.html).
 
+The group is grateful for support from the <strong><span style="color: #003087;"><a href="https://www.vagelos.columbia.edu/departments-centers/centers-and-institutes/stavros-niarchos-foundation-center-precision-psychiatry-mental-health" target="_blank">SNF Center for Precision Psychiatry and Mental Health (SPIRIT Precision Pilot Award)</a>, <a href="https://research.google/programs-and-events/research-scholar-program/recipients/" target="_blank">Google Inc.</a></span></strong>, the <strong><span style="color: #003087;"><a href="https://www.nimh.nih.gov/" target="_blank">NIMH</a></span></strong>, and the <strong><span style="color: #003087;"><a href="https://www.nlm.nih.gov/" target="_blank">NLM</a></span></strong>.
+
 
 #### News!
-- **[May 2025]**: New Preprint!
-  - We benchmarked SOTA structured EHR foundation models on Columbia University Medical Center data. Read more <a href="https://arxiv.org/pdf/2505.16941" target="_blank"><strong><span style="color: #003087;">here</span></strong></a>!
+- **[June 2025]**: Shalmali Joshi is grateful for support from the <a href="https://research.google/programs-and-events/research-scholar-program/recipients/" target="_blank"><strong><span style="color: #003087;">Google Research Scholar Program</span></strong></a>!
 
-- **[November 2024]**: [New JAMIA Perspective Published!]
-  - Our perspective white paper from MLHC 2023 pre-conference workshop on "Causal Inference and Machine Learning in Healthcare" has been accepted for publication at JAMIA!
+- **[May 2025]**: New Preprint!
+  - We benchmarked SOTA structured EHR foundation models on Columbia University Medical Center data. Read more about "FoMoH" <a href="https://arxiv.org/pdf/2505.16941" target="_blank"><strong><span style="color: #003087;">here</span></strong></a>!
 
 
 

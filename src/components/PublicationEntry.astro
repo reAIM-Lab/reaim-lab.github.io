@@ -1,0 +1,63 @@
+---
+import team from "../data/team.json";
+import alumni from "../data/alumni.json";
+
+interface Props {
+	pub: {
+		title: string;
+		url?: string;
+		authors: string;
+		venue: string;
+		year: number;
+		note?: string;
+	};
+}
+
+const { pub } = Astro.props;
+
+// LOGIC: Use 'pub_name' if available, otherwise default to 'name'
+// We cast 'm' and 'a' to (any) to stop the TypeScript error
+const labMembers = [
+	...team.map((m: any) => m.pub_name || m.name),
+	...alumni.map((a: any) => a.pub_name || a.name)
+];
+
+function formatAuthors(authorString: string) {
+	if (!authorString) return "";
+	let formatted = authorString;
+
+	labMembers.forEach((name) => {
+		const safeName = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+		const regex = new RegExp(`(${safeName})(?![^<]*>)`, "g");
+		formatted = formatted.replace(regex, '<span class="font-bold text-reaim-blue">$1</span>');
+	});
+
+	return formatted;
+}
+---
+
+<div class="flex flex-col gap-1">
+	<div class="text-xl leading-tight font-bold">
+		{
+			pub.url ? (
+				<a
+					href={pub.url}
+					target="_blank"
+					class="hover:text-reaim-blue text-black transition-colors hover:underline"
+				>
+					{pub.title}
+				</a>
+			) : (
+				<span class="text-black">{pub.title}</span>
+			)
+		}
+	</div>
+
+	<div class="text-lg leading-relaxed text-gray-700" set:html={formatAuthors(pub.authors)} />
+
+	<div class="text-lg text-gray-500 italic">
+		{pub.venue}
+		{pub.year}
+		{pub.note && <span> • {pub.note}</span>}
+	</div>
+</div>

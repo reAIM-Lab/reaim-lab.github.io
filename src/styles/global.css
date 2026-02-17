@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+	--color-reaim-blue: #0077c8; /* Medium Blue */
+	--color-reaim-dark: #012169; /* Dark Blue */
+}
+
+@layer base {
+	:focus-visible {
+		@apply ring-reaim-blue rounded-sm ring-2 ring-offset-2 outline-none;
+	}
+}

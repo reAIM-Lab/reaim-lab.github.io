@@ -1,0 +1,214 @@
+---
+import "../styles/global.css";
+const { title } = Astro.props;
+
+const currentYear = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta name="robots" content="noarchive" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<title>{title} | reAIM Lab</title>
+		<meta
+			name="description"
+			content="The reAIM Lab at Columbia University, led by Prof. Shalmali Joshi, focuses on Trustworthy Machine Learning for Healthcare."
+		/>
+	</head>
+
+	<body
+		class="selection:bg-reaim-blue bg-white font-sans text-lg text-gray-900 antialiased selection:text-white"
+	>
+		<a
+			href="#main-content"
+			class="sr-only transition-all focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:rounded-lg focus:bg-gray-900 focus:px-6 focus:py-3 focus:font-bold focus:text-white focus:shadow-xl"
+		>
+			Skip to main content
+		</a>
+
+		<nav class="relative z-50 bg-white" aria-label="Main Navigation">
+			<div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-6 md:py-8">
+				<a
+					href="/"
+					class="text-reaim-dark focus-visible:ring-reaim-blue relative z-50 rounded-sm text-xl font-bold tracking-tight focus:outline-none focus-visible:ring-2 md:text-3xl"
+				>
+					reAIM
+				</a>
+
+				<div
+					class="hidden items-baseline space-x-6 text-lg font-medium text-gray-600 md:flex lg:space-x-8"
+				>
+					<a
+						href="/shalmalijoshi"
+						class="hover:text-reaim-blue focus-visible:ring-reaim-blue rounded-sm transition-colors focus:outline-none focus-visible:ring-2"
+						>Shalmali Joshi</a
+					>
+					<a
+						href="/research"
+						class="hover:text-reaim-blue focus-visible:ring-reaim-blue rounded-sm transition-colors focus:outline-none focus-visible:ring-2"
+						>Research</a
+					>
+					<a
+						href="/publications"
+						class="hover:text-reaim-blue focus-visible:ring-reaim-blue rounded-sm transition-colors focus:outline-none focus-visible:ring-2"
+						>Publications</a
+					>
+					<a
+						href="/teaching"
+						class="hover:text-reaim-blue focus-visible:ring-reaim-blue rounded-sm transition-colors focus:outline-none focus-visible:ring-2"
+						>Teaching</a
+					>
+					<a
+						href="/group"
+						class="hover:text-reaim-blue focus-visible:ring-reaim-blue rounded-sm transition-colors focus:outline-none focus-visible:ring-2"
+						>Group</a
+					>
+					<a
+						href="/join"
+						class="text-reaim-blue focus-visible:ring-reaim-blue rounded-sm font-bold transition-colors hover:underline focus:outline-none focus-visible:ring-2"
+						>Join Us!</a
+					>
+				</div>
+
+				<button
+					id="menu-btn"
+					class="focus-visible:ring-reaim-blue relative z-50 block rounded-sm focus:outline-none focus-visible:ring-2 md:hidden"
+					aria-label="Toggle Navigation Menu"
+					aria-expanded="false"
+					aria-controls="mobile-menu"
+				>
+					<div class="space-y-2">
+						<span
+							id="line1"
+							class="block h-0.5 w-8 origin-center bg-gray-600 transition-transform duration-300"
+						></span>
+						<span id="line2" class="block h-0.5 w-8 bg-gray-600 transition-opacity duration-300"
+						></span>
+						<span
+							id="line3"
+							class="block h-0.5 w-8 origin-center bg-gray-600 transition-transform duration-300"
+						></span>
+					</div>
+				</button>
+			</div>
+
+			<div
+				id="mobile-menu"
+				class="fixed inset-0 z-40 flex translate-x-full items-center justify-center bg-white/95 backdrop-blur-xl transition-transform duration-300 md:hidden"
+			>
+				<div class="flex flex-col items-start space-y-8 text-2xl font-bold text-gray-800">
+					<a href="/shalmalijoshi" class="hover:text-reaim-blue transition-colors">Shalmali Joshi</a
+					>
+					<a href="/research" class="hover:text-reaim-blue transition-colors">Research</a>
+					<a href="/publications" class="hover:text-reaim-blue transition-colors">Publications</a>
+					<a href="/teaching" class="hover:text-reaim-blue transition-colors">Teaching</a>
+					<a href="/group" class="hover:text-reaim-blue transition-colors">Group</a>
+					<a href="/join" class="text-reaim-blue transition-colors hover:underline">Join Us!</a>
+				</div>
+			</div>
+		</nav>
+
+		<main
+			id="main-content"
+			class="mx-auto min-h-screen max-w-6xl px-4 py-12 focus:outline-none md:px-8"
+			tabindex="-1"
+		>
+			<slot />
+		</main>
+
+		<footer class="mt-24 py-12">
+			<div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+				<div class="flex flex-col items-center justify-between gap-6 md:flex-row">
+					<div class="text-sm font-medium tracking-tight text-gray-400">
+						© {currentYear} reAIM Lab
+					</div>
+
+					<div class="flex flex-col items-center gap-6 md:flex-row md:gap-8">
+						<nav
+							class="flex flex-wrap justify-center gap-x-6 gap-y-3"
+							aria-label="Footer Navigation"
+						>
+							<a
+								href="/research"
+								class="hover:text-reaim-blue rounded-sm text-sm font-bold text-gray-400 transition-colors"
+								>Research</a
+							>
+							<a
+								href="/publications"
+								class="hover:text-reaim-blue rounded-sm text-sm font-bold text-gray-400 transition-colors"
+								>Publications</a
+							>
+							<a
+								href="/teaching"
+								class="hover:text-reaim-blue rounded-sm text-sm font-bold text-gray-400 transition-colors"
+								>Teaching</a
+							>
+							<a
+								href="/group"
+								class="hover:text-reaim-blue rounded-sm text-sm font-bold text-gray-400 transition-colors"
+								>Group</a
+							>
+						</nav>
+
+						<button
+							id="back-to-top"
+							aria-label="Scroll back to top of page"
+							class="hover:text-reaim-blue flex items-center gap-1 rounded-sm px-2 py-1 text-sm font-bold tracking-wider text-gray-400 transition-colors"
+						>
+							Back to top <span aria-hidden="true">&uarr;</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script>
+			const btn = document.getElementById("menu-btn");
+			const menu = document.getElementById("mobile-menu");
+			const line1 = document.getElementById("line1");
+			const line2 = document.getElementById("line2");
+			const line3 = document.getElementById("line3");
+			let isMenuOpen = false;
+
+			function toggleMenu() {
+				if (!menu || !line1 || !line2 || !line3) return;
+				isMenuOpen = !isMenuOpen;
+
+				if (btn) btn.setAttribute("aria-expanded", isMenuOpen.toString());
+
+				if (isMenuOpen) {
+					menu.classList.remove("translate-x-full");
+					document.body.style.overflow = "hidden";
+					line1.classList.add("rotate-45", "translate-y-2.5");
+					line2.classList.add("opacity-0");
+					line3.classList.add("-rotate-45", "-translate-y-2.5");
+				} else {
+					menu.classList.add("translate-x-full");
+					document.body.style.overflow = "";
+					line1.classList.remove("rotate-45", "translate-y-2.5");
+					line2.classList.remove("opacity-0");
+					line3.classList.remove("-rotate-45", "-translate-y-2.5");
+				}
+			}
+
+			if (btn) btn.addEventListener("click", toggleMenu);
+			if (menu) {
+				menu.querySelectorAll("a").forEach((link) => {
+					link.addEventListener("click", () => {
+						if (isMenuOpen) toggleMenu();
+					});
+				});
+			}
+
+			const topBtn = document.getElementById("back-to-top");
+			if (topBtn) {
+				topBtn.addEventListener("click", () => {
+					window.scrollTo({ top: 0, behavior: "smooth" });
+				});
+			}
+		</script>
+	</body>
+</html>

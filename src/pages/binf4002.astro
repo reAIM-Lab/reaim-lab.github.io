@@ -1,0 +1,578 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const courseInfo = {
+	title: "Machine Learning for Healthcare",
+	code: "BINF GU 4002",
+	section: "",
+	semester: "Spring 2025",
+
+	lectureTime: "Tuesdays, Thursdays 9:00a - 10:15am",
+	lectureLocation: "622 W 168th St, PH20-200",
+	lectureMapLink: "https://www.cuimc.columbia.edu/about-us/explore-cuimc/campus-map-and-directions",
+
+	courseworksLink: "https://courseworks2.columbia.edu/courses/210430/",
+
+	instructor: {
+		name: "Shalmali Joshi",
+		link: "https://reaim-lab.github.io/shalmalijoshi.html",
+		officeHours: "Fridays 10:00a-11:00a (PH-20, 402)"
+	},
+	tas: [
+		{
+			name: "Young Sang Choi",
+			link: "https://youngsangchoi.github.io",
+			officeHours: "Tuesdays 2:00p – 3:00p (PH-20)"
+		},
+		{
+			name: "Yuta Kobayashi",
+			link: "https://ykobaya9.github.io/",
+			officeHours: "Mondays 3:00p – 4:00p (PH-20)"
+		}
+	]
+};
+
+const rawSchedule = [
+	{
+		date: "2025-01-21",
+		topic: ["Intro and course logistics", "MIMIC-IV access", "Google Colab Credits"],
+		subtopic: "Colab accounts setup, data downloads, conda environment setup, etc.",
+		homework: "Homework 0 Out"
+	},
+	{
+		date: "2025-01-23",
+		topic: ["Probability and information theory primer"],
+		homework: "Homework 0 Due, Homework 1 Out"
+	},
+	{
+		date: "2025-01-28",
+		topic: ["Linear algebra and optimization primer"]
+	},
+	{
+		date: "2025-01-30",
+		topic: ["Introduction to supervised learning"],
+		subtopic: "Empirical Risk Minimization, Loss functions, Model families"
+	},
+	{
+		date: "2025-02-04",
+		topic: ["Introduction to supervised learning"],
+		subtopic: "IID vs OOD, Bias-variance tradeoff, regularization"
+	},
+	{
+		date: "2025-02-06",
+		topic: ["Empirical practices in machine learning"],
+		subtopic: "LOOCV, validation data, calibration, uncertainty quantification, bootstrapping"
+	},
+	{
+		date: "2025-02-11",
+		topic: ["Principles of Maximum Likelihood"],
+		subtopic:
+			"Logistic regression- two views, other models motivated by maximum likelihood estimation"
+	},
+	{
+		date: "2025-02-13",
+		topic: ["Basics of probabilistic modeling and Bayesian inference"],
+		subtopic: "Prior, Likelihood, and Posterior. Logistic and Linear Regression"
+	},
+	{
+		date: "2025-02-18",
+		topic: ["Basics of probabilistic modeling and Bayesian inference"],
+		subtopic: "Posterior Predictive, Exponential Familities, Maximum-a-Posteriori",
+		homework: "Homework 1 Due, Homework 2 Out"
+	},
+	{
+		date: "2025-02-20",
+		topic: ["Introduction to Regression"],
+		subtopic: "Linear regression, other types of regression"
+	},
+	{
+		date: "2025-02-25",
+		topic: ["Bayesian linear regression"],
+		subtopic: "Derivation and connection to regularization"
+	},
+	{
+		date: "2025-02-27",
+		topic: ["Empirical practices in machine learning - revisited"],
+		subtopic: "Comparing approaches to uncertainty quantification, best practices, etc."
+	},
+	{
+		date: "2025-03-04",
+		topic: ["Review of basic supervised learning"],
+		subtopic: "Decision trees, Random Forests, XGBoost"
+	},
+	{
+		date: "2025-03-06",
+		topic: ["Introduction to deep neural networks"],
+		subtopic: "Multilayer perceptron and connection to logistic and linear regression"
+	},
+	{
+		date: "2025-03-11",
+		topic: ["Optimization in deep neural networks"],
+		subtopic: "Backpropagation, stochastic gradient descent",
+		homework: "Homework 2 Due, Homework 3 Out"
+	},
+	{
+		date: "2025-03-13",
+		topic: ["Midterm"],
+		isExam: true
+	},
+	{ date: "2025-03-18", topic: ["Spring Break"], isBreak: true },
+	{ date: "2025-03-20", topic: ["Spring Break"], isBreak: true },
+	{
+		date: "2025-03-25",
+		topic: ["Deep learning for image data"],
+		subtopic: "Convolutional Neural Networks"
+	},
+	{
+		date: "2025-03-27",
+		topic: ["Deep learning for sequential data"],
+		subtopic: "Recurrent Neural Networks, LSTM, State-space models, Gated Recurrent Units"
+	},
+	{
+		date: "2025-04-01",
+		topic: ["Deep learning for networked data"],
+		subtopic: "Graph Neural Networks"
+	},
+	{
+		date: "2025-04-03",
+		topic: ["Deep learning for sequential data"],
+		subtopic: "Transformer: Attention-based neural networks"
+	},
+	{
+		date: "2025-04-08",
+		topic: ["Deep learning for sequential data - contd"],
+		subtopic: "Training paradigms for sequence based models (e.g., Seq-2-seq, decoder-only etc)",
+		homework: "Homework 3 Due, Homework 4 Out"
+	},
+	{
+		date: "2025-04-10",
+		topic: ["Distribution shifts, generalization, and domain adaptation"],
+		subtopic:
+			"Concept of generalization, types of distribution shifts, examples of implications in healthcare"
+	},
+	{
+		date: "2025-04-15",
+		topic: ["Distribution shifts, generalization, and domain adaptation - contd."],
+		subtopic:
+			"Focus on various methods of adaptation to overcome different types of distribution shifts"
+	},
+	{
+		date: "2025-04-17",
+		topic: ["Unsupervised learning"],
+		subtopic: "History and review of classical methods, brief review of modern methods"
+	},
+	{
+		date: "2025-04-22",
+		topic: ["Generative modeling"],
+		subtopic: "Foundations of generative model, basic loss-functions and a broad overview of models"
+	},
+	{
+		date: "2025-04-24",
+		topic: ["Foundation models - LLMs"],
+		subtopic: "Large-language models (Transformers but more)"
+	},
+	{
+		date: "2025-04-29",
+		topic: ["Foundation models - Vision-language"],
+		subtopic: "CLIP and other basic Vision-language models",
+		homework: "Homework 4 Due"
+	},
+	{
+		date: "2025-05-01",
+		topic: ["Foundation models - Biological data"],
+		subtopic: "Major foundation models for biological data (e.g., AlphaFold)"
+	},
+	{
+		date: "2025-05-05",
+		topic: ["Finals"],
+		isExam: true
+	}
+];
+
+let lectureCounter = 0;
+const schedule = rawSchedule.map((item) => {
+	const dateObj = new Date(item.date + "T12:00:00");
+	const dayOfWeek = dateObj.toLocaleDateString("en-US", { weekday: "short" }).toUpperCase();
+	const month = dateObj.toLocaleDateString("en-US", { month: "short" });
+	const day = dateObj.getDate();
+	const formattedDate = `${month} ${day}`;
+
+	let lectureNum = "";
+	if (!item.isBreak) {
+		if (!item.isExam) lectureCounter++;
+		lectureNum = lectureCounter.toString();
+		if (item.isExam) lectureNum = "-";
+	} else {
+		lectureNum = "-";
+	}
+	return { ...item, day: dayOfWeek, formattedDate, number: lectureNum };
+});
+
+const navLinks = [
+	{ label: "Logistics", id: "logistics" },
+	{ label: "Description", id: "description" },
+	{ label: "Prerequisites", id: "prerequisites" },
+	{ label: "Grading", id: "grading" },
+	{ label: "AI Policy", id: "llm-policy" },
+	{ label: "Homeworks", id: "homeworks" },
+	{ label: "Schedule", id: "schedule" }
+];
+---
+
+<Layout title={courseInfo.code}>
+	<section class="pt-2 pb-12">
+		<div class="mb-4">
+			<h1 class="mb-1 text-4xl font-bold tracking-tight text-black md:text-5xl">
+				{courseInfo.title}
+			</h1>
+			<p class="mb-1 text-xl font-medium text-gray-600">{courseInfo.section}</p>
+			<p class="text-reaim-blue mb-0 text-2xl font-bold">
+				{courseInfo.code} • {courseInfo.semester}
+			</p>
+		</div>
+
+		<div class="mb-8 md:hidden">
+			<a
+				href="#schedule"
+				class="block w-full rounded-lg bg-gray-100 py-3 text-center text-lg font-bold text-gray-800 shadow-sm transition-colors hover:bg-gray-200"
+			>
+				Skip to Schedule &darr;
+			</a>
+		</div>
+
+		<div
+			class="sticky top-0 z-30 -mx-4 mb-6 hidden bg-white/95 px-4 backdrop-blur-sm md:-mx-8 md:block md:px-8"
+		>
+			<nav
+				class="no-scrollbar mx-auto flex max-w-6xl justify-start overflow-x-auto py-1.5 md:justify-center"
+				aria-label="Course Navigation"
+			>
+				<div class="flex gap-4 px-2 md:gap-8">
+					{
+						navLinks.map((link) => (
+							<a
+								href={`#${link.id}`}
+								data-nav-link={link.id}
+								class="nav-item hover:text-reaim-blue rounded-md border border-transparent px-3 py-1.5 text-sm font-bold tracking-wider whitespace-nowrap text-gray-400 uppercase transition-all duration-200 hover:bg-blue-50/50"
+							>
+								{link.label}
+							</a>
+						))
+					}
+				</div>
+			</nav>
+		</div>
+
+		<div class="max-w-none space-y-12">
+			<section id="logistics" class="section-spy scroll-mt-32">
+				<div class="rounded-2xl border border-gray-100 bg-gray-50 p-8">
+					<div class="grid grid-cols-1 gap-10 md:grid-cols-2">
+						<div class="space-y-6">
+							<h3
+								class="border-b border-gray-200 pb-3 text-xl font-bold tracking-wide text-black uppercase"
+							>
+								Logistics
+							</h3>
+							<div class="space-y-3 text-xl text-gray-700">
+								<div>
+									<p class="font-bold text-black">Lecture:</p>
+									<p>{courseInfo.lectureTime}</p>
+									<p>
+										{courseInfo.lectureLocation} (<a
+											href={courseInfo.lectureMapLink}
+											class="text-reaim-blue font-bold hover:underline">Map</a
+										>)
+									</p>
+								</div>
+								<p>
+									<span class="font-bold text-black">Contact:</span>
+									<a
+										href={courseInfo.courseworksLink}
+										class="text-reaim-blue font-bold hover:underline">Courseworks</a>
+								</p>
+							</div>
+						</div>
+						<div class="space-y-6">
+							<h3
+								class="border-b border-gray-200 pb-3 text-xl font-bold tracking-wide text-black uppercase"
+							>
+								Staff
+							</h3>
+							<ul class="space-y-4 text-xl text-gray-700">
+								<li>
+									<span class="font-bold text-black">Instructor:</span>
+									<a
+										href={courseInfo.instructor.link}
+										class="text-reaim-blue font-bold hover:underline"
+										>{courseInfo.instructor.name}</a
+									><br />
+									<span class="text-lg text-gray-500"
+										>Office Hours: {courseInfo.instructor.officeHours}</span
+									>
+								</li>
+								{
+									courseInfo.tas.map((ta) => (
+										<li>
+											<span class="font-bold text-black">TA:</span>{" "}
+											<>
+												<a href={ta.link} class="text-reaim-blue font-bold hover:underline">
+													{ta.name}
+												</a>
+												<br />
+											</>
+											<span class="text-lg text-gray-500">Office Hours: {ta.officeHours}</span>
+										</li>
+									))
+								}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="description" class="prose section-spy max-w-none scroll-mt-32 text-gray-800">
+				<h3 class="mb-4 text-3xl font-bold text-black">Course Description</h3>
+				<p class="mb-4 text-xl leading-relaxed">
+					Machine Learning (ML) has transformative potential for applications in health and
+					medicine. You will learn fundamentals of machine learning, deep learning, and modeling
+					clinical and biomedicine data using machine learning.
+				</p>
+			</section>
+
+			<section id="prerequisites" class="section-spy scroll-mt-32">
+				<div class="rounded-2xl border border-gray-100 bg-gray-50 p-8">
+					<div class="grid grid-cols-1 gap-10 md:grid-cols-2">
+						<div>
+							<h4
+								class="mb-3 border-b border-gray-200 pb-2 text-xl font-bold tracking-wide text-black uppercase"
+							>
+								Prerequisites
+							</h4>
+							<ul class="mt-4 list-outside list-disc space-y-2 pl-5 text-xl text-gray-700">
+								<li>
+									Basic knowledge of probability, statistics, calculus, and linear algebra is
+									expected and required.
+								</li>
+								<li>
+									Familiarity with programming with Python and versioning systems like Git is
+									required.
+								</li>
+							</ul>
+						</div>
+						<div>
+							<h4
+								class="mb-3 border-b border-gray-200 pb-2 text-xl font-bold tracking-wide text-black uppercase"
+							>
+								Learning Objectives
+							</h4>
+							<ul class="mt-4 list-outside list-disc space-y-2 pl-5 text-xl text-gray-700">
+								<li>
+									Learn foundations of major machine learning concepts and their relevance to health
+									and biomedicine data.
+								</li>
+								<li>Develop new ML methods focused on health/biomedicine tasks.</li>
+								<li>Be better equipped to evaluate and validate ML in healthcare and medicine.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="grading" class="section-spy scroll-mt-32">
+				<h3 class="mb-6 text-3xl font-bold text-black">Format & Grading</h3>
+				<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+					<div class="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
+						<div class="text-reaim-blue mb-1 text-4xl font-bold">
+							40 <span class="text-2xl">points</span>
+						</div>
+						<div class="text-xl font-bold text-black">Problem Sets</div>
+						<p class="text-lg text-gray-500">
+							4 homeworks (combination of numeric/conceptual/data-driven questions).
+						</p>
+					</div>
+					<div class="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
+						<div class="text-reaim-blue mb-1 text-4xl font-bold">
+							25 <span class="text-2xl">points</span>
+						</div>
+						<div class="text-xl font-bold text-black">Midterm</div>
+						<p class="text-lg text-gray-500">One mid-term exam.</p>
+					</div>
+					<div class="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
+						<div class="text-reaim-blue mb-1 text-4xl font-bold">
+							30 <span class="text-2xl">points</span>
+						</div>
+						<div class="text-xl font-bold text-black">Final Exam</div>
+						<p class="text-lg text-gray-500">One final exam.</p>
+					</div>
+					<div class="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
+						<div class="text-reaim-blue mb-1 text-4xl font-bold">
+							5 <span class="text-2xl">points</span>
+						</div>
+						<div class="text-xl font-bold text-black">Participation</div>
+						<p class="text-lg text-gray-500">In-person lecture participation.</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="llm-policy" class="section-spy scroll-mt-32">
+				<div class="border-reaim-blue mt-8 border-l-4 py-2 pl-8">
+					<h4 class="mb-3 text-2xl font-bold text-black">Policy on Generative AI</h4>
+					<ul class="list-outside list-disc space-y-4 pl-5 text-xl text-gray-800">
+						<li>
+							Use of generative AI for understanding concepts and reading material is allowed.
+						</li>
+						<li>
+							<span class="font-bold text-red-700"
+								>We will not allow the use of generative AI for solving homeworks or doing machine
+								learning modeling</span
+							>. Homework reports should not be generated using any AI tool. <span
+								class="font-bold text-red-700"
+								>You will be given 0 points for the complete homework assignment if any violations
+								are detected</span
+							>.
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section id="homeworks" class="section-spy scroll-mt-32">
+				<h3 class="mb-6 border-b border-gray-200 pb-2 text-3xl font-bold text-black">
+					Homework Assignments
+				</h3>
+				<div class="space-y-4 rounded-2xl border border-blue-100 bg-blue-50/50 p-8">
+					<p class="text-xl text-gray-800">
+						Homeworks will be assigned on Courseworks. Homeworks will be due 3 weeks after they are
+						assigned. We have ensured ample time for all homeworks.
+					</p>
+					<p class="text-xl text-gray-800">
+						However, we are allowing <strong>two slack days</strong> usable over the semester. If you
+						are using a slack day for a homework, mention this on your homework submission (otherwise
+						the TAs will assume late submission). You are free to use the slack days for any of the homeworks.
+					</p>
+				</div>
+			</section>
+
+			<section id="exams" class="section-spy scroll-mt-32">
+				<h3 class="mb-6 border-b border-gray-200 pb-2 text-3xl font-bold text-black">Exams</h3>
+				<div class="rounded-2xl border border-gray-100 bg-gray-50 p-8">
+					<p class="text-xl leading-relaxed text-gray-800">
+						There will be one mid-term (25 points) and one final exam (30 points). Both exams will
+						be for the duration of the class.
+					</p>
+					<p class="mt-4 text-xl leading-relaxed text-gray-800">
+						You will be allowed one Letter-sized cheat sheet for formulae only. You will return the
+						cheat sheet along with the exam for grading.
+					</p>
+				</div>
+			</section>
+
+			<section id="schedule" class="section-spy scroll-mt-32">
+				<h3 class="mb-6 border-b border-gray-200 pb-3 text-3xl font-bold text-black">Schedule</h3>
+				<div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+					<table class="w-full border-collapse text-left">
+						<thead
+							class="hidden bg-gray-100 text-base font-bold tracking-wider text-gray-900 uppercase md:table-header-group"
+						>
+							<tr>
+								<th class="w-16 border-b border-gray-300 px-4 py-4 text-center">#</th>
+								<th class="w-32 border-b border-gray-300 px-4 py-4">Date</th>
+								<th class="w-[45%] border-b border-gray-300 px-4 py-4">Topic</th>
+								<th class="w-40 border-b border-gray-300 px-4 py-4 text-right">Assignments</th>
+							</tr>
+						</thead>
+						<tbody class="divide-y divide-gray-200 bg-white text-lg">
+							{
+								schedule.map((row, index) => (
+									<tr
+										class={`flex flex-col gap-1 border-b border-gray-200 p-6 md:table-row md:gap-0 md:border-0 md:p-0 ${row.isBreak ? "bg-gray-50/50 text-gray-500 italic" : ""} ${row.isExam ? "bg-amber-50" : !row.isBreak && index % 2 !== 0 ? "bg-gray-50" : "bg-white"} `}
+									>
+										<td class="hidden px-4 py-4 text-center font-mono text-xl font-bold text-gray-500 md:table-cell">
+											{row.number}
+										</td>
+
+										<td class="block p-0 md:table-cell md:px-4 md:py-4 md:whitespace-nowrap">
+											{row.number !== "-" && (
+												<div class="mb-1 text-xs font-bold tracking-wider text-gray-400 uppercase md:hidden">
+													Lecture #{row.number}
+												</div>
+											)}
+											<div class="flex items-baseline gap-2 md:block">
+												<div
+													class={`text-xl font-bold ${row.isExam ? "text-amber-800" : "text-black"}`}
+												>
+													{row.formattedDate}
+												</div>
+												<div class="text-sm font-bold text-gray-500 uppercase md:mt-1">
+													{row.day}
+												</div>
+											</div>
+										</td>
+
+										<td class="block p-0 pt-2 md:table-cell md:px-4 md:py-4 md:align-top">
+											<div
+												class={`text-xl font-medium ${row.isExam ? "font-bold text-amber-800" : "text-gray-900"}`}
+											>
+												{row.topic.map((line) => (
+													<div class="mb-1 leading-snug">{line}</div>
+												))}
+											</div>
+											{row.subtopic && (
+												<div class="mt-2 text-base font-normal text-gray-600 md:text-lg">
+													{row.subtopic}
+												</div>
+											)}
+										</td>
+
+										<td class="block p-0 pt-4 md:table-cell md:px-4 md:py-4 md:text-right md:align-top">
+											{row.homework && (
+												<div class="flex flex-wrap items-start gap-2 md:flex-col md:items-end">
+													{row.homework.split(",").map((item) => {
+														const text = item.trim();
+														const isOut = text.includes("Out");
+														const isDue = text.includes("Due");
+														return (
+															<span
+																class={`inline-block rounded-lg border px-2 py-1 text-xs font-bold whitespace-nowrap shadow-sm md:px-3 md:py-1.5 md:text-sm ${isOut ? "border-green-200 bg-green-50 text-green-700" : isDue ? "border-red-200 bg-red-50 text-red-700" : "border-gray-200 bg-gray-50 text-gray-700"}`}
+															>
+																{text}
+															</span>
+														);
+													})}
+												</div>
+											)}
+										</td>
+									</tr>
+								))
+							}
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</div>
+	</section>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			const sections = document.querySelectorAll(".section-spy");
+			const navLinks = document.querySelectorAll(".nav-item");
+			const observerOptions = { root: null, rootMargin: "-20% 0px -60% 0px", threshold: 0 };
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						navLinks.forEach((link) => {
+							link.classList.remove("text-reaim-blue", "bg-blue-50", "border-blue-100");
+							link.classList.add("text-gray-400", "border-transparent");
+						});
+						const activeId = entry.target.getAttribute("id");
+						const activeLink = document.querySelector(`[data-nav-link="${activeId}"]`);
+						if (activeLink) {
+							activeLink.classList.remove("text-gray-400", "border-transparent");
+							activeLink.classList.add("text-reaim-blue", "bg-blue-50", "border-blue-100");
+						}
+					}
+				});
+			}, observerOptions);
+			sections.forEach((section) => observer.observe(section));
+		});
+	</script>
+</Layout>

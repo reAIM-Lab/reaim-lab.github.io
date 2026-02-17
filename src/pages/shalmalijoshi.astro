@@ -1,0 +1,249 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const profile = {
+	name: "Shalmali Joshi, Ph.D.",
+	pronunciation: "shaal-muh-lee",
+	titles: [
+		"Assistant Professor, Department of Biomedical Informatics",
+		"Member, Data Science Institute",
+		"Affiliate, SNF Center for Precision Psychiatry and Mental Health",
+		"Affiliate, Department of Computer Science",
+		"Columbia University"
+	],
+	image: "/images/shalmali_headshot.jpg",
+	email: "shalmali[dot]joshi[at]columbia.edu",
+	address: {
+		room: "PH-20, 402",
+		street: "622 W 168th St",
+		city: "New York, NY 10027"
+	},
+	twitterUrl: "https://twitter.com/shalmali_joshi_",
+	scholarUrl:
+		"https://scholar.google.com/citations?hl=en&user=x5wW5WIAAAAJ&view_op=list_works&sortby=pubdate",
+	cvLink: "/assets/SJ_cv.pdf",
+	cvDate: "Nov 17, 2024"
+};
+
+const education = [
+	{
+		degree: "Ph.D. in Electrical and Computer Engineering",
+		school: "The University of Texas at Austin",
+		year: "2018"
+	},
+	{
+		degree: "M.S. in Electrical and Computer Engineering",
+		school: "University of California, San Diego",
+		year: "2011"
+	},
+	{
+		degree: "B.Tech. in Electrical and Electronics Engineering",
+		school: "Visvesvaraya National Institute of Technology",
+		year: "2009"
+	}
+];
+
+const interests = [
+	"Adaptive AI systems for health and medicine observational data",
+	"New capabilities for high-dimensional health and medicine data",
+	"Robustness of scientific inference and predictions in health",
+	"Applications in psychiatry, cardiology, radiology, rheumatology, and neurocritical care"
+];
+---
+
+<Layout title="Home">
+	<section class="pt-4 pb-12">
+		<div class="grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-20">
+			<div class="flex flex-col items-center lg:col-span-4 lg:items-start">
+				<div
+					class="mx-auto mb-6 h-64 w-64 shrink-0 overflow-hidden rounded-2xl bg-gray-100 shadow-md lg:mx-0 lg:h-72 lg:w-72"
+				>
+					<img
+						src={profile.image}
+						alt={profile.name}
+						class="h-full w-full object-cover object-top"
+					/>
+				</div>
+
+				<div class="w-full lg:hidden">
+					<h1 class="mb-2 text-left text-3xl font-bold tracking-tight text-black">
+						{profile.name}
+					</h1>
+
+					<div
+						class="border-reaim-blue mb-4 inline-flex items-center border-l-2 bg-gray-50 px-3 py-1.5 text-sm text-gray-600"
+					>
+						<span
+							class="text-reaim-blue mr-3 text-[10px] leading-none font-bold tracking-widest uppercase"
+							>Pronunciation</span
+						>
+						<span class="font-mono text-lg leading-none font-medium">{profile.pronunciation}</span>
+					</div>
+				</div>
+
+				<div class="w-full space-y-3 text-gray-600">
+					<div class="flex flex-col items-center">
+						<a
+							href={`mailto:${profile.email.replace("[at]", "@").replace("[dot]", ".")}`}
+							class="hover:text-reaim-blue text-center text-sm font-bold break-all text-black transition-colors lg:text-lg"
+						>
+							{profile.email}
+						</a>
+
+						<div class="hidden pt-1 text-center text-base leading-snug text-gray-500 lg:block">
+							{profile.address.room}<br />
+							{profile.address.street}<br />
+							{profile.address.city}
+						</div>
+					</div>
+
+					<div class="flex w-full items-center justify-center gap-6 pt-1 lg:justify-center">
+						<div class="flex items-center gap-5">
+							<a
+								href={profile.twitterUrl}
+								target="_blank"
+								class="text-gray-400 transition-colors hover:text-black"
+								title="Twitter/X"
+							>
+								<span class="sr-only">Twitter</span>
+								<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"
+									><path
+										d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+									></path></svg
+								>
+							</a>
+							<a
+								href={profile.scholarUrl}
+								target="_blank"
+								class="hover:text-reaim-blue text-gray-400 transition-colors"
+								title="Google Scholar"
+							>
+								<span class="sr-only">Google Scholar</span>
+								<svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24"
+									><path d="M12 3L1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"
+									></path></svg
+								>
+							</a>
+							<a
+								href={profile.cvLink}
+								target="_blank"
+								class="bg-reaim-blue inline-flex items-center justify-center rounded-lg px-3 py-1 text-xs font-bold text-white shadow-sm transition-opacity hover:opacity-90 lg:hidden"
+							>
+								CV
+							</a>
+						</div>
+					</div>
+
+					<div class="hidden w-full pt-4 lg:block">
+						<a
+							href={profile.cvLink}
+							target="_blank"
+							class="bg-reaim-blue block w-full rounded-lg py-3 text-center font-bold text-white shadow-sm transition-opacity hover:opacity-90"
+						>
+							Download CV
+						</a>
+						<p class="mt-2 text-center text-sm text-gray-400">
+							Last updated: {profile.cvDate}
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="lg:col-span-8">
+				<div
+					class="mb-8 hidden flex-col items-start border-b border-gray-100 pb-8 text-left lg:flex"
+				>
+					<h1 class="mb-2 text-5xl leading-tight font-bold tracking-tight text-black">
+						{profile.name}
+					</h1>
+
+					<div
+						class="border-reaim-blue mb-6 inline-flex items-center border-l-2 bg-gray-50 px-3 py-1.5 text-sm text-gray-600"
+					>
+						<span
+							class="text-reaim-blue mr-3 text-[10px] leading-none font-bold tracking-widest uppercase"
+							>Pronunciation</span
+						>
+						<span class="font-mono text-lg leading-none font-medium">{profile.pronunciation}</span>
+					</div>
+
+					<div class="space-y-1 text-xl leading-relaxed font-medium text-gray-800">
+						{profile.titles.map((title) => <p>{title}</p>)}
+					</div>
+				</div>
+
+				<div class="prose mt-2 max-w-none text-xl leading-relaxed text-gray-800 lg:mt-0">
+					<p class="mb-4">
+						I am an Assistant Professor at Columbia University, Department of Biomedical Informatics
+						where I lead the <a href="/group" class="text-reaim-blue font-bold hover:underline"
+							>reAIM lab</a
+						>. I am a member of the Data Science Institute, and affiliated with the SNF Center for
+						Precision Psychiatry and Mental Health, and Computer Science.
+					</p>
+					<p class="mb-4">
+						Before Columbia, I was a Postdoctoral Fellow at Harvard University and the Vector
+						Institute. I completed my PhD in Electrical and Computer Engineering from the University
+						of Texas at Austin.
+					</p>
+					<p class="mb-10">
+						My vision is to design AI and ML systems to improve scientific inference and predictive
+						capabilities in the biomedical sciences and informatics, focused on challenges of
+						generalizability, reliability, and robustness.
+					</p>
+				</div>
+
+				<div class="mb-12 rounded-2xl border border-blue-100 bg-blue-50/50 p-8">
+					<h2 class="mb-6 text-xl font-bold tracking-wide text-black uppercase">
+						Research Interests
+					</h2>
+					<ul class="mb-8 list-outside list-disc space-y-4 pl-5">
+						{
+							interests.map((item) => (
+								<li class="text-xl text-gray-800">
+									<span>{item}</span>
+								</li>
+							))
+						}
+					</ul>
+					<div class="flex flex-col gap-4 border-t border-blue-100 pt-6 sm:flex-row sm:gap-12">
+						<a
+							href="/research"
+							class="text-reaim-blue inline-flex items-center gap-1 text-lg font-bold hover:underline"
+						>
+							View Projects <span>&rarr;</span>
+						</a>
+						<a
+							href="/publications"
+							class="text-reaim-blue inline-flex items-center gap-1 text-lg font-bold hover:underline"
+						>
+							View Publications <span>&rarr;</span>
+						</a>
+					</div>
+				</div>
+
+				<div class="mb-12">
+					<h2
+						class="mb-6 border-b border-gray-200 pb-2 text-xl font-bold tracking-wide text-black uppercase"
+					>
+						Education
+					</h2>
+					<div class="space-y-6">
+						{
+							education.map((edu) => (
+								<div class="group">
+									<div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
+										<h3 class="group-hover:text-reaim-blue text-xl font-bold text-black transition-colors">
+											{edu.school}
+										</h3>
+										<span class="font-mono text-lg text-gray-400">{edu.year}</span>
+									</div>
+									<p class="text-lg text-gray-600">{edu.degree}</p>
+								</div>
+							))
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>

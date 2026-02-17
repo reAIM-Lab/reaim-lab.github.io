@@ -1,0 +1,96 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PublicationEntry from "../components/PublicationEntry.astro";
+import publications from "../data/publications.json";
+
+// FILTERING LOGIC
+const selectedPubs = publications.filter((p: any) => p.selected === true);
+const preprints = publications.filter((p: any) => p.type === "preprint");
+
+const mainList = publications
+	.filter((p: any) => p.type !== "preprint")
+	.sort((a: any, b: any) => b.year - a.year);
+
+const pubsByYear = mainList.reduce((acc: Record<string, any[]>, pub: any) => {
+	const year = pub.year.toString();
+	(acc[year] = acc[year] || []).push(pub);
+	return acc;
+}, {});
+
+const years = Object.keys(pubsByYear).sort((a, b) => Number(b) - Number(a));
+---
+
+<Layout title="Publications">
+	<section class="mb-16 pt-4">
+		<h1 class="mb-10 text-5xl font-bold tracking-tight text-black md:text-6xl">Publications</h1>
+
+		<div class="border-reaim-blue mb-20 max-w-4xl rounded-r-xl border-l-4 bg-gray-50 p-8">
+			<div class="flex flex-col justify-between gap-6 md:flex-row md:items-center">
+				<div class="space-y-1">
+					<p class="text-xl font-bold text-black">Looking for the latest work out of reAIM?</p>
+					<p class="text-lg text-gray-600">
+						Visit <a
+							href="https://scholar.google.com/citations?hl=en&user=x5wW5WIAAAAJ&view_op=list_works&sortby=pubdate"
+							target="_blank"
+							class="text-reaim-blue font-bold hover:underline"
+							>Dr. Joshi's Google Scholar page &rarr;</a
+						>
+					</p>
+				</div>
+
+				<div
+					class="rounded-lg border border-gray-200 bg-white px-5 py-3 text-lg text-gray-600 shadow-sm"
+				>
+					<span class="text-reaim-blue font-bold">Blue text</span> indicates reAIM authors.
+				</div>
+			</div>
+		</div>
+
+		<div class="space-y-20">
+			{
+				selectedPubs.length > 0 && (
+					<div>
+						<h2 class="mb-10 border-b border-gray-200 pb-3 text-3xl font-bold text-black">
+							Selected Publications
+						</h2>
+						<div class="space-y-8">
+							{selectedPubs.map((pub: any) => (
+								<PublicationEntry pub={pub} />
+							))}
+						</div>
+					</div>
+				)
+			}
+
+			{
+				preprints.length > 0 && (
+					<div>
+						<h2 class="mb-10 border-b border-gray-200 pb-3 text-3xl font-bold text-black">
+							Preprints
+						</h2>
+						<div class="space-y-8">
+							{preprints.map((pub: any) => (
+								<PublicationEntry pub={pub} />
+							))}
+						</div>
+					</div>
+				)
+			}
+
+			{
+				years.map((year) => (
+					<div>
+						<h2 class="mb-10 border-b border-gray-200 pb-3 text-3xl font-bold text-black">
+							{year}
+						</h2>
+						<div class="space-y-8">
+							{pubsByYear[year].map((pub: any) => (
+								<PublicationEntry pub={pub} />
+							))}
+						</div>
+					</div>
+				))
+			}
+		</div>
+	</section>
+</Layout>

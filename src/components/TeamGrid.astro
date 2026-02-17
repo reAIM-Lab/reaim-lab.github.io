@@ -1,0 +1,83 @@
+---
+interface Member {
+	name: string;
+	suffix?: string;
+	role?: string;
+	image?: string;
+	bio?: string;
+	email?: string;
+	website?: string;
+	scholar?: string;
+	group?: string;
+}
+
+interface Props {
+	members: Member[];
+}
+
+const { members } = Astro.props;
+---
+
+<div class="flex flex-col gap-16">
+	{
+		members.map((member) => (
+			<div class="flex flex-col items-start gap-8 md:flex-row md:gap-12">
+				<div class="mx-auto shrink-0 md:mx-0">
+					<img
+						src={member.image || "/images/placeholder_headshot.jpg"}
+						alt={member.name}
+						class="h-48 w-48 rounded-2xl bg-gray-100 object-cover object-center shadow-md md:h-56 md:w-56"
+					/>
+				</div>
+
+				<div class="min-w-0 flex-1 text-left">
+					<h3 class="text-3xl leading-tight font-bold break-words text-black">
+						{member.name}
+						{member.suffix && `, ${member.suffix}`}
+					</h3>
+
+					<div class="mt-3 flex flex-col items-start gap-2 text-lg font-medium text-gray-600">
+						{member.email && (
+							<div class="w-fit max-w-full rounded border border-gray-200 bg-gray-100 px-2 py-0.5 font-mono text-sm break-all text-gray-700">
+								{member.email}
+							</div>
+						)}
+
+						<div class="flex flex-col items-start gap-1 md:flex-row md:items-baseline md:gap-0">
+							{member.website && (
+								<a
+									href={member.website}
+									target="_blank"
+									class="text-reaim-blue font-bold hover:underline"
+								>
+									Personal Website
+								</a>
+							)}
+
+							{member.website && member.scholar && (
+								<span class="hidden px-3 text-gray-300 md:inline">•</span>
+							)}
+
+							{member.scholar && (
+								<a
+									href={member.scholar}
+									target="_blank"
+									class="text-reaim-blue font-bold hover:underline"
+								>
+									Google Scholar
+								</a>
+							)}
+						</div>
+					</div>
+
+					{member.bio && (
+						<div
+							class="[&_a]:text-reaim-blue mt-3 text-xl leading-relaxed break-words text-gray-800 [&_a]:font-bold [&_a]:hover:underline"
+							set:html={member.bio}
+						/>
+					)}
+				</div>
+			</div>
+		))
+	}
+</div>

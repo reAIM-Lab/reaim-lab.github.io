@@ -1,0 +1,158 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const news = [
+	{
+		date: "June 2025",
+		title: "Google Research Scholar Award",
+		content:
+			"Shalmali Joshi is grateful for support from the <a href='https://research.google/programs-and-events/research-scholar-program/recipients/' class='font-bold text-reaim-blue hover:underline'>Google Research Scholar Program</a>!"
+	},
+	{
+		date: "May 2025",
+		badge: "New Preprint!",
+		title: "Benchmarking EHR Foundation Models",
+		content:
+			"We benchmarked SOTA structured EHR foundation models on Columbia University Medical Center data. Read more about 'FoMoH' <a href='https://arxiv.org/pdf/2505.16941' class='font-bold text-reaim-blue hover:underline'>here</a>!"
+	}
+];
+---
+
+<Layout title="Home">
+	<section class="py-12 md:py-20">
+		<div class="max-w-4xl">
+			<h1 class="mb-10 text-5xl leading-[1.1] font-bold tracking-tight text-black md:text-6xl">
+				We are the <br class="hidden md:block" />
+				<span class="text-reaim-blue">re</span>liable
+				<span class="text-reaim-blue">A</span>rtificial
+				<span class="text-reaim-blue">I</span>ntelligence <br class="hidden md:block" />
+				for Health and
+				<span class="text-reaim-blue">M</span>edicine Lab.
+			</h1>
+
+			<p class="mb-8 max-w-3xl text-xl leading-relaxed font-light text-gray-800">
+				Led by <a
+					href="/shalmalijoshi"
+					class="border-reaim-blue hover:text-reaim-blue border-b-2 font-bold text-black transition-colors"
+					>Dr. Shalmali Joshi</a
+				> in the
+				<a
+					href="https://www.dbmi.columbia.edu/"
+					class="hover:text-reaim-blue font-medium text-gray-900"
+					>Department of Biomedical Informatics (DBMI)</a
+				> at Columbia University in the City of New York.
+			</p>
+
+			<p class="max-w-3xl text-xl leading-relaxed text-gray-800">
+				Our vision is to design AI and ML systems to improve scientific inference and predictive
+				capabilities in the biomedical sciences, discovery, and informatics, focused on challenges
+				of <span class="font-semibold text-black"
+					>generalizability, reliability, and robustness</span
+				> of inference and prediction. We develop methods that cut across deep learning, reinforcement
+				learning, observational causal inference, and probabilistic modeling.
+			</p>
+
+			<p class="mt-6 text-xl">
+				<a href="/research" class="text-reaim-blue font-bold transition-colors hover:underline">
+					Learn more about our research at reAIM &rarr;
+				</a>
+			</p>
+		</div>
+	</section>
+
+	<section class="mb-24">
+		<div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+			<a
+				href="/publications"
+				class="group block rounded-2xl border border-gray-100 bg-gray-50 p-8 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl"
+			>
+				<h3 class="group-hover:text-reaim-blue mb-2 text-2xl font-bold text-black">
+					Publications &rarr;
+				</h3>
+				<p class="text-lg text-gray-600">
+					Read our latest papers, preprints, and conference proceedings.
+				</p>
+			</a>
+
+			<a
+				href="/group"
+				class="group block rounded-2xl border border-gray-100 bg-gray-50 p-8 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl"
+			>
+				<h3 class="group-hover:text-reaim-blue mb-2 text-2xl font-bold text-black">
+					Our Group &rarr;
+				</h3>
+				<p class="text-lg text-gray-600">
+					Meet the doctoral students, postdocs, and researchers behind reAIM.
+				</p>
+			</a>
+
+			<a
+				href="/join"
+				class="group block rounded-2xl border border-gray-100 bg-gray-50 p-8 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-xl"
+			>
+				<h3 class="mb-2 text-2xl font-bold text-black">Join Us &rarr;</h3>
+				<p class="text-lg text-gray-600">
+					Interested in working with us? Explore open positions for students and postdocs.
+				</p>
+			</a>
+		</div>
+	</section>
+
+	<section class="mb-24">
+		<div class="mb-8 flex items-center">
+			<h2 class="mr-4 text-3xl font-bold tracking-wide text-black uppercase">News</h2>
+			<div class="h-1 flex-1 rounded-full bg-gray-100"></div>
+		</div>
+
+		<div class="space-y-8">
+			{
+				news.map((item) => (
+					<div class="flex flex-col items-start gap-4 md:flex-row md:gap-8">
+						<div class="w-32 shrink-0 pt-1">
+							<span class="text-sm font-bold tracking-wider text-gray-400 uppercase">
+								{item.date}
+							</span>
+						</div>
+						<div class="flex-1">
+							{item.badge && (
+								<span class="bg-reaim-blue/10 text-reaim-blue mb-2 inline-block rounded px-2 py-1 text-xs font-bold tracking-wide uppercase">
+									{item.badge}
+								</span>
+							)}
+							<h3 class="mb-2 text-xl font-bold text-black">{item.title}</h3>
+							<p class="text-xl text-gray-800" set:html={item.content} />
+						</div>
+					</div>
+				))
+			}
+		</div>
+	</section>
+
+	<section class="mb-20 pt-12">
+		<p class="mb-8 text-center text-sm font-bold tracking-widest text-gray-400 uppercase">
+			We are grateful for support from
+		</p>
+		<div
+			class="flex flex-wrap items-center justify-center gap-8 opacity-70 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0 md:gap-16"
+		>
+			<a
+				href="https://www.vagelos.columbia.edu/departments-centers/centers-and-institutes/stavros-niarchos-foundation-center-precision-psychiatry-mental-health"
+				class="text-reaim-dark hover:text-reaim-blue max-w-[200px] text-center text-xl font-bold"
+			>
+				SNF Center for Precision Psychiatry
+			</a>
+			<a
+				href="https://research.google/programs-and-events/research-scholar-program/recipients/"
+				class="text-2xl font-bold text-gray-800 hover:text-blue-500">Google</a
+			>
+			<a
+				href="https://www.nimh.nih.gov/"
+				class="text-2xl font-bold text-gray-800 hover:text-blue-700">NIMH</a
+			>
+			<a
+				href="https://www.nlm.nih.gov/"
+				class="text-2xl font-bold text-gray-800 hover:text-blue-600">NLM</a
+			>
+		</div>
+	</section>
+</Layout>

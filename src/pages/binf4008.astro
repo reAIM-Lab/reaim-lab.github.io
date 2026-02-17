@@ -1,0 +1,885 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const courseInfo = {
+	title: "Advanced Machine Learning for Health and Medicine",
+	code: "BINF GU 4008",
+	section: "Section 3 (Cross-listed in Computer Science)",
+	semester: "Spring 2026",
+
+	lectureTime: "Friday 2:00pm - 4:30pm",
+	lectureLocation: "Uris 304",
+	lectureMapLink: "https://operations.cufo.columbia.edu/content/uris-hall",
+
+	courseworksLink: "https://courseworks2.columbia.edu/courses/237192",
+
+	instructor: {
+		name: "Shalmali Joshi",
+		link: "https://reaim-lab.github.io/shalmalijoshi/",
+		officeHours: "Fridays 10:00a-11:00a (PH-20, 402)"
+	},
+	tas: [
+		{
+			name: "Zilin Jing",
+			link: "https://zilinjing.github.io/",
+			officeHours: "Fridays 4:30pm - 5:30pm (Uris 304)"
+		}
+	]
+};
+
+const rawSchedule = [
+	{
+		date: "2026-01-23",
+		topic: [
+			"1.1 Introduction to health and medicine data",
+			"1.2 History of AI/ML in health",
+			"1.3 Statistical challenges in health and medicine data"
+		],
+		readings: [
+			{
+				title:
+					"Big Data In Health Care: Using Analytics To Identify And Manage High-Risk And High-Cost Patients",
+				link: "https://www.healthaffairs.org/doi/full/10.1377/hlthaff.2014.0041"
+			},
+			{
+				title: "A Review of Challenges and Opportunities in Machine Learning for Health",
+				link: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7233077/"
+			}
+		],
+		homework: "HW 1 Out"
+	},
+	{
+		date: "2026-01-30",
+		topic: [
+			"2.1 Supervised Learning in Healthcare",
+			"2.2 Preventing data leakage",
+			"2.3 Learning with noisy labels",
+			"2.4 Positive and Unlabeled Learning",
+			"2.5 Shortcut Learning"
+		],
+		readings: [
+			{
+				title:
+					"Prospective, multi-site study of patient outcomes after implementation of the TREWS machine learning-based early warning system for sepsis",
+				link: "https://www.nature.com/articles/s41591-022-01894-0"
+			},
+			{
+				title:
+					"Intelligible Models for HealthCare: Predicting Pneumonia Risk and Hospital 30-day Readmission",
+				link: "https://dl.acm.org/doi/abs/10.1145/2783258.2788613"
+			}
+		],
+		homework: "HW 1 continues"
+	},
+	{
+		date: "2026-02-06",
+		topic: [
+			"3.1 Medical Imaging modalities",
+			"3.2 Convolutional Neural Networks, ResNet, ViT",
+			"3.3 Common tasks in medical imaging",
+			"3.4 State-of-the-art deep neural networks in medical imaging"
+		],
+		readings: [
+			{
+				title:
+					"Mammographic Breast Density Assessment Using Deep Learning: Clinical Implementation",
+				link: "https://pubs.rsna.org/doi/full/10.1148/radiol.2018180694"
+			},
+			{
+				title: "Foundation models in medical imaging - A review and outlook",
+				link: "https://arxiv.org/pdf/2506.09095"
+			}
+		],
+		homework: "Reflection 1 Due"
+	},
+	{
+		date: "2026-02-13",
+		topic: [
+			"4.1 Survival Modeling Basics",
+			"4.2 Censoring",
+			"4.3 Survival Modeling using Deep Learning"
+		],
+		readings: [
+			{
+				title: "An Introduction to Survival Analysis Math",
+				link: "https://www.andrew.cmu.edu/user/georgech/Introduction%20to%20Survival%20Analysis%20Math.pdf"
+			},
+			{ title: "Deep Survival Analysis", link: "http://proceedings.mlr.press/v56/Ranganath16.html" }
+		],
+		homework: "HW 1 ongoing"
+	},
+	{
+		date: "2026-02-20",
+		topic: [
+			"5.1 Sequence modeling of health data, including irregularly sampled EHR data",
+			"5.2 Deep learning for time-series modeling (RNN, LSTM, Attention)",
+			"5.3 An overview of structured EHR foundation models, and time-series models"
+		],
+		readings: [
+			{
+				title:
+					"FoMoH: A clinically meaningful foundation model evaluation for structured electronic health records",
+				link: "https://arxiv.org/pdf/2505.16941"
+			},
+			{
+				title:
+					"Probabilistic detection of short events, with application to critical care monitoring",
+				link: "https://proceedings.neurips.cc/paper_files/paper/2008/file/170c944978496731ba71f34c25826a34-Paper.pdf"
+			}
+		],
+		homework: "Reflection 2 Due, HW 1 Due, HW 2 Out"
+	},
+	{
+		date: "2026-02-27",
+		topic: [
+			"6.1 Causal Inference in Healthcare",
+			"6.2 Introduction to Structural Causal Models, Potential Outcomes framework",
+			"6.3 Causal view of structural biases in the data",
+			"6.4 Average Treatment Effect, Conditional Average Treatment Effect, Effect of Treatment on the Treated",
+			"6.5 Causal Machine Learning"
+		],
+		readings: [
+			{
+				title: "Chapters 1, 2, and 3 of What If book by Miguel Hernan and James Robins",
+				link: "https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/"
+			}
+		],
+		homework: "Project Proposals Due"
+	},
+	{
+		date: "2026-03-06",
+		topic: [
+			"7.1 Overview of Markov Decision Processes",
+			"7.2 Offline Off-policy Evaluation and Learning",
+			"7.3 Model based RL, Causal view of RL",
+			"7.4 Causal view of Off-policy RL",
+			"7.5 Applications in Healthcare"
+		],
+		readings: [
+			{
+				title:
+					"A Reinforcement Learning Approach to Weaning of Mechanical Ventilation in Intensive Care Units",
+				link: "http://auai.org/uai2017/proceedings/papers/209.pdf"
+			},
+			{
+				title: "Evaluating Reinforcement Learning Algorithms in Observational Health Settings",
+				link: "https://arxiv.org/abs/1805.12298"
+			}
+		],
+		homework: "Reflection 3 Due"
+	},
+	{
+		date: "2026-03-13",
+		topic: [
+			"Guest Lecture: TBD",
+			"8.1 Generalization of Machine Learning",
+			"8.2 Distribution Shifts: Types of distribution shifts",
+			"8.3 Domain adaptation, transfer learning",
+			"8.4 Causal view of distribution shift",
+			"8.5 Algorithms for robustness in Supervised Learning, Reinforcement Learning"
+		],
+		readings: [
+			{
+				title: "The Clinician and Dataset Shift in Artificial Intelligence",
+				link: "https://www.nejm.org/doi/full/10.1056/NEJMc2104626"
+			},
+			{
+				title:
+					"Factors Associated With Variability in the Performance of a Proprietary Sepsis Prediction Model Across 9 Networked Hospitals in the US",
+				link: "https://jamanetwork.com/journals/jamainternalmedicine/article-abstract/2803492?resultClick=1"
+			}
+		],
+		homework: "HW 2 Due, HW 3 Out"
+	},
+	{ date: "2026-03-20", topic: ["Spring Break", "No Class"], isBreak: true },
+	{
+		date: "2026-03-27",
+		topic: [
+			"Guest Lecture: TBD",
+			"9.1 Autoregressive foundation models (LLMs) for health",
+			"9.2 Research and advances in structured EHR foundation models for health",
+			"9.3 Applications of text-based foundation models in differential diagnosis, medical question answering, treatment planning"
+		],
+		readings: [
+			{
+				title:
+					"Large Language Model Influence on Diagnostic Reasoning, A Randomized Clinical Trial",
+				link: "https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2825395"
+			},
+			{
+				title: "Towards Expert-Level Medical Question Answering with Large Language Models",
+				link: "https://arxiv.org/pdf/2305.09617"
+			},
+			{
+				title:
+					"Assessment of Large Language Models in Clinical Reasoning: A Novel Benchmarking Study",
+				link: "https://ai.nejm.org/doi/full/10.1056/AIdbp2500120"
+			}
+		],
+		homework: "Reflection 4 Due"
+	},
+	{
+		date: "2026-04-03",
+		topic: [
+			"Guest Lecture: TBD",
+			"10.1 LLMs part 2",
+			"10.2 Information extraction, in-basket messaging, and summarization",
+			"10.3 LLMs for trial matching, systematic reviews, and knowledge discovery"
+		],
+		readings: [
+			{
+				title:
+					"Retrieval Augmented Generation Enabled Generative Pre-Trained Transformer 4 (GPT-4) Performance for Clinical Trial Screening",
+				link: "https://www.medrxiv.org/content/10.1101/2024.02.08.24302376v1.full.pdf"
+			},
+			{
+				title:
+					"Manual vs AI-Assisted Prescreening for Trial Eligibility Using Large Language Models—A Randomized Clinical Trial",
+				link: "https://jamanetwork.com/journals/jama/fullarticle/2830514"
+			},
+			{
+				title: "The evaluation illusion of large language models in medicine",
+				link: "https://www.nature.com/articles/s41746-025-01963-x"
+			}
+		],
+		homework: "HW 3 ongoing"
+	},
+	{
+		date: "2026-04-10",
+		topic: [
+			"Guest Lecture: TBD",
+			"11.1 Multimodal foundation models in healthcare",
+			"11.2 Vision language models and its (limited) uses",
+			"11.3 Successful (deployed) applications and current shortcomings"
+		],
+		readings: [
+			{
+				title: "Multimodal generative AI for medical image interpretation",
+				link: "https://www.nature.com/articles/s41586-025-08675-y"
+			},
+			{
+				title: "Understanding the robustness of vision-language models to medical image artefacts",
+				link: "https://www.nature.com/articles/s41746-025-02108-w"
+			}
+		],
+		homework: "Reflection 5 Due, HW 3 Due"
+	},
+	{
+		date: "2026-04-17",
+		topic: [
+			"Guest Lecture: TBD",
+			"12.1 Ethics, safety, and equity of ML in healthcare",
+			"12.2 Human-AI decision-making for healthcare",
+			"12.3 Regulation of ML/AI in healthcare"
+		],
+		readings: [
+			{
+				title: "Ethical Machine Learning in Healthcare",
+				link: "https://www.annualreviews.org/doi/abs/10.1146/annurev-biodatasci-092820-114757"
+			},
+			{
+				title: "Artificial Intelligence and Machine Learning in Software as a Medical Device",
+				link: "https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-and-machine-learning-software-medical-device"
+			}
+		],
+		homework: "Projects ongoing"
+	},
+	{
+		date: "2026-04-24",
+		topic: ["In-class pen and paper final"],
+		subtopic: "One letter-sized cheat sheet for formulae and equations for use during the exam.",
+		isExam: true,
+		homework: "Reflection 6 Due"
+	},
+	{
+		date: "2026-05-01",
+		topic: ["Project Presentations"],
+		subtopic: "Classroom discussion"
+	},
+	{
+		date: "2026-05-08",
+		topic: ["Project Presentations"],
+		subtopic: "Classroom discussion",
+		homework: "Reports Due 5/15"
+	}
+];
+
+let lectureCounter = 0;
+const schedule = rawSchedule.map((item) => {
+	const dateObj = new Date(item.date + "T12:00:00");
+	const dayOfWeek = dateObj.toLocaleDateString("en-US", { weekday: "short" }).toUpperCase();
+	const month = dateObj.toLocaleDateString("en-US", { month: "short" });
+	const day = dateObj.getDate();
+	const formattedDate = `${month} ${day}`;
+
+	let lectureNum = "";
+	if (!item.isBreak) {
+		if (!item.isExam) lectureCounter++;
+		lectureNum = lectureCounter.toString();
+		if (item.isExam) lectureNum = "-";
+	} else {
+		lectureNum = "-";
+	}
+	return { ...item, day: dayOfWeek, formattedDate, number: lectureNum };
+});
+
+const navLinks = [
+	{ label: "Logistics", id: "logistics" },
+	{ label: "Description", id: "description" },
+	{ label: "Prerequisites", id: "prerequisites" },
+	{ label: "Grading", id: "grading" },
+	{ label: "GenAI Policy", id: "llm-policy" },
+	{ label: "Project", id: "project" },
+	{ label: "Schedule", id: "schedule" }
+];
+---
+
+<Layout title={courseInfo.code}>
+	<section class="pt-2 pb-12">
+		<div class="mb-4">
+			<h1 class="mb-1 text-4xl font-bold tracking-tight text-black md:text-5xl">
+				{courseInfo.title}
+			</h1>
+			<p class="mb-1 text-xl font-medium text-gray-600">{courseInfo.section}</p>
+			<p class="text-reaim-blue mb-0 text-2xl font-bold">
+				{courseInfo.code} • {courseInfo.semester}
+			</p>
+		</div>
+
+		<!-- <div class="mb-8 rounded-r-lg border-l-4 border-red-500 bg-red-50 p-6">
+            <p class="text-xl font-bold text-red-700 md:text-2xl">
+                IMPORTANT NOTICE: From January 23rd onwards, our course will meet on Fridays 2p-4:30p at
+                Uris 304.
+            </p>
+        </div> -->
+
+		<div class="mb-8 md:hidden">
+			<a
+				href="#schedule"
+				class="block w-full rounded-lg bg-gray-100 py-3 text-center text-lg font-bold text-gray-800 shadow-sm transition-colors hover:bg-gray-200"
+			>
+				Skip to Schedule & Readings &darr;
+			</a>
+		</div>
+
+		<div
+			class="sticky top-0 z-30 -mx-4 mb-6 hidden bg-white/95 px-4 backdrop-blur-sm md:-mx-8 md:block md:px-8"
+		>
+			<nav
+				class="no-scrollbar mx-auto flex max-w-6xl justify-start overflow-x-auto py-1.5 md:justify-center"
+				aria-label="Course Navigation"
+			>
+				<div class="flex gap-4 px-2 md:gap-8">
+					{
+						navLinks.map((link) => (
+							<a
+								href={`#${link.id}`}
+								data-nav-link={link.id}
+								class="nav-item hover:text-reaim-blue rounded-md border border-transparent px-3 py-1.5 text-sm font-bold tracking-wider whitespace-nowrap text-gray-400 uppercase transition-all duration-200 hover:bg-blue-50/50"
+							>
+								{link.label}
+							</a>
+						))
+					}
+				</div>
+			</nav>
+		</div>
+
+		<div class="max-w-none space-y-12">
+			<section id="logistics" class="section-spy scroll-mt-32">
+				<div class="rounded-2xl border border-gray-100 bg-gray-50 p-8">
+					<div class="grid grid-cols-1 gap-10 md:grid-cols-2">
+						<div class="space-y-6">
+							<h3
+								class="border-b border-gray-200 pb-3 text-xl font-bold tracking-wide text-black uppercase"
+							>
+								Logistics
+							</h3>
+							<div class="space-y-3 text-xl text-gray-700">
+								<div>
+									<p class="font-bold text-black">Lecture:</p>
+									<p>{courseInfo.lectureTime}</p>
+									<p>
+										{courseInfo.lectureLocation} (<a
+											href={courseInfo.lectureMapLink}
+											class="text-reaim-blue font-bold hover:underline">Map</a
+										>)
+									</p>
+								</div>
+								<p>
+									<span class="font-bold text-black">Contact:</span>
+									<a
+										href={courseInfo.courseworksLink}
+										class="text-reaim-blue font-bold hover:underline">Courseworks</a>
+								</p>
+							</div>
+						</div>
+						<div class="space-y-6">
+							<h3
+								class="border-b border-gray-200 pb-3 text-xl font-bold tracking-wide text-black uppercase"
+							>
+								Staff
+							</h3>
+							<ul class="space-y-4 text-xl text-gray-700">
+								<li>
+									<span class="font-bold text-black">Instructor:</span>
+									<a
+										href={courseInfo.instructor.link}
+										class="text-reaim-blue font-bold hover:underline"
+										>{courseInfo.instructor.name}</a
+									><br /><span class="text-lg text-gray-500"
+										>Office Hours: Fridays 10:00a-11:00a at 622 W 168th St, PH-20, 402</span>
+								</li>
+								{
+									courseInfo.tas.map((ta) => (
+										<li>
+											<span class="font-bold text-black">TA:</span>{" "}
+											<>
+												<a href={ta.link} class="text-reaim-blue font-bold hover:underline">
+													{ta.name}
+												</a>
+												<br />
+												<span class="text-lg text-gray-500">Office Hours: {ta.officeHours}</span>
+											</>
+										</li>
+									))
+								}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="description" class="prose section-spy max-w-none scroll-mt-32 text-gray-800">
+				<h3 class="mb-4 text-3xl font-bold text-black">Course Description</h3>
+				<p class="mb-4 text-xl leading-relaxed">
+					Machine Learning (ML) has transformative potential for applications in health and
+					medicine. The complexity of healthcare and medicine has highlighted foundational
+					challenges in ML such as lack of generalization, robustness, safety, inequity, and
+					statistical interpretability. The generative AI revolution has brought quite a few AI
+					applications to fruition, but many challenges still remain.
+				</p>
+				<p class="mb-4 text-xl leading-relaxed">
+					The availability of large scale data and the foundation model paradigm brings in exciting
+					opportunities for methodological progress in Machine Learning/Aritficial Intelligence,
+					including generative AI motivated by health and medicine applications with applications
+					that impact patients, clinicians, researchers, regularatory bodies, and data scientists
+					developing such tools.
+				</p>
+				<p class="text-xl leading-relaxed">
+					In this course, you will learn about complexities that make health and medicine data
+					unique and how it opens up opportunities for advanced AI. You will learn advanced ML/AI
+					methods, for example, time-series modeling, (offline) reinforcement learning,
+					probabilistic modeling, observational causal inference, and how foundation models are
+					being used in medicine, and what challenges remain to be addressed, such as reasoning. The
+					course will train students to map real-world challenges of working with health and medical
+					data to statistical challenges that require new and advanced ML methods.
+				</p>
+			</section>
+
+			<section id="prerequisites" class="section-spy scroll-mt-32">
+				<div class="rounded-2xl border border-gray-100 bg-gray-50 p-8">
+					<div class="grid grid-cols-1 gap-10 md:grid-cols-2">
+						<div>
+							<h4
+								class="mb-3 border-b border-gray-200 pb-2 text-xl font-bold tracking-wide text-black uppercase"
+							>
+								Prerequisites
+							</h4>
+							<ul class="mt-4 list-outside list-disc space-y-2 pl-5 text-xl text-gray-700">
+								<li>
+									Machine Learning (COMS W 4771-001) or equivalent (BINF G 4002) with grade B or
+									higher
+								</li>
+								<li>Familiarity with Python and one or more of: Pytorch, Tensorflow, JAX</li>
+								<li>Basic knowledge of probability, statistics, and linear algebra</li>
+							</ul>
+						</div>
+						<div>
+							<h4
+								class="mb-3 border-b border-gray-200 pb-2 text-xl font-bold tracking-wide text-black uppercase"
+							>
+								Learning Objectives
+							</h4>
+							<ul class="mt-4 list-outside list-disc space-y-2 pl-5 text-xl text-gray-700">
+								<li>Get a foundational overview of state-of-the-art ML/AI in healthcare</li>
+								<li>
+									Distill challenges in health and medicine data to technical challenges to address
+									using ML/AI
+								</li>
+								<li>Develop new AI methods focused on health/medicine tasks</li>
+								<li>Be better equipped to evaluate and validate ML/AI in health and medicine</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="grading" class="section-spy scroll-mt-32">
+				<h3 class="mb-6 text-3xl font-bold text-black">Format & Grading</h3>
+				<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-5">
+					<div class="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
+						<div class="text-reaim-blue mb-1 text-4xl font-bold">
+							25 <span class="text-2xl">points</span>
+						</div>
+						<div class="text-xl font-bold text-black">Problem Sets</div>
+						<p class="text-lg text-gray-500">
+							Each homework is a mini-project divided into 3 problem-based questions (3 homeworks
+							total).
+						</p>
+					</div>
+					<div class="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
+						<div class="text-reaim-blue mb-1 text-4xl font-bold">
+							15 <span class="text-2xl">points</span>
+						</div>
+						<div class="text-xl font-bold text-black">Reading</div>
+						<p class="text-lg text-gray-500">Reflection questions bi-weekly.</p>
+					</div>
+					<div class="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
+						<div class="text-reaim-blue mb-1 text-4xl font-bold">
+							35 <span class="text-2xl">points</span>
+						</div>
+						<div class="text-xl font-bold text-black">Exam</div>
+						<p class="text-lg text-gray-500">In-class paper exam held on <strong>04/24</strong>.</p>
+					</div>
+					<div class="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
+						<div class="text-reaim-blue mb-1 text-4xl font-bold">
+							30 <span class="text-2xl">points</span>
+						</div>
+						<div class="text-xl font-bold text-black">Final Project</div>
+						<p class="text-lg text-gray-500">Presentation + NeurIPS format report.</p>
+					</div>
+					<div class="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
+						<div class="text-reaim-blue mb-1 text-4xl font-bold">
+							5 <span class="text-2xl">points</span>
+						</div>
+						<div class="text-xl font-bold text-black">Participation</div>
+						<p class="text-lg text-gray-500">In-person lecture participation.</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="homework" class="section-spy scroll-mt-32">
+				<h3 class="mb-6 border-b border-gray-200 pb-2 text-3xl font-bold text-black">
+					Homework Assignments
+				</h3>
+				<div class="border-reaim-blue border-l-4 py-2 pl-8">
+					<div class="space-y-4 text-xl leading-relaxed text-gray-800">
+						<p>
+							Homeworks will be assigned on Courseworks. Homeworks will be due 3 weeks after they
+							are assigned. We have ensured ample time for all homeworks.
+						</p>
+						<p>
+							However, we are allowing <strong>two slack days</strong> usable over the semester. If you
+							are using a slack day for a homework, mention this on your homework submission (otherwise
+							the TA will assume late submission).
+						</p>
+						<p>
+							You are free to use the slack days for any of the homeworks.
+							<span class="font-bold text-red-700"
+								>No slack days for project submission is allowed</span
+							> (unless you have a medical emergency, in which case please contact the instructor).
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<h3 class="mb-6 border-b border-gray-200 pb-2 text-3xl font-bold text-black">
+				Policy on Generative AI
+			</h3>
+
+			<section id="llm-policy" class="section-spy scroll-mt-32">
+				<div class="border-reaim-blue mt-8 border-l-4 py-2 pl-8">
+					<p class="mb-4 text-xl text-gray-800">
+						This class has a different LLM/genAI usage policy for each component of the class:
+					</p>
+					<ul class="list-outside list-disc space-y-6 pl-5 text-xl text-gray-800">
+						<li>
+							<strong>Lectures:</strong><br />
+							All slides will be made available on courseworks. <span class="font-bold text-red-700"
+								>No recording/transcribing tools are permitted</span
+							>. Any transcribing will only be allowed for special accomodations with written
+							approval from Columbia office of accomodations.
+						</li>
+						<li>
+							<strong>Homeworks:</strong><br />
+							LLM/agentic AI can be used to assist in coding, studying concepts, plotting. However, <span
+								class="font-bold text-red-700"
+								>LLM/agentic AI should not be used for conceptual questions</span
+							>. We know you will still do it, and will be evaluating for it with <span
+								class="font-bold text-red-700">negative marking</span
+							> for each question where LLM usage was not permitted but was applied.
+						</li>
+						<li>
+							<strong>Preparing for exams:</strong><br />
+							You are welcome to use LLMs/genAI tools to learn and understand concepts. You are solely
+							responsible for handling potential hallucinations or learning the concepts incorrectly due
+							to LLM usage.
+						</li>
+						<li>
+							<strong>Usage in exams:</strong><br />
+							<span class="font-bold text-red-700">The exam is closed-book, closed-device</span>.
+							You will not be allowed to keep laptops, phones, smart-watches or any other digital
+							device at your disposal during the exam. Calculators are not required. You will be
+							allowed one letter-sized cheat sheet for formulae and equations for use during the
+							exam, which you will submit along with your answer sheet. <span
+								class="font-bold text-red-700"
+								>Any usage of generative AI will be considered a violation and no points will be
+								awarded for the midterm. No ability to retake the exam is permitted if found in
+								violation of rules</span
+							>.
+						</li>
+						<li>
+							<strong>Usage in final projects:</strong><br />
+							Policy is analogous to homeworks.
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section id="project" class="section-spy scroll-mt-32">
+				<h3 class="mb-6 border-b border-gray-200 pb-2 text-3xl font-bold text-black">
+					Final Projects
+				</h3>
+				<div class="space-y-6 rounded-2xl border border-blue-100 bg-blue-50/50 p-8">
+					<p class="text-xl text-gray-800">
+						The goal of the projects is to identify a meaningful problem in health and medicine that
+						can be addressed using Machine Learning. The project can be a new method, a new
+						application, or a new dataset. Each type of project requires careful consideration of:
+					</p>
+
+					<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+						<div>
+							<h4 class="mb-4 font-bold tracking-wide text-black uppercase">Key Considerations</h4>
+							<ul class="list-outside list-disc space-y-2 pl-5 text-lg text-gray-700">
+								<li>What is the health or medicine problem?</li>
+								<li>Why is it an important?</li>
+								<li>What is the current state of the art?</li>
+								<li>What is the gap in the current state of the art?</li>
+								<li>Why is Machine Learning a good solution to address this gap?</li>
+								<li>In what ways do you expect ML to address existing limitations?</li>
+								<li>Are existing ML methods good enough to address your problem?</li>
+								<li>
+									If yes, what application-specific considerations are crucial for successfully
+									addressing the problem?
+								</li>
+								<li>If no, what new methods are needed to address the problem?</li>
+								<li>What is your methodological advancement to address this issue?</li>
+								<li>
+									What is a good evaluation of i) the validity of the method, ii) the relevance to
+									the health/medicine problem, iii) utility to the applicaiton of interest
+								</li>
+								<li>
+									What are the limitations of your method? What are the considerations before I can
+									declare that my method is the best out there?
+								</li>
+								<li>
+									What are the future directions that you think might improve on your proposal?
+								</li>
+							</ul>
+						</div>
+						<div>
+							<h4 class="mb-4 font-bold tracking-wide text-black uppercase">Format & Data</h4>
+							<div class="space-y-4 text-lg text-gray-700">
+								<p>
+									The project can be done individually or in groups of 2 students maximum. The
+									project will be presented in class at the end of the semester. The project report
+									will be in <strong>NeurIPS paper format in Latex</strong> (required, with a maximum
+									of 8 pages excluding references). The instructor will read and grade all midterms and
+									final projects.
+								</p>
+								<div>
+									<p class="font-bold text-black">
+										Potential sources of data (list is not exhaustive):
+									</p>
+									<ul class="list-outside list-disc space-y-1 pl-5">
+										<li>
+											<a
+												href="https://physionet.org/content/mimiciv/"
+												class="text-reaim-blue hover:underline">MIMIC-IV (X-ray and ICU data)</a>
+										</li>
+										<li>
+											<a
+												href="https://physionet.org/content/eicu-crd/2.0/"
+												class="text-reaim-blue hover:underline">eICU</a>
+										</li>
+										<li>
+											<a href="https://www.ngsci.org" class="text-reaim-blue hover:underline"
+												>Nightingale Open Data</a>
+										</li>
+										<li>
+											<a
+												href="https://stanfordaimi.azurewebsites.net/datasets/8cbd9ed4-2eb9-4565-affc-111cf4f7ebe2"
+												class="text-reaim-blue hover:underline">Stanford X-ray data</a>
+										</li>
+										<li>
+											<a
+												href="https://bimcv.cipf.es/bimcv-projects/padchest/"
+												class="text-reaim-blue hover:underline">PadChest</a>
+										</li>
+									</ul>
+								</div>
+								<p class="text-base text-gray-600 italic">
+									Instructor(s) will work with students to manage (temporary) data access to above
+									data sources. Other data sources/tasks can be used in consultation with the
+									instructor. Students will work closely with the instructor to scope the project
+									and frequently update the instructor on progress on their projects at office
+									hours.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="schedule" class="section-spy scroll-mt-32">
+				<h3 class="mb-6 border-b border-gray-200 pb-3 text-3xl font-bold text-black">Schedule</h3>
+				<div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
+					<table class="w-full border-collapse text-left">
+						<thead
+							class="hidden bg-gray-100 text-base font-bold tracking-wider text-gray-900 uppercase md:table-header-group"
+						>
+							<tr>
+								<th class="w-16 border-b border-gray-300 px-4 py-4 text-center">#</th>
+								<th class="w-32 border-b border-gray-300 px-4 py-4">Date</th>
+								<th class="w-[35%] border-b border-gray-300 px-4 py-4">Topic</th>
+								<th class="w-[30%] border-b border-gray-300 px-4 py-4">Reading Assignments</th>
+								<th class="w-40 border-b border-gray-300 px-4 py-4 text-right">Assignments</th>
+							</tr>
+						</thead>
+						<tbody class="divide-y divide-gray-200 bg-white text-lg">
+							{
+								schedule.map((row, index) => (
+									<tr
+										class={`flex flex-col gap-1 border-b border-gray-200 p-6 md:table-row md:gap-0 md:border-0 md:p-0 ${row.isBreak ? "bg-gray-50/50 text-gray-500 italic" : ""} ${row.isExam ? "bg-amber-50" : !row.isBreak && index % 2 !== 0 ? "bg-gray-50" : "bg-white"} `}
+									>
+										<td class="hidden px-4 py-4 text-center font-mono text-xl font-bold text-gray-500 md:table-cell">
+											{row.number}
+										</td>
+
+										<td class="block p-0 md:table-cell md:px-4 md:py-4 md:whitespace-nowrap">
+											{row.number !== "-" && (
+												<div class="mb-1 text-xs font-bold tracking-wider text-gray-400 uppercase md:hidden">
+													Lecture #{row.number}
+												</div>
+											)}
+											<div class="flex items-baseline gap-2 md:block">
+												<div
+													class={`text-xl font-bold ${row.isExam ? "text-amber-800" : "text-black"}`}
+												>
+													{row.formattedDate}
+												</div>
+												<div class="text-sm font-bold text-gray-500 uppercase md:mt-1">
+													{row.day}
+												</div>
+											</div>
+										</td>
+
+										<td class="block p-0 pt-2 md:table-cell md:px-4 md:py-4 md:align-top">
+											<div
+												class={`text-xl ${row.isExam ? "font-bold text-amber-800" : "font-medium text-gray-900"}`}
+											>
+												{row.topic.map((line) => {
+													const isGuest = line.includes("Guest Lecture:");
+													const parts = line.split(" ");
+													const label = parts[0];
+													const text = parts.slice(1).join(" ");
+													const hasLabel = /^\d+(\.\d+)?$/.test(label) && !row.isExam && !isGuest;
+
+													return (
+														<div
+															class={`mb-2 flex items-start gap-6 leading-snug ${isGuest ? "text-reaim-blue font-bold" : ""}`}
+														>
+															{hasLabel ? (
+																<>
+																	<span class="w-14 shrink-0 text-gray-500 tabular-nums">
+																		{label}
+																	</span>
+																	<span>{text}</span>
+																</>
+															) : (
+																<span>{line}</span>
+															)}
+														</div>
+													);
+												})}
+											</div>
+											{row.subtopic && (
+												<div class="mt-2 text-base font-normal text-gray-600 md:text-lg">
+													{row.subtopic}
+												</div>
+											)}
+										</td>
+
+										<td class="block p-0 pt-4 md:table-cell md:px-4 md:py-4 md:pt-4 md:align-top">
+											{row.readings && row.readings.length > 0 && (
+												<>
+													<div class="mb-1 text-xs font-bold tracking-wider text-gray-400 uppercase md:hidden">
+														Readings
+													</div>
+													<ul class="list-outside list-disc space-y-2 pl-4 text-base text-gray-700">
+														{row.readings.map((reading) => (
+															<li>
+																<a
+																	href={reading.link}
+																	class="text-reaim-blue decoration-1 underline-offset-2 hover:underline"
+																	target="_blank"
+																	rel="noopener noreferrer"
+																>
+																	{reading.title}
+																</a>
+															</li>
+														))}
+													</ul>
+												</>
+											)}
+										</td>
+
+										<td class="block p-0 pt-4 md:table-cell md:px-4 md:py-4 md:text-right md:align-top">
+											{row.homework && (
+												<div class="flex flex-wrap items-start gap-2 md:flex-col md:items-end">
+													{row.homework.split(",").map((item) => {
+														const text = item.trim();
+														const isOut = text.includes("Out");
+														const isDue = text.includes("Due");
+														return (
+															<span
+																class={`inline-block rounded-lg border px-2 py-1 text-xs font-bold whitespace-nowrap shadow-sm md:px-3 md:py-1.5 md:text-sm ${isOut ? "border-green-200 bg-green-50 text-green-700" : isDue ? "border-red-200 bg-red-50 text-red-700" : "border-gray-200 bg-gray-50 text-gray-700"}`}
+															>
+																{text}
+															</span>
+														);
+													})}
+												</div>
+											)}
+										</td>
+									</tr>
+								))
+							}
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</div>
+	</section>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+			const sections = document.querySelectorAll(".section-spy");
+			const navLinks = document.querySelectorAll(".nav-item");
+			const observerOptions = { root: null, rootMargin: "-20% 0px -60% 0px", threshold: 0 };
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						navLinks.forEach((link) => link.classList.add("text-gray-400", "border-transparent"));
+						const activeId = entry.target.getAttribute("id");
+						const activeLink = document.querySelector(`[data-nav-link="${activeId}"]`);
+						if (activeLink)
+							activeLink.classList.add("text-reaim-blue", "bg-blue-50", "border-blue-100");
+					}
+				});
+			}, observerOptions);
+			sections.forEach((section) => observer.observe(section));
+		});
+	</script>
+</Layout>

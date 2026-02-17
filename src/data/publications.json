@@ -1,0 +1,79 @@
+[
+	{
+		"title": "Towards Safe Policy Learning Under Partial Identifiability: A Causal Approach",
+		"authors": "Shalmali Joshi, Junzhe Zhang, and Elias Bareinboim",
+		"venue": "AAAI Conference on Artificial Intelligence (AAAI)",
+		"year": 2024,
+		"url": "https://ojs.aaai.org/index.php/AAAI/article/view/29198",
+		"selected": true
+	},
+	{
+		"title": "\"Why did the model fail?\": attributing model performance changes to distribution shifts",
+		"authors": "Haoran Zhang, Harvineet Singh, Marzyeh Ghassemi, and Shalmali Joshi",
+		"venue": "International Conference on Machine Learning (ICML)",
+		"year": 2023,
+		"url": "https://proceedings.mlr.press/v202/zhang23ai/zhang23ai.pdf",
+		"selected": true
+	},
+	{
+		"title": "AI as an intervention: improving clinical outcomes relies on a causal approach to AI development",
+		"authors": "Shalmali Joshi, Iñigo Urteaga, Wouter A. C. van Amsterdam, George Hripcsak, Pierre Elias, Benjamin Recht, Noémie Elhadad, James Fackler, Mark P Sendak, Jenna Wiens, Kaivalya Deshpande, Yoav Wald, Madaline Fiterau, Zachary Lipton, Daniel Malinsky, Madhur Nayan, Hongseok Namkoong, Soojin Park, Julia E. Vogt, Rajesh Ranganath",
+		"venue": "Journal of the American Medical Informatics Association (JAMIA)",
+		"year": 2024,
+		"note": "to appear",
+		"url": "",
+		"selected": true
+	},
+	{
+		"title": "Adaptive Labeling for Efficient Out-of-distribution Model Evaluation",
+		"authors": "Daksh Mittal, Yuanzhe Ma, Shalmali Joshi, and Hongseok Namkoong",
+		"venue": "Neural Information Processing Systems (NeurIPS)",
+		"year": 2024,
+		"url": "https://openreview.net/pdf?id=uuQQwrjMzb",
+		"selected": true
+	},
+	{
+		"title": "Machine Learning is More Accurate and Biased than Risk Scoring Tools in the Prediction of Postoperative Atrial Fibrillation After Cardiac Surgery",
+		"authors": "Joyce C. Ho, Shalmali Joshi, Eduardo Valverde, Kathryn Wood, Kendra J. Grubb, Miguel A. Leal, and Vicki Stover Hertzberg",
+		"venue": "medRxiv preprint",
+		"year": 2024,
+		"url": "https://www.medrxiv.org/content/10.1101/2024.07.05.24310013v1",
+		"type": "preprint"
+	},
+	{
+		"title": "Rise of the machines: how machine learning will shape the field of rheumatology",
+		"authors": "Shalmali Joshi and Jason E Leibowitz",
+		"venue": "Rheumatology",
+		"year": 2024,
+		"url": "https://academic.oup.com/rheumatology/article/63/9/2319/7665716"
+	},
+	{
+		"title": "Prevalence and incidence measures for schizophrenia among commercial health insurance and medicaid enrollees",
+		"authors": "Molly T. Finnerty, Atif Khan, Kai You, Rui Wang, Gyojeong Gu, Deborah Layman, Qingxian Chen, Noémie Elhadad, Shalmali Joshi, Paul S. Appelbaum, Todd Lencz, Sander Markx, Steven A. Kushner and Andrey Rzhetsky",
+		"venue": "Schizophrenia",
+		"year": 2024,
+		"url": "https://www.nature.com/articles/s41537-024-00490-0"
+	},
+	{
+		"title": "Does multimodality help in deep learning-based structural heart disease detection?",
+		"authors": "Young Sang Choi, Shalmali Joshi, Linyuan Jing, and Pierre Elias",
+		"venue": "Medical Imaging with Deep Learning (MIDL)",
+		"year": 2024,
+		"note": "Short Paper Track",
+		"url": "https://openreview.net/pdf?id=sMiSQP8zmr"
+	},
+	{
+		"title": "A normative framework for artificial intelligence as a sociotechnical system in healthcare",
+		"authors": "Melissa D. McCradden, Shalmali Joshi, James A. Anderson, and Alex John London",
+		"venue": "Patterns",
+		"year": 2023,
+		"url": "https://www.cell.com/patterns/pdf/S2666-3899(23)00248-9.pdf"
+	},
+	{
+		"title": "What's fair is… fair?: Presenting JustEFAB, an ethical framework for operationalizing medical ethics and social Justice in the integration of clinical machine learning",
+		"authors": "Melissa McCradden, Oluwadara Odusi, Shalmali Joshi, Ismail Akrout, Kagiso Ndlovu, Ben Glocker, Gabriel Maicas et al.",
+		"venue": "ACM Conference on Fairness, Accountability, and Transparency (FAccT)",
+		"year": 2023,
+		"url": "https://dl.acm.org/doi/pdf/10.1145/3593013.3594096"
+	}
+]

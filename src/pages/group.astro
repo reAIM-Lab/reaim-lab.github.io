@@ -1,0 +1,150 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TeamGrid from "../components/TeamGrid.astro";
+import allMembers from "../data/team.json";
+import alumni from "../data/alumni.json";
+
+const pi = allMembers.filter((m) => m.group === "PI");
+const postdocs = allMembers.filter((m) => m.group === "Postdoc");
+const phdStudents = allMembers.filter((m) => m.group === "PhD");
+const others = allMembers.filter((m) => m.group === "Masters/Undergrad");
+// Updated filter to strictly "Visiting"
+const visitors = allMembers.filter((m) => m.group === "Visiting");
+---
+
+<Layout title="Group">
+	<section class="mb-12 px-4 pt-4">
+		<h1
+			class="mb-10 text-left text-5xl font-bold tracking-tight break-words text-black md:text-left md:text-6xl"
+		>
+			Group
+		</h1>
+
+		<div class="space-y-16">
+			<div class="flex flex-col items-center md:items-start">
+				<h2
+					class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-3xl font-bold text-black"
+				>
+					Principal Investigator
+				</h2>
+				<TeamGrid members={pi} />
+			</div>
+
+			{
+				postdocs.length > 0 && (
+					<div class="flex flex-col items-center md:items-start">
+						<h2 class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-3xl font-bold text-black">
+							Postdoctoral Researchers
+						</h2>
+						<TeamGrid members={postdocs} />
+					</div>
+				)
+			}
+
+			{
+				phdStudents.length > 0 && (
+					<div class="flex flex-col items-center md:items-start">
+						<h2 class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-3xl font-bold text-black">
+							Doctoral Students
+						</h2>
+						<TeamGrid members={phdStudents} />
+					</div>
+				)
+			}
+
+			{
+				others.length > 0 && (
+					<div class="flex flex-col items-center md:items-start">
+						<h2 class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-3xl font-bold text-black">
+							Master's and Undergraduate Researchers
+						</h2>
+						<TeamGrid members={others} />
+					</div>
+				)
+			}
+
+			{
+				visitors.length > 0 && (
+					<div class="flex flex-col items-center md:items-start">
+						<h2 class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-3xl font-bold text-black">
+							Visiting Researchers
+						</h2>
+						<TeamGrid members={visitors} />
+					</div>
+				)
+			}
+
+			{
+				alumni.length > 0 && (
+					<div class="flex flex-col items-center md:items-start">
+						<h2 class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-3xl font-bold text-black">
+							Lab Alumni
+						</h2>
+
+						<ul class="grid w-full grid-cols-1 gap-x-12 gap-y-8 text-gray-800 md:grid-cols-2">
+							{alumni.map((alum) => {
+								const hasLinks = alum.website || alum.scholar;
+
+								return (
+									<li class="hover:border-reaim-blue overflow-hidden border-l-4 border-gray-200 pl-4 break-words transition-colors">
+										<div class="flex flex-col">
+											<div class="text-2xl leading-tight font-bold break-words text-black">
+												{alum.name}
+												{alum.suffix && `, ${alum.suffix}`}
+											</div>
+										</div>
+
+										{hasLinks && (
+											<div class="mt-2 flex flex-col gap-1 text-lg font-medium text-gray-600 md:flex-row md:items-center md:gap-0">
+												{alum.website && (
+													<a
+														href={alum.website}
+														target="_blank"
+														class="text-reaim-blue w-fit font-bold hover:underline"
+													>
+														Personal Website
+													</a>
+												)}
+
+												{alum.website && alum.scholar && (
+													<span class="hidden px-3 text-gray-300 md:inline">•</span>
+												)}
+
+												{alum.scholar && (
+													<a
+														href={alum.scholar}
+														target="_blank"
+														class="text-reaim-blue w-fit font-bold hover:underline"
+													>
+														Google Scholar
+													</a>
+												)}
+											</div>
+										)}
+										<div class={`${hasLinks ? "mt-3" : "mt-1"} space-y-1.5`}>
+											<div class="text-lg break-words text-gray-700 italic">{alum.thesis}</div>
+
+											{alum.first_position && (
+												<div class="flex flex-col text-lg text-gray-600 sm:flex-row sm:gap-x-1.5">
+													<span class="shrink-0 font-bold text-black">First Position:</span>
+													<span class="break-words">{alum.first_position}</span>
+												</div>
+											)}
+
+											{alum.current_position && (
+												<div class="flex flex-col text-lg text-gray-600 sm:flex-row sm:gap-x-1.5">
+													<span class="shrink-0 font-bold text-black">Current Position:</span>
+													<span class="break-words">{alum.current_position}</span>
+												</div>
+											)}
+										</div>
+									</li>
+								);
+							})}
+						</ul>
+					</div>
+				)
+			}
+		</div>
+	</section>
+</Layout>

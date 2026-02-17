@@ -1,0 +1,90 @@
+[
+	{
+		"name": "Shalmali Joshi",
+		"suffix": "Ph.D.",
+		"role": "Principal Investigator",
+		"group": "PI",
+		"image": "/images/shalmali_headshot.jpg",
+		"email": "shalmali[dot]joshi[at]columbia.edu",
+		"website": "https://reaim-lab.github.io/shalmalijoshi.html",
+		"scholar": "https://scholar.google.com/citations?user=x5wW5WIAAAAJ",
+		"bio": "Dr. Joshi is an Assistant Professor at Columbia University, Department of Biomedical Informatics where she leads the reAIM Lab. She works to advance Machine Learning (ML) and Artificial Intelligence (AI) methods with the goal of advancing clinical health and medicine for all."
+	},
+	{
+		"name": "Vincent Jeanselme",
+		"suffix": "Ph.D.",
+		"role": "Postdoctoral Researcher",
+		"group": "Postdoc",
+		"image": "/images/vincent_headshot.png",
+		"email": "vincent[dot]jeanselme[at]gmail[dot]com",
+		"website": "https://jeanselme.github.io/",
+		"scholar": "https://scholar.google.com/citations?user=CnN1SlcAAAAJ",
+		"bio": "Vincent is a postdoctoral researcher at the reAIM lab at Columbia University. He was formerly a postdoctoral researcher at the MRC BSU at the University of Cambridge. His research interest lies in developing machine learning models to assist medical practitioners with a focus on reducing inequalities in medical care access and delivery. He received his PhD at the University of Cambridge under the supervision of Dr. Jessica Barrett and Dr. Brian Tom, where he investigated how the interaction between patients and the healthcare system harms the application of machine learning models in real-world settings. Before his doctoral studies, Vincent received an engineering degree in computer science and a master’s degree in machine learning from the Ecole Nationale Supérieure d’Informatique et de Mathématiques Appliquées de Grenoble. Then, he worked as a research analyst at the AutonLab at Carnegie Mellon University where he developed machine learning models with a focus on medical applications such as hypotension prediction and haemorrhage detection. "
+	},
+	{
+		"name": "Young Sang Choi",
+		"suffix": "M.S.",
+		"role": "PhD Student",
+		"group": "PhD",
+		"image": "/images/young_headshot.jpg",
+		"email": "young[dot]sang[dot]choi[at]columbia[dot]edu",
+		"website": "https://youngsangchoi.github.io/",
+		"scholar": "https://scholar.google.com/citations?hl=en&user=cX-zhzAAAAAJ",
+		"bio": "Young is a doctoral student in Biomedical Informatics advised by Dr. Shalmali Joshi and Dr. Pierre Elias. His research sits on the intersection of multimodal learning, event stream modeling, and trustworthy machine learning, particularly in how these fields converge to create reliable AI-based systems that advance human health. Previously, he was a researcher at the National Cancer Center-Korea, received a master's degree under the supervision of Dr. Deborah Estrin in Information Systems at Cornell Tech, and graduated from New York University with a bachelor's degree in Mathematics."
+	},
+	{
+		"name": "Aparajita Kashyap",
+		"suffix": "M.A.",
+		"role": "PhD Student",
+		"group": "PhD",
+		"image": "/images/apara_headshot.jpg",
+		"email": "ak4885@cumc[dot]columbia[dot]edu",
+		"website": "https://aparakashyap.github.io/",
+		"scholar": "https://scholar.google.com/citations?user=0g2q-j8AAAAJ&hl=en",
+		"bio": "Aparajita (Apara) Kashyap is a PhD student at Columbia University in the Department of Biomedical Informatics. Her research focuses on building fair and equitable models for use in healthcare settings, with a focus on mental health disorders and reproductive health disorders. At Columbia, Aparajita is coadvised by Shalmali Joshi and Noémie Elhadad. Prior to her work at Columbia, Aparajita studied Biophysics at Johns Hopkins University."
+	},
+	{
+		"name": "Yuta Kobayashi",
+		"suffix": "M.S.",
+		"role": "PhD Student",
+		"group": "PhD",
+		"image": "/images/yuta_headshot.jpg",
+		"email": "yk3043@cumc[dot]columbia[dot]edu",
+		"website": "https://ykobaya9.github.io/",
+		"scholar": "https://scholar.google.com/citations?user=ePjRZKcAAAAJ",
+		"bio": "Yuta is a doctoral student in Biomedical Informatics advised by Dr. Shalmali Joshi. He received his bachelor's degree in Computer Science and Biomedical Engineering and a master's degree in Computer Science at Johns Hopkins University, where he was advised by Dr. Archana Venkataraman. Currently, his research focuses on utilizing tools from causal inference and reinforcement learning to detect and mitigate algorithmic bias in AI models for healthcare."
+	},
+	{
+		"name": "Zilin Jing",
+		"suffix": "B.Sc.",
+		"role": "PhD Student",
+		"group": "PhD",
+		"image": "/images/zilin_headshot.jpg",
+		"email": "zj2398[at]columbia[dot]edu",
+		"website": "https://zilinjing.github.io/",
+		"scholar": "https://scholar.google.com/citations?user=q7XpLa4AAAAJ",
+		"bio": "Zilin is a doctoral student in Computer Science advised by Dr. Shalmali Joshi. He received his bachelor degree in Computer Science and Engineering at The Chinese University of Hong Kong, Shenzhen under the supervision of Prof. Shuang Li and Prof. Hongyuan Zha and was an international visiting student at Yale University through Y-VISP. His research interest is in machine learning for healthcare, causal inference and reinforcement learning. "
+	},
+	{
+		"name": "Florent Pollet",
+		"suffix": "M.Sc.",
+		"role": "PhD Student",
+		"group": "PhD",
+		"image": "/images/florent_headshot.jpg",
+		"email": "ffp2106[at]columbia[dot]edu",
+		"website": "https://florian6973.github.io/",
+		"scholar": "https://scholar.google.com/citations?user=-NcIrc0AAAAJ&hl=en",
+		"bio": "Florent is a PhD student in Biomedical Informatics at Columbia University. He graduated from PSL University with a MSc in CS and from Paris-Saclay University with a MSc in Applied Math for AI. His research focuses on foundation models for healthcare, clinical large language models, privacy risks of medical data, co-advised by Prof. Gamze Gürsoy from Cambridge University. He has strong experience in applied mathematics, optimization, and scientific software development In his free time, he loves running, biking, and swimming."
+	},
+	{
+		"name": "Sara Matijevic",
+		"suffix": "M.Phil.",
+		"role": "PhD Student",
+		"group": "Visiting",
+		"image": "/images/sara_headshot.jpg",
+		"email": "sm6088[at]cumc[dot]columbia[dot]edu",
+		"website": "",
+		"scholar": "https://scholar.google.com/citations?user=ZDcMLd8AAAAJ&hl=en",
+		"bio": "Sara Matijevic is a DPhil student at the University of Oxford and visiting researcher at reAIM, working on deep learning models for survival analysis and time to event data. At Oxford, she is part of the Health Data Science CDT and is based at the Big Data Institute. Sara also holds an MPhil in Health Data Science from the University of Cambridge and an BEng in Mechanical Engineering from the University of Southampton. In her free time she likes to run, play tennis and volleyball. She is also a big fan of the theatre and an avid reader."
+	}
+]

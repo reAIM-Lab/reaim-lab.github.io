@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<style>
+	body {
+		visibility: hidden;
+		opacity: 0;
+	}
+</style>
+
+<Layout title="Page Not Found">
+	<script is:inline>
+		const path = window.location.pathname;
+
+		if (path.endsWith(".html")) {
+			const newPath = path.slice(0, -5);
+			window.location.replace(newPath);
+		} else {
+			document.body.style.visibility = "visible";
+			document.body.style.opacity = "1";
+		}
+	</script>
+
+	<section
+		class="flex min-h-[60vh] flex-col items-center justify-center px-4 text-center transition-opacity duration-500"
+	>
+		<h1 class="mb-4 text-9xl font-bold text-gray-200">404</h1>
+		<h2 class="mb-6 text-3xl font-bold text-black">Page Not Found</h2>
+	</section>
+</Layout>

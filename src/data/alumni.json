@@ -1,0 +1,40 @@
+[
+	{
+		"name": "Jiayu Yao",
+		"suffix": "Ph.D.",
+		"thesis": "DSI Postdoctoral Fellow, 2024 - 2026",
+		"first_position": "Manager (IC) at Capital One",
+		"current_position": "",
+		"website": "https://yaojiayu0826.github.io/",
+		"scholar": "https://scholar.google.com/citations?user=WNoNASEAAAAJ"
+	},
+	{
+		"name": "Kevin Zhang",
+		"suffix": "B.A.",
+		"thesis": "Undergraduate Research (CS), 2025",
+		"first_position": "Doctoral program in EECS, Massachusetts Institute of Technology (MIT)",
+		"current_position": "",
+		"website": "",
+		"scholar": "https://scholar.google.com/citations?user=VGvLE4oAAAAJ&hl=en"
+	},
+	{
+		"name": "Xinghe Chen",
+		"pub_name": "Xinghe Chen",
+		"suffix": "M.S.",
+		"thesis": "Master's Thesis (CS), 2024",
+		"first_position": "Doctoral program at CCDS, Nanyang Technological University (NTU)",
+		"current_position": "",
+		"website": "",
+		"scholar": ""
+	},
+	{
+		"name": "Haoqing (Terese) Wang",
+		"pub_name": "Haoqing Wang",
+		"suffix": "M.S.",
+		"thesis": "Masters Research (CS), 2024",
+		"first_position": "Doctoral program in Biomedical Engineering, University of Southern California (USC)",
+		"current_position": "",
+		"website": "",
+		"scholar": ""
+	}
+]

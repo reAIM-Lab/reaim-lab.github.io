@@ -1,9 +1,6 @@
-
 {
   "extends": ["stylelint-config-standard", "stylelint-config-recommended-scss"],
-  "plugins": [
-    "stylelint-order"
-  ],
+  "plugins": ["stylelint-order"],
   "rules": {
     "at-rule-empty-line-before": null,
     "at-rule-name-space-after": "always",
@@ -34,9 +31,12 @@
     "no-descending-specificity": null,
     "no-duplicate-selectors": true,
     "number-leading-zero": "never",
-    "media-feature-name-no-unknown": [true, {
-      "ignoreMediaFeatureNames": ["prefers-reduced-motion"]
-    }],
+    "media-feature-name-no-unknown": [
+      true,
+      {
+        "ignoreMediaFeatureNames": ["prefers-reduced-motion"]
+      }
+    ],
     "order/properties-order": [
       "position",
       "top",

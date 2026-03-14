@@ -4,14 +4,13 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://reaim-lab.github.io",
 
-	site: "https://reaim-lab.github.io",
+  build: {
+    format: "file",
+  },
 
-	build: {
-		format: "file"
-	},
-
-	vite: {
-		plugins: [tailwindcss()]
-	}
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });

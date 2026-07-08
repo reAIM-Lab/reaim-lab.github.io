@@ -1,5 +1,14 @@
 [
   {
+    "name": "Vincent Jeanselme",
+    "suffix": "Ph.D.",
+    "thesis": "Postdoctoral Scientist, 2025 - 2026",
+    "first_position": "Director of Machine Learning Research at PathomIQ",
+    "current_position": "",
+    "website": "https://jeanselme.github.io/",
+    "scholar": "https://scholar.google.com/citations?user=CnN1SlcAAAAJ"
+  },
+  {
     "name": "Jiayu Yao",
     "suffix": "Ph.D.",
     "thesis": "DSI Postdoctoral Fellow, 2024 - 2026",
@@ -9,12 +18,21 @@
     "scholar": "https://scholar.google.com/citations?user=WNoNASEAAAAJ"
   },
   {
+    "name": "Sara Matijevic",
+    "suffix": "M.Phil.",
+    "thesis": "Visiting Researcher, 2026",
+    "first_position": "Returned to the University of Oxford to complete DPhil",
+    "current_position": "",
+    "website": "",
+    "scholar": "https://scholar.google.com/citations?user=ZDcMLd8AAAAJ&hl=en"
+  },
+  {
     "name": "Kevin Zhang",
     "suffix": "B.A.",
     "thesis": "Undergraduate Research (CS), 2025",
     "first_position": "Doctoral program in EECS, Massachusetts Institute of Technology (MIT)",
     "current_position": "",
-    "website": "",
+    "website": "https://kzhangm02.github.io/",
     "scholar": "https://scholar.google.com/citations?user=VGvLE4oAAAAJ&hl=en"
   },
   {
@@ -25,7 +43,7 @@
     "first_position": "Doctoral program at CCDS, Nanyang Technological University (NTU)",
     "current_position": "",
     "website": "",
-    "scholar": ""
+    "scholar": "https://scholar.google.com/citations?user=JoUIzGkAAAAJ"
   },
   {
     "name": "Haoqing (Terese) Wang",

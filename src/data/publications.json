@@ -13,16 +13,17 @@
     "venue": "arXiv preprint",
     "year": 2026,
     "url": "https://arxiv.org/pdf/2602.00541",
-    "type": "preprint"
+    "type": "preprint",
+    "note": "Accepted at ICML 2026 Workshop on Structured Data for Health"
   },
 
   {
     "title": "A pipeline for enabling path-specific causal fairness in observational health data",
     "authors": "Aparajita Kashyap, Sara Matijevic, Noémie Elhadad, Steven A Kushner, Shalmali Joshi",
-    "venue": "arXiv preprint",
+    "venue": "ACM Conference on Fairness, Accountability, and Transparency (FAccT)",
     "year": 2026,
     "url": "https://arxiv.org/pdf/2601.09841",
-    "type": "preprint"
+    "award": { "label": "Best Paper", "url": "https://facct-blog.github.io/2026-06-25/best-papers" }
   },
   {
     "title": "Path-specific effects for pulse-oximetry guided decisions in critical care",
@@ -35,10 +36,9 @@
   {
     "title": "Learning-To-Measure: In-context Active Feature Acquisition",
     "authors": "Yuta Kobayashi, Zilin Jing, Jiayu Yao, Hongseok Namkoong, Shalmali Joshi",
-    "venue": "arXiv preprint",
-    "year": 2025,
-    "url": "https://arxiv.org/pdf/2510.12624",
-    "type": "preprint"
+    "venue": "International Conference on Machine Learning (ICML)",
+    "year": 2026,
+    "url": "https://arxiv.org/pdf/2510.12624"
   },
   {
     "title": "Mind the data gap: Missingness Still Shapes Large Language Model Prognoses",

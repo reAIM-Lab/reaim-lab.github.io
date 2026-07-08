@@ -13,7 +13,7 @@ import Layout from "../layouts/Layout.astro";
 				<p>Thank you for your interest in joining the reAIM lab!</p>
 
 				<div
-					class="border-reaim-blue w-full max-w-4xl rounded-r-xl border-l-4 bg-gray-50 p-6 md:p-8"
+					class="w-full max-w-4xl rounded-xl border border-gray-100 bg-white p-6 md:p-8"
 				>
 					<div class="space-y-1">
 						<p class="text-xl font-bold break-words text-black">
@@ -41,7 +41,36 @@ import Layout from "../layouts/Layout.astro";
 					>. Consequently, there are several avenues for students and researchers to join our lab:
 				</p>
 
-				<h3 class="mt-10 border-t border-gray-100 pt-6 text-3xl font-bold break-words text-black">
+				<div class="rounded-xl border border-gray-100 bg-white p-5">
+					<p class="mb-3 text-sm font-bold tracking-wide text-gray-400 uppercase">Jump to a role</p>
+					<nav class="flex flex-wrap gap-2" aria-label="Open positions">
+						<a
+							href="#doctoral"
+							class="hover:border-reaim-blue hover:text-reaim-blue inline-flex items-center rounded-full border border-gray-200 px-4 py-1.5 text-base font-semibold text-gray-700 transition-colors hover:bg-blue-50"
+							>Doctoral Students</a
+						>
+						<a
+							href="#postdoc"
+							class="hover:border-reaim-blue hover:text-reaim-blue inline-flex items-center rounded-full border border-gray-200 px-4 py-1.5 text-base font-semibold text-gray-700 transition-colors hover:bg-blue-50"
+							>Postdoctoral Researchers</a
+						>
+						<a
+							href="#masters"
+							class="hover:border-reaim-blue hover:text-reaim-blue inline-flex items-center rounded-full border border-gray-200 px-4 py-1.5 text-base font-semibold text-gray-700 transition-colors hover:bg-blue-50"
+							>Master's &amp; Undergraduate</a
+						>
+						<a
+							href="#visiting"
+							class="hover:border-reaim-blue hover:text-reaim-blue inline-flex items-center rounded-full border border-gray-200 px-4 py-1.5 text-base font-semibold text-gray-700 transition-colors hover:bg-blue-50"
+							>Visiting &amp; Collaborators</a
+						>
+					</nav>
+				</div>
+
+				<h3
+					id="doctoral"
+					class="mt-10 scroll-mt-28 border-t border-gray-100 pt-6 text-3xl font-bold break-words text-black"
+				>
 					Doctoral Students
 				</h3>
 
@@ -97,7 +126,10 @@ import Layout from "../layouts/Layout.astro";
 					reach out to Dr. Joshi to do a rotation with reAIM lab!
 				</p>
 
-				<h3 class="mt-10 border-t border-gray-100 pt-6 text-3xl font-bold break-words text-black">
+				<h3
+					id="postdoc"
+					class="mt-10 scroll-mt-28 border-t border-gray-100 pt-6 text-3xl font-bold break-words text-black"
+				>
 					Postdoctoral Researchers
 				</h3>
 
@@ -126,7 +158,10 @@ import Layout from "../layouts/Layout.astro";
 					</li>
 				</ul>
 
-				<h3 class="mt-10 border-t border-gray-100 pt-6 text-3xl font-bold break-words text-black">
+				<h3
+					id="masters"
+					class="mt-10 scroll-mt-28 border-t border-gray-100 pt-6 text-3xl font-bold break-words text-black"
+				>
 					Master's and Undergraduate Students
 				</h3>
 
@@ -147,7 +182,10 @@ import Layout from "../layouts/Layout.astro";
 					<li>Attach your unofficial Columbia and undergraduate (if applicable) transcripts.</li>
 				</ul>
 
-				<h3 class="mt-10 border-t border-gray-100 pt-6 text-3xl font-bold break-words text-black">
+				<h3
+					id="visiting"
+					class="mt-10 scroll-mt-28 border-t border-gray-100 pt-6 text-3xl font-bold break-words text-black"
+				>
 					Visiting Researchers and Outside Collaborators
 				</h3>
 
@@ -156,7 +194,7 @@ import Layout from "../layouts/Layout.astro";
 					collaborating with our lab.
 				</p>
 
-				<div class="mt-12 rounded-lg border border-gray-200 bg-gray-50 p-6 md:p-8">
+				<div class="mt-12 rounded-lg border border-gray-200 bg-white p-6 md:p-8">
 					<h3 class="mb-4 text-2xl font-bold text-black">For All Applicants:</h3>
 					<p class="break-words">
 						The best way to get in contact with the lab is by emailing Professor Joshi at <code

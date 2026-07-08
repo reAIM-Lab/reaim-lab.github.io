@@ -21,7 +21,7 @@ const visitors = allMembers.filter((m) => m.group === "Visiting");
 		</h1>
 
 		<div class="space-y-16">
-			<div class="flex flex-col items-center md:items-start">
+			<div class="reveal flex flex-col items-center md:items-start">
 				<h2
 					class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-3xl font-bold text-black"
 				>
@@ -32,7 +32,7 @@ const visitors = allMembers.filter((m) => m.group === "Visiting");
 
 			{
 				postdocs.length > 0 && (
-					<div class="flex flex-col items-center md:items-start">
+					<div class="reveal flex flex-col items-center md:items-start">
 						<h2 class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-3xl font-bold text-black">
 							Postdoctoral Researchers
 						</h2>
@@ -43,7 +43,7 @@ const visitors = allMembers.filter((m) => m.group === "Visiting");
 
 			{
 				phdStudents.length > 0 && (
-					<div class="flex flex-col items-center md:items-start">
+					<div class="reveal flex flex-col items-center md:items-start">
 						<h2 class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-3xl font-bold text-black">
 							Doctoral Students
 						</h2>
@@ -54,7 +54,7 @@ const visitors = allMembers.filter((m) => m.group === "Visiting");
 
 			{
 				others.length > 0 && (
-					<div class="flex flex-col items-center md:items-start">
+					<div class="reveal flex flex-col items-center md:items-start">
 						<h2 class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-3xl font-bold text-black">
 							Master's and Undergraduate Researchers
 						</h2>
@@ -65,7 +65,7 @@ const visitors = allMembers.filter((m) => m.group === "Visiting");
 
 			{
 				visitors.length > 0 && (
-					<div class="flex flex-col items-center md:items-start">
+					<div class="reveal flex flex-col items-center md:items-start">
 						<h2 class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-3xl font-bold text-black">
 							Visiting Researchers
 						</h2>
@@ -76,7 +76,7 @@ const visitors = allMembers.filter((m) => m.group === "Visiting");
 
 			{
 				alumni.length > 0 && (
-					<div class="flex flex-col items-center md:items-start">
+					<div class="reveal flex flex-col items-center md:items-start">
 						<h2 class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-3xl font-bold text-black">
 							Lab Alumni
 						</h2>
@@ -89,8 +89,7 @@ const visitors = allMembers.filter((m) => m.group === "Visiting");
 									<li class="hover:border-reaim-blue overflow-hidden border-l-4 border-gray-200 pl-4 break-words transition-colors">
 										<div class="flex flex-col">
 											<div class="text-2xl leading-tight font-bold break-words text-black">
-												{alum.name}
-												{alum.suffix && `, ${alum.suffix}`}
+												{alum.name}{alum.suffix && `, ${alum.suffix}`}
 											</div>
 										</div>
 
@@ -100,6 +99,7 @@ const visitors = allMembers.filter((m) => m.group === "Visiting");
 													<a
 														href={alum.website}
 														target="_blank"
+														rel="noopener noreferrer"
 														class="text-reaim-blue w-fit font-bold hover:underline"
 													>
 														Personal Website
@@ -114,6 +114,7 @@ const visitors = allMembers.filter((m) => m.group === "Visiting");
 													<a
 														href={alum.scholar}
 														target="_blank"
+														rel="noopener noreferrer"
 														class="text-reaim-blue w-fit font-bold hover:underline"
 													>
 														Google Scholar

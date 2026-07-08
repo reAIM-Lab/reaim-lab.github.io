@@ -3,10 +3,91 @@
 @theme {
   --color-reaim-blue: #0077c8; /* Medium Blue */
   --color-reaim-dark: #012169; /* Dark Blue */
+  --color-reaim-bg: #f6f7f9; /* Soft cool grey page canvas */
 }
 
 @layer base {
   :focus-visible {
     @apply ring-reaim-blue rounded-sm ring-2 ring-offset-2 outline-none;
+  }
+}
+
+/* The off-canvas mobile menu (fixed inset-0 + translate-x-full) parks just off
+   the right edge and would otherwise create a horizontal scroll gutter. Clip it
+   below `md`, where that menu exists and the sticky course sidebar (lg only)
+   does not — so desktop `position: sticky` is unaffected. */
+@media (max-width: 767px) {
+  html {
+    overflow-x: hidden;
+  }
+}
+
+/* Scroll-reveal ("emerge") animation.
+   Gated on `.js-enabled` so content is always visible if JS is off or fails,
+   and only applied when the user has not requested reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .js-enabled .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 0.6s ease-out,
+      transform 0.6s ease-out;
+    will-change: opacity, transform;
+  }
+
+  .js-enabled .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Header morph on scroll: a flush, transparent, square full-width bar at the top
+   of the page eases into a floating, rounded, blurred bar once scrolled. The
+   `.is-scrolled` class is toggled by JS; if JS is off the bar simply stays in its
+   (perfectly usable) top state. */
+#site-header,
+#site-nav {
+  transition:
+    padding 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    border-radius 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+#site-header.is-scrolled {
+  padding-top: 0.6rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+#site-header.is-scrolled #site-nav {
+  border-radius: 1rem;
+  border-color: rgb(229 231 235); /* gray-200 */
+  background-color: rgb(255 255 255 / 0.8);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 10px 15px -3px rgb(15 23 42 / 0.08),
+    0 4px 6px -4px rgb(15 23 42 / 0.05);
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+}
+
+/* Course-page section nav parked in the left margin, outside (left of) the
+   centered max-w-6xl content column and the reAIM logo — so the content stays
+   full width. Only shown once the viewport is wide enough to have gutter room;
+   below 1440px the in-page "Skip to Schedule" link covers navigation instead. */
+.course-toc {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  .course-toc {
+    position: fixed;
+    top: 9rem;
+    left: calc((100vw - 72rem) / 2 - 8rem);
+    display: block;
+    width: 7rem;
   }
 }

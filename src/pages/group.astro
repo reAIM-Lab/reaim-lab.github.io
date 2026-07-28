@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import TeamGrid from "../components/TeamGrid.astro";
 import allMembers from "../data/team.json";
 import alumni from "../data/alumni.json";
+import { slugify } from "../lib/slugify";
 
 const pi = allMembers.filter((m) => m.group === "PI");
 const postdocs = allMembers.filter((m) => m.group === "Postdoc");
@@ -86,7 +87,10 @@ const visitors = allMembers.filter((m) => m.group === "Visiting");
 								const hasLinks = alum.website || alum.scholar;
 
 								return (
-									<li class="hover:border-reaim-blue overflow-hidden border-l-4 border-gray-200 pl-4 break-words transition-colors">
+									<li
+										id={slugify(alum.name)}
+										class="hover:border-reaim-blue scroll-mt-28 overflow-hidden border-l-4 border-gray-200 pl-4 break-words transition-colors"
+									>
 										<div class="flex flex-col">
 											<div class="text-2xl leading-tight font-bold break-words text-black">
 												{alum.name}{alum.suffix && `, ${alum.suffix}`}

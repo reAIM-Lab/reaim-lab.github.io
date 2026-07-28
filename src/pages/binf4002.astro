@@ -464,7 +464,7 @@ const navLinks = [
 				<div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
 					<table class="w-full border-collapse text-left">
 						<thead
-							class="hidden bg-gray-100 text-base font-bold tracking-wider text-gray-900 uppercase md:table-header-group"
+							class="hidden bg-gray-100 text-sm font-bold tracking-wider text-gray-900 uppercase md:table-header-group"
 						>
 							<tr>
 								<th class="w-16 border-b border-gray-300 px-4 py-4 text-center">#</th>
@@ -473,13 +473,13 @@ const navLinks = [
 								<th class="w-40 border-b border-gray-300 px-4 py-4 text-right">Assignments</th>
 							</tr>
 						</thead>
-						<tbody class="divide-y divide-gray-200 bg-white text-lg">
+						<tbody class="divide-y divide-gray-200 bg-white text-base">
 							{
 								schedule.map((row, index) => (
 									<tr
 										class={`flex flex-col gap-1 border-b border-gray-200 p-6 md:table-row md:gap-0 md:border-0 md:p-0 ${row.isBreak ? "bg-gray-50/50 text-gray-500 italic" : ""} ${row.isExam ? "bg-amber-50" : !row.isBreak && index % 2 !== 0 ? "bg-gray-50" : "bg-white"} `}
 									>
-										<td class="hidden px-4 py-4 text-center font-mono text-xl font-bold text-gray-500 md:table-cell">
+										<td class="hidden px-4 py-4 text-center font-mono text-base font-bold text-gray-500 md:table-cell">
 											{row.number}
 										</td>
 
@@ -491,7 +491,7 @@ const navLinks = [
 											)}
 											<div class="flex items-baseline gap-2 md:block">
 												<div
-													class={`text-xl font-bold ${row.isExam ? "text-amber-800" : "text-black"}`}
+													class={`text-base font-bold ${row.isExam ? "text-amber-800" : "text-black"}`}
 												>
 													{row.formattedDate}
 												</div>
@@ -503,14 +503,14 @@ const navLinks = [
 
 										<td class="block p-0 pt-2 md:table-cell md:px-4 md:py-4 md:align-top">
 											<div
-												class={`text-xl font-medium ${row.isExam ? "font-bold text-amber-800" : "text-gray-900"}`}
+												class={`text-base font-medium ${row.isExam ? "font-bold text-amber-800" : "text-gray-900"}`}
 											>
 												{row.topic.map((line) => (
 													<div class="mb-1 leading-snug">{line}</div>
 												))}
 											</div>
 											{row.subtopic && (
-												<div class="mt-2 text-base font-normal text-gray-600 md:text-lg">
+												<div class="mt-2 text-sm font-normal text-gray-600 md:text-base">
 													{row.subtopic}
 												</div>
 											)}

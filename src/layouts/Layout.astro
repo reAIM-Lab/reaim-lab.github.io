@@ -6,7 +6,7 @@ const currentYear = new Date().getFullYear();
 ---
 
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 	<head>
 		<meta name="robots" content="noarchive" />
 		<meta charset="UTF-8" />
@@ -210,6 +210,57 @@ const currentYear = new Date().getFullYear();
 					});
 				});
 			}
+
+			// The browser does not reliably perform the page-load jump to a URL
+			// fragment here, which strands deep links (a publication author linking
+			// to /group#yuta-kobayashi, or the join page's "jump to a role" links)
+			// at the top of the page. Do the jump ourselves, honouring the target's
+			// scroll-margin so it clears the fixed header.
+			function scrollToHash() {
+				if (!location.hash) return;
+				let target: HTMLElement | null = null;
+				try {
+					target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+				} catch {
+					return; // malformed percent-encoding in the hash
+				}
+				if (!target) return;
+
+				// Land on a section that has already emerged rather than a blank one.
+				target.closest(".reveal")?.classList.add("is-visible");
+
+				const margin = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
+				window.scrollTo({
+					top: target.getBoundingClientRect().top + window.scrollY - margin,
+					behavior: "instant"
+				});
+			}
+
+			if (location.hash) {
+				scrollToHash();
+
+				// Late-loading images or fonts can shift the target after the first
+				// jump, so correct once more — unless the visitor is already scrolling.
+				let userScrolled = false;
+				const noteUserScroll = () => {
+					userScrolled = true;
+				};
+				addEventListener("wheel", noteUserScroll, { passive: true, once: true });
+				addEventListener("touchstart", noteUserScroll, { passive: true, once: true });
+				addEventListener("keydown", noteUserScroll, { once: true });
+				addEventListener(
+					"load",
+					() => {
+						if (!userScrolled) scrollToHash();
+					},
+					{ once: true }
+				);
+			}
+
+			// Enabled only after load so the jump above stays instant.
+			window.addEventListener("load", () => {
+				document.documentElement.classList.add("smooth-scroll");
+			});
 
 			const topBtn = document.getElementById("back-to-top");
 			if (topBtn) {

@@ -22,6 +22,20 @@
   }
 }
 
+/* Smooth scrolling is switched on only once the page has loaded. Chrome drops
+   the page-load fragment jump when scroll-behavior is smooth on the root
+   element, which left deep links (e.g. /group#yuta-kobayashi from a publication
+   author) parked at the top of the page. */
+html.smooth-scroll {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.smooth-scroll {
+    scroll-behavior: auto;
+  }
+}
+
 /* Scroll-reveal ("emerge") animation.
    Gated on `.js-enabled` so content is always visible if JS is off or fails,
    and only applied when the user has not requested reduced motion. */

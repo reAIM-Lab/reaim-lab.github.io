@@ -55,6 +55,48 @@ html.smooth-scroll {
   }
 }
 
+/* The alumni role filter is inert without JS, so it stays out of the page until
+   the enhancement is actually running — same gate as the reveal animation. */
+[data-alumni-filter] {
+  display: none;
+}
+
+.js-enabled [data-alumni-filter] {
+  display: flex;
+}
+
+/* The role menu eases open from under its trigger. `visibility` is what keeps a
+   closed menu out of the tab order and the a11y tree, so it flips on instantly
+   when opening (letting JS focus an option right away) and is held back until
+   the fade finishes when closing. */
+[data-alumni-menu] {
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-0.25rem) scale(0.98);
+  transition:
+    opacity 0.18s ease-out,
+    transform 0.18s ease-out,
+    visibility 0s linear 0.18s;
+}
+
+[data-alumni-menu][data-open] {
+  visibility: visible;
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.18s ease-out,
+    transform 0.18s ease-out,
+    visibility 0s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-alumni-menu],
+  [data-alumni-menu][data-open] {
+    transition-duration: 0.01ms;
+    transition-delay: 0s;
+  }
+}
+
 /* Header morph on scroll: a flush, transparent, square full-width bar at the top
    of the page eases into a floating, rounded, blurred bar once scrolled. The
    `.is-scrolled` class is toggled by JS; if JS is off the bar simply stays in its

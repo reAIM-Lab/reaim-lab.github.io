@@ -1,134 +1,210 @@
 [
   {
     "title": "ICYM<sup>2</sup>I: The illusion of multimodal informativeness under missingness",
+    "bibkey": "choi2026icymi",
     "authors": "Young Sang Choi*, Vincent Jeanselme*, Pierre Elias, Shalmali Joshi",
     "venue": "International Conference on Learning Representations (ICLR)",
     "year": 2026,
-    "url": "https://arxiv.org/pdf/2505.16953",
-    "selected": true
+    "url": "https://arxiv.org/abs/2505.16953",
+    "selected": true,
+    "links": [
+      { "label": "arXiv", "url": "https://arxiv.org/abs/2505.16953" },
+      { "label": "OpenReview", "url": "https://openreview.net/forum?id=jC7FK8Rf4s" },
+      { "label": "Code", "url": "https://github.com/reAIM-Lab/ICYM2I" }
+    ]
   },
   {
     "title": "One Loss to Rule Them All: Marked Time-to-Event for Structured EHR Foundation Models",
+    "bibkey": "jing2026one",
     "authors": "Zilin Jing, Vincent Jeanselme, Yuta Kobayashi, Simon A Lee, Chao Pang, Aparajita Kashyap, Yanwei Li, Xinzhuo Jiang, Shalmali Joshi",
     "venue": "arXiv preprint",
     "year": 2026,
-    "url": "https://arxiv.org/pdf/2602.00541",
+    "url": "https://arxiv.org/abs/2602.00541",
     "type": "preprint",
-    "note": "Accepted at ICML 2026 Workshop on Structured Data for Health"
+    "note": "Spotlight at ICML 2026 Workshop on Structured Data for Health (SD4H)",
+    "links": [{ "label": "arXiv", "url": "https://arxiv.org/abs/2602.00541" }]
   },
 
   {
     "title": "A pipeline for enabling path-specific causal fairness in observational health data",
+    "bibkey": "kashyap2026pipeline",
     "authors": "Aparajita Kashyap, Sara Matijevic, Noémie Elhadad, Steven A Kushner, Shalmali Joshi",
     "venue": "ACM Conference on Fairness, Accountability, and Transparency (FAccT)",
     "year": 2026,
-    "url": "https://arxiv.org/pdf/2601.09841",
-    "award": { "label": "Best Paper", "url": "https://facct-blog.github.io/2026-06-25/best-papers" }
+    "url": "https://arxiv.org/abs/2601.09841",
+    "award": { "label": "Best Paper Award", "url": "https://facct-blog.github.io/2026-06-25/best-papers" },
+    "links": [
+      { "label": "arXiv", "url": "https://arxiv.org/abs/2601.09841" },
+      { "label": "Code", "url": "https://github.com/reAIM-Lab/causal_fairness_health_pipeline" }
+    ]
   },
   {
     "title": "Path-specific effects for pulse-oximetry guided decisions in critical care",
+    "bibkey": "zhang2025pathspecific",
     "authors": "Kevin Zhang, Yonghan Jung, Divyat Mahajan, Karthikeyan Shanmugam, Shalmali Joshi ",
     "venue": "Neural Information Processing Systems (NeurIPS)",
     "year": 2025,
-    "url": "https://openreview.net/pdf?id=2XelsPmKV1",
-    "selected": true
+    "url": "https://arxiv.org/abs/2506.12371",
+    "selected": true,
+    "links": [
+      { "label": "arXiv", "url": "https://arxiv.org/abs/2506.12371" },
+      { "label": "OpenReview", "url": "https://openreview.net/forum?id=2XelsPmKV1" },
+      { "label": "Code", "url": "https://github.com/reAIM-Lab/PSE-Pulse-Oximetry" }
+    ]
   },
   {
     "title": "Learning-To-Measure: In-context Active Feature Acquisition",
+    "bibkey": "kobayashi2026learningtomeasure",
     "authors": "Yuta Kobayashi, Zilin Jing, Jiayu Yao, Hongseok Namkoong, Shalmali Joshi",
     "venue": "International Conference on Machine Learning (ICML)",
     "year": 2026,
-    "url": "https://arxiv.org/pdf/2510.12624"
+    "url": "https://arxiv.org/abs/2510.12624",
+    "links": [
+      { "label": "arXiv", "url": "https://arxiv.org/abs/2510.12624" },
+      { "label": "OpenReview", "url": "https://openreview.net/forum?id=ZumBSRsRbE" },
+      { "label": "Code", "url": "https://github.com/reAIM-Lab/Learning-To-Measure" }
+    ]
   },
   {
     "title": "Mind the data gap: Missingness Still Shapes Large Language Model Prognoses",
+    "bibkey": "kobayashi2025mind",
     "authors": "Yuta Kobayashi, Vincent Jeanselme, Shalmali Joshi",
     "venue": "arXiv preprint",
     "year": 2025,
-    "url": "https://arxiv.org/pdf/2512.00479",
-    "type": "preprint"
+    "url": "https://arxiv.org/abs/2512.00479",
+    "type": "preprint",
+    "links": [
+      { "label": "arXiv", "url": "https://arxiv.org/abs/2512.00479" },
+      { "label": "Code", "url": "https://github.com/reAIM-Lab/EHR-missingness" }
+    ]
   },
   {
     "title": "The evaluation illusion of large language models in medicine",
+    "bibkey": "agrawal2025evaluation",
     "authors": "Monica Agrawal, Irene Y Chen, Freya Gulamali, Shalmali Joshi",
     "venue": "npj Digital Medicine",
     "year": 2025,
-    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12504413/pdf/41746_2025_Article_1963.pdf"
+    "url": "https://www.nature.com/articles/s41746-025-01963-x",
+    "links": [{ "label": "Publisher", "url": "https://www.nature.com/articles/s41746-025-01963-x" }]
   },
   {
     "title": "FoMoH: A clinically meaningful foundation model evaluation for structured electronic health records",
+    "bibkey": "pang2025fomoh",
     "authors": "Chao Pang*, Vincent Jeanselme*, Young Sang Choi, Xinzhuo Jiang, Zilin Jing, Aparajita Kashyap, Yuta Kobayashi, Yanwei Li, Florent Pollet, Karthik Natarajan, Shalmali Joshi",
     "venue": "arXiv preprint",
     "year": 2025,
-    "url": "https://arxiv.org/pdf/2505.16941",
-    "type": "preprint"
+    "url": "https://arxiv.org/abs/2505.16941",
+    "type": "preprint",
+    "links": [
+      { "label": "arXiv", "url": "https://arxiv.org/abs/2505.16941" },
+      { "label": "Code", "url": "https://github.com/reAIM-Lab/ehr_foundation_model_benchmark" }
+    ]
   },
   {
     "title": "\"Why did the model fail?\": attributing model performance changes to distribution shifts",
+    "bibkey": "pmlr-v202-zhang23ai",
     "authors": "Haoran Zhang, Harvineet Singh, Marzyeh Ghassemi, and Shalmali Joshi",
     "venue": "International Conference on Machine Learning (ICML)",
     "year": 2023,
-    "url": "https://proceedings.mlr.press/v202/zhang23ai/zhang23ai.pdf",
-    "selected": true
+    "url": "https://arxiv.org/abs/2210.10769",
+    "selected": true,
+    "links": [
+      { "label": "arXiv", "url": "https://arxiv.org/abs/2210.10769" },
+      { "label": "OpenReview", "url": "https://openreview.net/forum?id=LwSKljRST0" },
+      { "label": "Code", "url": "https://github.com/MLforHealth/expl_perf_drop" }
+    ]
   },
   {
     "title": "AI as an intervention: improving clinical outcomes relies on a causal approach to AI development",
+    "bibkey": "joshi2025ai",
     "authors": "Shalmali Joshi, Iñigo Urteaga, Wouter A. C. van Amsterdam, George Hripcsak, Pierre Elias, Benjamin Recht, Noémie Elhadad, James Fackler, Mark P Sendak, Jenna Wiens, Kaivalya Deshpande, Yoav Wald, Madaline Fiterau, Zachary Lipton, Daniel Malinsky, Madhur Nayan, Hongseok Namkoong, Soojin Park, Julia E. Vogt, Rajesh Ranganath",
     "venue": "Journal of the American Medical Informatics Association (JAMIA)",
     "year": 2024,
     "note": "",
-    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11833492/pdf/ocae301.pdf",
-    "selected": true
+    "url": "https://academic.oup.com/jamia/article/32/3/589/7945189",
+    "selected": true,
+    "links": [
+      { "label": "Publisher", "url": "https://academic.oup.com/jamia/article/32/3/589/7945189" }
+    ]
   },
   {
     "title": "Adaptive Labeling for Efficient Out-of-distribution Model Evaluation",
+    "bibkey": "mittal2024adaptive",
     "authors": "Daksh Mittal, Yuanzhe Ma, Shalmali Joshi, and Hongseok Namkoong",
     "venue": "Neural Information Processing Systems (NeurIPS)",
     "year": 2024,
-    "url": "https://openreview.net/pdf?id=uuQQwrjMzb",
-    "selected": true
+    "url": "https://arxiv.org/abs/2502.06076",
+    "selected": true,
+    "links": [
+      { "label": "arXiv", "url": "https://arxiv.org/abs/2502.06076" },
+      { "label": "OpenReview", "url": "https://openreview.net/forum?id=uuQQwrjMzb" },
+      { "label": "Code", "url": "https://github.com/namkoong-lab/adaptive-labeling" }
+    ]
   },
   {
     "title": "Machine Learning is More Accurate and Biased than Risk Scoring Tools in the Prediction of Postoperative Atrial Fibrillation After Cardiac Surgery",
+    "bibkey": "ho2024machine",
     "authors": "Joyce C. Ho, Shalmali Joshi, Eduardo Valverde, Kathryn Wood, Kendra J. Grubb, Miguel A. Leal, and Vicki Stover Hertzberg",
     "venue": "medRxiv preprint",
     "year": 2024,
-    "url": "https://www.medrxiv.org/content/10.1101/2024.07.05.24310013v1"
+    "url": "https://www.medrxiv.org/content/10.1101/2024.07.05.24310013v1",
+    "links": [
+      {
+        "label": "medRxiv",
+        "url": "https://www.medrxiv.org/content/10.1101/2024.07.05.24310013v1"
+      }
+    ]
   },
   {
     "title": "Rise of the machines: how machine learning will shape the field of rheumatology",
-    "authors": "Shalmali Joshi and Jason E Leibowitz",
+    "bibkey": "joshi2024rise",
+    "authors": "Shalmali Joshi and Jason E Liebowitz",
     "venue": "Rheumatology",
     "year": 2024,
-    "url": "https://academic.oup.com/rheumatology/article/63/9/2319/7665716"
+    "url": "https://academic.oup.com/rheumatology/article/63/9/2319/7665716",
+    "links": [
+      { "label": "Publisher", "url": "https://academic.oup.com/rheumatology/article/63/9/2319/7665716" }
+    ]
   },
   {
     "title": "Prevalence and incidence measures for schizophrenia among commercial health insurance and medicaid enrollees",
+    "bibkey": "finnerty2024prevalence",
     "authors": "Molly T. Finnerty, Atif Khan, Kai You, Rui Wang, Gyojeong Gu, Deborah Layman, Qingxian Chen, Noémie Elhadad, Shalmali Joshi, Paul S. Appelbaum, Todd Lencz, Sander Markx, Steven A. Kushner and Andrey Rzhetsky",
     "venue": "Schizophrenia",
     "year": 2024,
-    "url": "https://www.nature.com/articles/s41537-024-00490-0"
+    "url": "https://www.nature.com/articles/s41537-024-00490-0",
+    "links": [
+      { "label": "Publisher", "url": "https://www.nature.com/articles/s41537-024-00490-0" }
+    ]
   },
   {
     "title": "Does multimodality help in deep learning-based structural heart disease detection?",
+    "bibkey": "choi2024does",
     "authors": "Young Sang Choi, Shalmali Joshi, Linyuan Jing, and Pierre Elias",
     "venue": "Medical Imaging with Deep Learning (MIDL)",
     "year": 2024,
     "note": "Short Paper Track",
-    "url": "https://openreview.net/pdf?id=sMiSQP8zmr"
+    "url": "https://openreview.net/forum?id=sMiSQP8zmr",
+    "links": [{ "label": "OpenReview", "url": "https://openreview.net/forum?id=sMiSQP8zmr" }]
   },
   {
     "title": "A normative framework for artificial intelligence as a sociotechnical system in healthcare",
+    "bibkey": "mccradden2023normative",
     "authors": "Melissa D. McCradden, Shalmali Joshi, James A. Anderson, and Alex John London",
     "venue": "Patterns",
     "year": 2023,
-    "url": "https://www.cell.com/patterns/pdf/S2666-3899(23)00248-9.pdf"
+    "url": "https://www.cell.com/patterns/fulltext/S2666-3899(23)00248-9",
+    "links": [
+      { "label": "Publisher", "url": "https://www.cell.com/patterns/fulltext/S2666-3899(23)00248-9" }
+    ]
   },
   {
     "title": "What's fair is… fair?: Presenting JustEFAB, an ethical framework for operationalizing medical ethics and social Justice in the integration of clinical machine learning",
+    "bibkey": "mccradden2023s",
     "authors": "Melissa McCradden, Oluwadara Odusi, Shalmali Joshi, Ismail Akrout, Kagiso Ndlovu, Ben Glocker, Gabriel Maicas et al.",
     "venue": "ACM Conference on Fairness, Accountability, and Transparency (FAccT)",
     "year": 2023,
-    "url": "https://dl.acm.org/doi/pdf/10.1145/3593013.3594096"
+    "url": "https://dl.acm.org/doi/abs/10.1145/3593013.3594096",
+    "links": [{ "label": "ACM DL", "url": "https://dl.acm.org/doi/abs/10.1145/3593013.3594096" }]
   }
 ]

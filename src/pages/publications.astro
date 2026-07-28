@@ -34,7 +34,10 @@ const pubsByYear = mainList.reduce((acc: Record<string, any[]>, pub: any) => {
 const years = Object.keys(pubsByYear).sort((a, b) => Number(b) - Number(a));
 ---
 
-<Layout title="Publications">
+<Layout
+    title="Publications"
+    description="Papers, preprints, and conference proceedings from the reAIM Lab at Columbia University's Department of Biomedical Informatics."
+>
     <section class="mb-16 pt-4">
         <h1 class="mb-10 text-5xl font-bold tracking-tight text-black md:text-6xl">Publications</h1>
 

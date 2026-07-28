@@ -1,8 +1,21 @@
 ---
 import "../styles/global.css";
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 
 const currentYear = new Date().getFullYear();
+
+const pageTitle = `${title} | reAIM Lab`;
+const metaDescription =
+	description ||
+	"The reAIM Lab at Columbia University, led by Prof. Shalmali Joshi, focuses on Trustworthy Machine Learning for Healthcare.";
+
+// Link previews and canonical tags need absolute URLs; `site` in
+// astro.config.mjs supplies the origin. build.format "file" leaves a .html
+// suffix on the pathname, but every link on the site (and so every URL that
+// gets shared) uses the extensionless form — canonicalise on that.
+const canonicalPath = Astro.url.pathname.replace(/index\.html$/, "").replace(/\.html$/, "");
+const canonicalUrl = new URL(canonicalPath || "/", Astro.site);
+const socialImage = new URL("/images/og-card.jpg", Astro.site);
 ---
 
 <!doctype html>
@@ -12,11 +25,24 @@ const currentYear = new Date().getFullYear();
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<title>{title} | reAIM Lab</title>
-		<meta
-			name="description"
-			content="The reAIM Lab at Columbia University, led by Prof. Shalmali Joshi, focuses on Trustworthy Machine Learning for Healthcare."
-		/>
+		<title>{pageTitle}</title>
+		<meta name="description" content={metaDescription} />
+		<link rel="canonical" href={canonicalUrl} />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="reAIM Lab" />
+		<meta property="og:title" content={pageTitle} />
+		<meta property="og:description" content={metaDescription} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:image" content={socialImage} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:alt" content="Members of the reAIM Lab gathered around a table" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={pageTitle} />
+		<meta name="twitter:description" content={metaDescription} />
+		<meta name="twitter:image" content={socialImage} />
 		<script is:inline>
 			// Runs synchronously before paint so scroll-reveal elements start hidden
 			// only when JS is available (content stays visible if JS is off/fails).

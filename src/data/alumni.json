@@ -2,6 +2,7 @@
   {
     "name": "Vincent Jeanselme",
     "suffix": "Ph.D.",
+    "role": "Postdoctoral Researcher",
     "thesis": "Postdoctoral Scientist, 2025 - 2026",
     "first_position": "Director of Machine Learning Research at PathomIQ",
     "current_position": "",
@@ -11,6 +12,7 @@
   {
     "name": "Jiayu Yao",
     "suffix": "Ph.D.",
+    "role": "Postdoctoral Researcher",
     "thesis": "DSI Postdoctoral Fellow, 2024 - 2026",
     "first_position": "Manager (IC) at Capital One",
     "current_position": "",
@@ -20,6 +22,7 @@
   {
     "name": "Sara Matijevic",
     "suffix": "M.Phil.",
+    "role": "Visiting Researcher",
     "thesis": "Visiting Researcher, 2026",
     "first_position": "Returned to the University of Oxford to complete DPhil",
     "current_position": "",
@@ -29,6 +32,7 @@
   {
     "name": "Kevin Zhang",
     "suffix": "B.A.",
+    "role": "Undergraduate Researcher",
     "thesis": "Undergraduate Research (CS), 2025",
     "first_position": "Doctoral program in EECS, Massachusetts Institute of Technology (MIT)",
     "current_position": "",
@@ -39,6 +43,7 @@
     "name": "Xinghe Chen",
     "pub_name": "Xinghe Chen",
     "suffix": "M.S.",
+    "role": "Master's Researcher",
     "thesis": "Master's Thesis (CS), 2024",
     "first_position": "Doctoral program at CCDS, Nanyang Technological University (NTU)",
     "current_position": "",
@@ -49,10 +54,11 @@
     "name": "Haoqing (Terese) Wang",
     "pub_name": "Haoqing Wang",
     "suffix": "M.S.",
+    "role": "Master's Researcher",
     "thesis": "Masters Research (CS), 2024",
     "first_position": "Doctoral program in Biomedical Engineering, University of Southern California (USC)",
     "current_position": "",
     "website": "",
-    "scholar": ""
+    "scholar": "https://scholar.google.com/citations?user=VdneJCYAAAAJ&hl=en"
   }
 ]

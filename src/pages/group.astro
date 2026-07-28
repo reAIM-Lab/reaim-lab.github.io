@@ -11,9 +11,43 @@ const phdStudents = allMembers.filter((m) => m.group === "PhD");
 const others = allMembers.filter((m) => m.group === "Masters/Undergrad");
 // Updated filter to strictly "Visiting"
 const visitors = allMembers.filter((m) => m.group === "Visiting");
+
+// Roles the alumni filter knows how to order, following the section order above.
+// Anything else in the data still appears, sorted to the end.
+const ROLE_ORDER = [
+	"Postdoctoral Researcher",
+	"Doctoral Researcher",
+	"Master's Researcher",
+	"Undergraduate Researcher",
+	"Visiting Researcher"
+];
+
+// Options come from the data, so adding an alum with a new role needs no change
+// here — only ROLE_ORDER if it should slot somewhere particular.
+const alumniRoles: string[] = [...new Set(alumni.map((a: any) => a.role).filter(Boolean))].sort(
+	(a, b) => {
+		const ia = ROLE_ORDER.indexOf(a);
+		const ib = ROLE_ORDER.indexOf(b);
+		if (ia === -1 && ib === -1) return a.localeCompare(b);
+		if (ia === -1) return 1;
+		if (ib === -1) return -1;
+		return ia - ib;
+	}
+);
+
+const roleOptions = [
+	{ value: "", label: `All (${alumni.length})` },
+	...alumniRoles.map((role) => ({
+		value: role,
+		label: `${role} (${alumni.filter((a: any) => a.role === role).length})`
+	}))
+];
 ---
 
-<Layout title="Group">
+<Layout
+	title="Group"
+	description="The people of the reAIM Lab at Columbia University — principal investigator, doctoral students, postdoctoral and visiting researchers, and lab alumni."
+>
 	<section class="mb-12 px-4 pt-4">
 		<h1
 			class="mb-10 text-left text-5xl font-bold tracking-tight break-words text-black md:text-left md:text-6xl"
@@ -78,17 +112,80 @@ const visitors = allMembers.filter((m) => m.group === "Visiting");
 			{
 				alumni.length > 0 && (
 					<div class="reveal flex flex-col items-center md:items-start">
-						<h2 class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-3xl font-bold text-black">
-							Lab Alumni
-						</h2>
+						<div class="mb-6 flex w-full flex-col gap-3 border-b border-gray-200 pb-2 sm:flex-row sm:items-center sm:justify-between">
+							<h2 class="text-left text-3xl font-bold text-black">Lab Alumni</h2>
 
-						<ul class="grid w-full grid-cols-1 gap-x-12 gap-y-8 text-gray-800 md:grid-cols-2">
+							<div data-alumni-filter class="relative items-center gap-2 text-lg">
+								<span class="shrink-0 text-gray-600">Filter by role:</span>
+
+								<button
+									type="button"
+									id="alumni-role-trigger"
+									aria-expanded="false"
+									aria-controls="alumni-role-menu"
+									class="text-reaim-blue inline-flex items-center gap-1.5 font-bold transition-colors hover:underline [&[aria-expanded=true]_svg]:rotate-180"
+								>
+									<span data-alumni-role-label>All</span>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2.5"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										class="h-3 w-3 transition-transform duration-200"
+										aria-hidden="true"
+									>
+										<path d="m6 9 6 6 6-6" />
+									</svg>
+								</button>
+
+								<div
+									id="alumni-role-menu"
+									data-alumni-menu
+									role="group"
+									aria-labelledby="alumni-role-trigger"
+									class="absolute top-full left-0 z-20 mt-2 w-max origin-top rounded-xl border border-gray-100 bg-white p-1.5 shadow-xl sm:right-0 sm:left-auto"
+								>
+									{roleOptions.map((option) => (
+										<button
+											type="button"
+											data-value={option.value}
+											aria-current={option.value ? "false" : "true"}
+											class="aria-[current=true]:text-reaim-blue flex w-full items-center justify-between gap-6 rounded-lg px-3 py-1.5 text-left text-base font-medium whitespace-nowrap text-gray-700 transition-colors hover:bg-gray-50 aria-[current=true]:font-bold [&[aria-current=true]_svg]:opacity-100"
+										>
+											{option.label}
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="3"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												class="h-3.5 w-3.5 shrink-0 opacity-0 transition-opacity"
+												aria-hidden="true"
+											>
+												<path d="M20 6 9 17l-5-5" />
+											</svg>
+										</button>
+									))}
+								</div>
+							</div>
+						</div>
+
+						<ul
+							id="alumni-list"
+							class="grid w-full grid-cols-1 gap-x-12 gap-y-8 text-gray-800 md:grid-cols-2"
+						>
 							{alumni.map((alum) => {
 								const hasLinks = alum.website || alum.scholar;
 
 								return (
 									<li
 										id={slugify(alum.name)}
+										data-role={alum.role}
 										class="hover:border-reaim-blue scroll-mt-28 overflow-hidden border-l-4 border-gray-200 pl-4 break-words transition-colors"
 									>
 										<div class="flex flex-col">
@@ -147,9 +244,92 @@ const visitors = allMembers.filter((m) => m.group === "Visiting");
 								);
 							})}
 						</ul>
+
+						<p class="sr-only" role="status" data-alumni-status></p>
 					</div>
 				)
 			}
 		</div>
 	</section>
 </Layout>
+
+<script>
+	const filter = document.querySelector<HTMLElement>("[data-alumni-filter]");
+	const trigger = document.getElementById("alumni-role-trigger");
+	const menu = document.querySelector<HTMLElement>("[data-alumni-menu]");
+	const list = document.getElementById("alumni-list");
+
+	if (filter && trigger && menu && list) {
+		const items = Array.from(list.querySelectorAll<HTMLElement>("[data-role]"));
+		const options = Array.from(menu.querySelectorAll<HTMLButtonElement>("[data-value]"));
+		const label = filter.querySelector("[data-alumni-role-label]");
+		const status = document.querySelector("[data-alumni-status]");
+
+		function setOpen(open: boolean) {
+			trigger!.setAttribute("aria-expanded", String(open));
+			menu!.toggleAttribute("data-open", open);
+		}
+
+		function close(refocus = false) {
+			setOpen(false);
+			if (refocus) trigger!.focus();
+		}
+
+		trigger.addEventListener("click", () => {
+			const isOpen = trigger.getAttribute("aria-expanded") === "true";
+			setOpen(!isOpen);
+			// The menu becomes visible synchronously (only its hiding is delayed to
+			// let the fade finish), so this focus lands.
+			if (!isOpen) (options.find((o) => o.getAttribute("aria-current") === "true") || options[0])?.focus();
+		});
+
+		options.forEach((option) => {
+			option.addEventListener("click", () => {
+				const role = option.dataset.value || "";
+				let shown = 0;
+
+				items.forEach((item) => {
+					const matches = !role || item.dataset.role === role;
+					item.hidden = !matches;
+					if (matches) shown += 1;
+				});
+
+				options.forEach((o) => o.setAttribute("aria-current", String(o === option)));
+				if (label) label.textContent = role || "All";
+				if (status) {
+					status.textContent = role
+						? `Showing ${shown} of ${items.length} alumni: ${role}.`
+						: `Showing all ${items.length} alumni.`;
+				}
+
+				close(true);
+			});
+		});
+
+		filter.addEventListener("keydown", (event) => {
+			if (event.key === "Escape") {
+				close(true);
+				return;
+			}
+			if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
+
+			event.preventDefault();
+			if (trigger.getAttribute("aria-expanded") !== "true") {
+				setOpen(true);
+				options[0]?.focus();
+				return;
+			}
+			const current = options.indexOf(document.activeElement as HTMLButtonElement);
+			const step = event.key === "ArrowDown" ? 1 : -1;
+			options[(current + step + options.length) % options.length]?.focus();
+		});
+
+		// Dismiss on a click anywhere else, or when focus leaves the whole control.
+		document.addEventListener("click", (event) => {
+			if (!filter.contains(event.target as Node)) close();
+		});
+		filter.addEventListener("focusout", (event) => {
+			if (!filter.contains(event.relatedTarget as Node)) close();
+		});
+	}
+</script>

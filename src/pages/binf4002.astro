@@ -15,7 +15,7 @@ const courseInfo = {
 
 	instructor: {
 		name: "Shalmali Joshi",
-		link: "https://reaim-lab.github.io/shalmalijoshi.html",
+		link: "/shalmalijoshi",
 		officeHours: "Fridays 10:00a-11:00a (PH-20, 402)"
 	},
 	tas: [
@@ -219,7 +219,10 @@ const navLinks = [
 ];
 ---
 
-<Layout title={courseInfo.code}>
+<Layout
+	title={courseInfo.code}
+	description={`${courseInfo.code}: ${courseInfo.title} — a Columbia University Department of Biomedical Informatics course taught by the reAIM Lab.`}
+>
 	<section class="pt-2 pb-12">
 		<div class="mb-4">
 			<h1 class="mb-1 text-4xl font-bold tracking-tight text-black md:text-5xl">
@@ -261,11 +264,11 @@ const navLinks = [
 				<div class="rounded-2xl border border-gray-100 bg-white p-8">
 					<div class="grid grid-cols-1 gap-10 md:grid-cols-2">
 						<div class="space-y-6">
-							<h3
+							<h2
 								class="border-b border-gray-200 pb-3 text-xl font-bold tracking-wide text-black uppercase"
 							>
 								Logistics
-							</h3>
+							</h2>
 							<div class="space-y-3 text-xl text-gray-700">
 								<div>
 									<p class="font-bold text-black">Lecture:</p>
@@ -286,11 +289,11 @@ const navLinks = [
 							</div>
 						</div>
 						<div class="space-y-6">
-							<h3
+							<h2
 								class="border-b border-gray-200 pb-3 text-xl font-bold tracking-wide text-black uppercase"
 							>
 								Staff
-							</h3>
+							</h2>
 							<ul class="space-y-4 text-xl text-gray-700">
 								<li>
 									<span class="font-bold text-black">Instructor:</span>
@@ -324,7 +327,7 @@ const navLinks = [
 			</section>
 
 			<section id="description" class="prose section-spy max-w-none scroll-mt-32 text-gray-800">
-				<h3 class="mb-4 text-3xl font-bold text-black">Course Description</h3>
+				<h2 class="mb-4 text-3xl font-bold text-black">Course Description</h2>
 				<p class="mb-4 text-xl leading-relaxed">
 					Machine Learning (ML) has transformative potential for applications in health and
 					medicine. You will learn fundamentals of machine learning, deep learning, and modeling
@@ -336,11 +339,11 @@ const navLinks = [
 				<div class="rounded-2xl border border-gray-100 bg-white p-8">
 					<div class="grid grid-cols-1 gap-10 md:grid-cols-2">
 						<div>
-							<h4
+							<h3
 								class="mb-3 border-b border-gray-200 pb-2 text-xl font-bold tracking-wide text-black uppercase"
 							>
 								Prerequisites
-							</h4>
+							</h3>
 							<ul class="mt-4 list-outside list-disc space-y-2 pl-5 text-xl text-gray-700">
 								<li>
 									Basic knowledge of probability, statistics, calculus, and linear algebra is
@@ -353,11 +356,11 @@ const navLinks = [
 							</ul>
 						</div>
 						<div>
-							<h4
+							<h3
 								class="mb-3 border-b border-gray-200 pb-2 text-xl font-bold tracking-wide text-black uppercase"
 							>
 								Learning Objectives
-							</h4>
+							</h3>
 							<ul class="mt-4 list-outside list-disc space-y-2 pl-5 text-xl text-gray-700">
 								<li>
 									Learn foundations of major machine learning concepts and their relevance to health
@@ -372,7 +375,7 @@ const navLinks = [
 			</section>
 
 			<section id="grading" class="section-spy scroll-mt-32">
-				<h3 class="mb-6 text-3xl font-bold text-black">Format & Grading</h3>
+				<h2 class="mb-6 text-3xl font-bold text-black">Format & Grading</h2>
 				<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
 					<div class="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
 						<div class="text-reaim-blue mb-1 text-4xl font-bold">
@@ -409,7 +412,7 @@ const navLinks = [
 
 			<section id="llm-policy" class="section-spy scroll-mt-32">
 				<div class="border-reaim-blue mt-8 border-l-4 py-2 pl-8">
-					<h4 class="mb-3 text-2xl font-bold text-black">Policy on Generative AI</h4>
+					<h3 class="mb-3 text-2xl font-bold text-black">Policy on Generative AI</h3>
 					<ul class="list-outside list-disc space-y-4 pl-5 text-xl text-gray-800">
 						<li>
 							Use of generative AI for understanding concepts and reading material is allowed.
@@ -429,9 +432,9 @@ const navLinks = [
 			</section>
 
 			<section id="homeworks" class="section-spy scroll-mt-32">
-				<h3 class="mb-6 border-b border-gray-200 pb-2 text-3xl font-bold text-black">
+				<h2 class="mb-6 border-b border-gray-200 pb-2 text-3xl font-bold text-black">
 					Homework Assignments
-				</h3>
+				</h2>
 				<div class="space-y-4 rounded-2xl border border-blue-100 bg-blue-50/50 p-8">
 					<p class="text-xl text-gray-800">
 						Homeworks will be assigned on Courseworks. Homeworks will be due 3 weeks after they are
@@ -446,7 +449,7 @@ const navLinks = [
 			</section>
 
 			<section id="exams" class="section-spy scroll-mt-32">
-				<h3 class="mb-6 border-b border-gray-200 pb-2 text-3xl font-bold text-black">Exams</h3>
+				<h2 class="mb-6 border-b border-gray-200 pb-2 text-3xl font-bold text-black">Exams</h2>
 				<div class="rounded-2xl border border-gray-100 bg-white p-8">
 					<p class="text-xl leading-relaxed text-gray-800">
 						There will be one mid-term (25 points) and one final exam (30 points). Both exams will
@@ -460,7 +463,7 @@ const navLinks = [
 			</section>
 
 			<section id="schedule" class="section-spy scroll-mt-32">
-				<h3 class="mb-6 border-b border-gray-200 pb-3 text-3xl font-bold text-black">Schedule</h3>
+				<h2 class="mb-6 border-b border-gray-200 pb-3 text-3xl font-bold text-black">Schedule</h2>
 				<div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
 					<table class="w-full border-collapse text-left">
 						<thead

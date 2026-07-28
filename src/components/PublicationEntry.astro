@@ -2,6 +2,7 @@
 import team from "../data/team.json";
 import alumni from "../data/alumni.json";
 import { slugify } from "../lib/slugify";
+import { bibtex } from "../data/bibtex";
 
 interface Props {
 	pub: {
@@ -12,6 +13,8 @@ interface Props {
 		year: number;
 		note?: string;
 		award?: { label: string; url: string };
+		links?: { label: string; url: string }[];
+		bibkey?: string;
 	};
 }
 
@@ -42,6 +45,18 @@ function formatAuthors(authorString: string) {
 
 	return formatted;
 }
+
+// Titles may carry markup (e.g. the superscript in ICYM<sup>2</sup>I), so strip
+// it before using the title inside a label.
+const plainTitle = pub.title.replace(/<[^>]*>/g, "");
+
+const bib = pub.bibkey ? bibtex[pub.bibkey] : undefined;
+const bibPanelId = `bibtex-${slugify(plainTitle)}`;
+
+// Shared shape for every pill under an entry. The arrow marks a link that
+// leaves the page, so the BibTeX pill gets a chevron instead.
+const pillClass =
+	"hover:border-reaim-blue hover:text-reaim-blue inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-2.5 py-0.5 text-sm font-bold text-gray-600 transition-colors";
 ---
 
 <div class="flex flex-col gap-1">
@@ -70,29 +85,169 @@ function formatAuthors(authorString: string) {
 	</div>
 
 	{
-		pub.award && (
-			<a
-				href={pub.award.url}
-				target="_blank"
-				rel="noopener noreferrer"
-				class="mt-1.5 inline-flex w-fit items-center gap-1.5 rounded-full border border-amber-200 bg-amber-50 px-2.5 py-0.5 text-sm font-bold text-amber-700 transition-colors hover:bg-amber-100"
-			>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24"
-					fill="none"
-					stroke="currentColor"
-					stroke-width="2"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					class="h-3.5 w-3.5"
-					aria-hidden="true"
+		(pub.award || pub.links?.length || bib) && (
+			<div class="mt-2 flex flex-wrap items-center gap-2">
+				{pub.award && (
+					<a
+						href={pub.award.url}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="inline-flex items-center gap-1.5 rounded-full border border-amber-200 bg-amber-50 px-2.5 py-0.5 text-sm font-bold text-amber-700 transition-colors hover:bg-amber-100"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="h-3.5 w-3.5"
+							aria-hidden="true"
+						>
+							<circle cx="12" cy="8" r="6" />
+							<path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+						</svg>
+						{pub.award.label}
+						<span aria-hidden="true">&rarr;</span>
+					</a>
+				)}
+
+				{pub.links?.map((link) => (
+					<a
+						href={link.url}
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label={`${link.label} — ${plainTitle}`}
+						class={pillClass}
+					>
+						{link.label}
+						<span aria-hidden="true">&rarr;</span>
+					</a>
+				))}
+
+				{bib && (
+					<button
+						type="button"
+						data-bibtex-toggle
+						aria-expanded="false"
+						aria-controls={bibPanelId}
+						aria-label={`BibTeX for ${plainTitle}`}
+						class={`${pillClass} [&[aria-expanded=true]_svg]:rotate-180`}
+					>
+						BibTeX
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2.5"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="h-3 w-3 transition-transform duration-200"
+							aria-hidden="true"
+						>
+							<path d="m6 9 6 6 6-6" />
+						</svg>
+					</button>
+				)}
+			</div>
+		)
+	}
+
+	{
+		bib && (
+			<div id={bibPanelId} hidden class="relative mt-2">
+				<pre class="overflow-x-auto rounded-lg border border-gray-200 bg-gray-50 p-4 pr-14 font-mono text-sm leading-relaxed text-gray-800"><code>{bib}</code></pre>
+				<button
+					type="button"
+					data-bibtex-copy
+					aria-label={`Copy BibTeX for ${plainTitle}`}
+					class="hover:border-reaim-blue hover:text-reaim-blue absolute top-2 right-2 inline-flex h-8 w-8 items-center justify-center rounded-md border border-gray-200 bg-white text-gray-500 transition-colors"
 				>
-					<circle cx="12" cy="8" r="6" />
-					<path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
-				</svg>
-				{pub.award.label}
-			</a>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="h-4 w-4"
+						data-icon="copy"
+						aria-hidden="true"
+					>
+						<rect x="3" y="3" width="13" height="13" rx="2.5" />
+						<rect x="8" y="8" width="13" height="13" rx="2.5" />
+					</svg>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2.5"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						class="hidden h-4 w-4"
+						data-icon="done"
+						aria-hidden="true"
+					>
+						<path d="M20 6 9 17l-5-5" />
+					</svg>
+					<span class="sr-only" role="status" data-copy-status />
+				</button>
+			</div>
 		)
 	}
 </div>
+
+<script>
+	// Astro hoists this once for the whole page, so it wires up every publication
+	// entry rather than the single instance it is written beside.
+	document.querySelectorAll("[data-bibtex-toggle]").forEach((toggle) => {
+		const panel = document.getElementById(toggle.getAttribute("aria-controls") || "");
+		if (!panel) return;
+
+		toggle.addEventListener("click", () => {
+			const isOpen = toggle.getAttribute("aria-expanded") === "true";
+			toggle.setAttribute("aria-expanded", String(!isOpen));
+			panel.hidden = isOpen;
+		});
+	});
+
+	document.querySelectorAll("[data-bibtex-copy]").forEach((button) => {
+		const code = button.parentElement?.querySelector("code");
+		if (!code) return;
+
+		const copyIcon = button.querySelector('[data-icon="copy"]');
+		const doneIcon = button.querySelector('[data-icon="done"]');
+		const status = button.querySelector("[data-copy-status]");
+		let revert: ReturnType<typeof setTimeout> | undefined;
+
+		button.addEventListener("click", async () => {
+			try {
+				await navigator.clipboard.writeText(code.textContent || "");
+			} catch {
+				// Clipboard access can be refused (insecure context, denied
+				// permission). Select the entry so it can still be copied by hand.
+				const range = document.createRange();
+				range.selectNodeContents(code);
+				const selection = getSelection();
+				selection?.removeAllRanges();
+				selection?.addRange(range);
+				return;
+			}
+
+			copyIcon?.classList.add("hidden");
+			doneIcon?.classList.remove("hidden");
+			if (status) status.textContent = "BibTeX copied";
+
+			clearTimeout(revert);
+			revert = setTimeout(() => {
+				copyIcon?.classList.remove("hidden");
+				doneIcon?.classList.add("hidden");
+				if (status) status.textContent = "";
+			}, 2000);
+		});
+	});
+</script>

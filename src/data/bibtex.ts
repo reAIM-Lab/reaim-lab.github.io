@@ -5,6 +5,13 @@
 // backslashes in LaTeX escapes, turning No{\'e}mie into No{'e}mie and
 // {\textasciicircum} into a tab character.
 export const bibtex: Record<string, string> = {
+	kobayashi2026positive: String.raw`@article{kobayashi2026positive,
+  title={Positive-Unlabeled Preference Optimization For Chest X-ray Report Generation},
+  author={Kobayashi, Yuta and Ramesh, Pradyun and Chaudhry, Muhammad Ahmed and Jeanselme, Vincent and Gichoya, Judy Wawira and Koyejo, Sanmi and Capaccione, Kathleen and Joshi, Shalmali},
+  journal={arXiv preprint arXiv:2608.05341},
+  year={2026}
+}`,
+
 	choi2026icymi: String.raw`@inproceedings{choi2026icymi,
   title={{ICYM}\${\textasciicircum}2\$I: The illusion of multimodal informativeness under missingness},
   author={Young Sang Choi and Vincent Jeanselme and Pierre Elias and Shalmali Joshi},

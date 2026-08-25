@@ -1,5 +1,18 @@
 [
   {
+    "title": "Positive-Unlabeled Preference Optimization For Chest X-ray Report Generation",
+    "bibkey": "kobayashi2026positive",
+    "authors": "Yuta Kobayashi, Pradyun Ramesh, Muhammad Ahmed Chaudhry, Vincent Jeanselme, Judy Wawira Gichoya, Sanmi Koyejo, Kathleen Capaccione, Shalmali Joshi",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2608.05341",
+    "type": "preprint",
+    "links": [
+      { "label": "arXiv", "url": "https://arxiv.org/abs/2608.05341" },
+      { "label": "Code", "url": "https://github.com/reAIM-Lab/CXR-reason" }
+    ]
+  },
+  {
     "title": "ICYM<sup>2</sup>I: The illusion of multimodal informativeness under missingness",
     "bibkey": "choi2026icymi",
     "authors": "Young Sang Choi*, Vincent Jeanselme*, Pierre Elias, Shalmali Joshi",

@@ -1,6 +1,9 @@
+@import "@fontsource-variable/inter/wght.css";
+@import "@fontsource-variable/inter/wght-italic.css";
 @import "tailwindcss";
 
 @theme {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --color-reaim-blue: #0077c8; /* Medium Blue */
   --color-reaim-dark: #012169; /* Dark Blue */
   --color-reaim-bg: #f6f7f9; /* Soft cool grey page canvas */
@@ -14,9 +17,9 @@
 
 /* The off-canvas mobile menu (fixed inset-0 + translate-x-full) parks just off
    the right edge and would otherwise create a horizontal scroll gutter. Clip it
-   below `md`, where that menu exists and the sticky course sidebar (lg only)
+   below `lg`, where that menu exists and the sticky course sidebar (lg only)
    does not — so desktop `position: sticky` is unaffected. */
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   html {
     overflow-x: hidden;
   }

@@ -53,16 +53,5 @@
     "website": "https://zilinjing.github.io/",
     "scholar": "https://scholar.google.com/citations?user=q7XpLa4AAAAJ",
     "bio": "Zilin is a doctoral student in Computer Science advised by Dr. Shalmali Joshi. He received his bachelor's degree in Computer Science and Engineering at The Chinese University of Hong Kong, Shenzhen under the supervision of Prof. Shuang Li and Prof. Hongyuan Zha and was an international visiting student at Yale University through Y-VISP. His research interests are in machine learning for healthcare, causal inference and reinforcement learning. "
-  },
-  {
-    "name": "Florent Pollet",
-    "suffix": "M.Sc.",
-    "role": "PhD Student",
-    "group": "PhD",
-    "image": "/images/florent_headshot.jpg",
-    "email": "ffp2106[at]columbia[dot]edu",
-    "website": "https://florian6973.github.io/",
-    "scholar": "https://scholar.google.com/citations?user=-NcIrc0AAAAJ&hl=en",
-    "bio": "Florent is a PhD student in Biomedical Informatics at Columbia University. He graduated from PSL University with a MSc in CS and from Paris-Saclay University with a MSc in Applied Math for AI. His research focuses on foundation models for healthcare, clinical large language models, privacy risks of medical data, co-advised by Prof. Gamze Gürsoy from Cambridge University. He has strong experience in applied mathematics, optimization, and scientific software development In his free time, he loves running, biking, and swimming."
   }
 ]

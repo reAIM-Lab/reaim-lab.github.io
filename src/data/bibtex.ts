@@ -69,11 +69,14 @@ export const bibtex: Record<string, string> = {
   publisher={Nature Publishing Group UK London}
 }`,
 
-	pang2025fomoh: String.raw`@article{pang2025fomoh,
+	jeanselme2026fomohclinicallymeaningfulfoundation: String.raw`@misc{jeanselme2026fomohclinicallymeaningfulfoundation,
   title={FoMoH: A clinically meaningful foundation model evaluation for structured electronic health records},
-  author={Pang, Chao and Jeanselme, Vincent and Choi, Young Sang and Jiang, Xinzhuo and Jing, Zilin and Kashyap, Aparajita and Kobayashi, Yuta and Li, Yanwei and Pollet, Florent and Natarajan, Karthik and others},
-  journal={arXiv preprint arXiv:2505.16941},
-  year={2025}
+  author={Vincent Jeanselme and Zilin Jing and Aparajita Kashyap and Chao Pang and Florent Pollet and Young Sang Choi and Xinzhuo Jiang and Yuta Kobayashi and Yanwei Li and Sara Matijevic and Karthik Natarajan and Shalmali Joshi},
+  year={2026},
+  eprint={2505.16941},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG},
+  url={https://arxiv.org/abs/2505.16941},
 }`,
 
 	"pmlr-v202-zhang23ai": String.raw`@inproceedings{pmlr-v202-zhang23ai,

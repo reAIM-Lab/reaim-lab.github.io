@@ -46,7 +46,7 @@ const roleOptions = [
 
 <Layout
 	title="Group"
-	description="The people of the reAIM Lab at Columbia University — principal investigator, doctoral students, postdoctoral and visiting researchers, and lab alumni."
+	description="Group page for the reAIM Lab at Columbia University."
 >
 	<section class="mb-12 px-4 pt-4">
 		<h1
@@ -195,7 +195,7 @@ const roleOptions = [
 										</div>
 
 										{hasLinks && (
-											<div class="mt-2 flex flex-col gap-1 text-lg font-medium text-gray-600 min-[390px]:flex-row min-[390px]:items-center min-[390px]:gap-0">
+											<div class="mt-2 flex flex-col gap-1 text-lg font-medium text-gray-600 md:flex-row md:items-center md:gap-0">
 												{alum.website && (
 													<a
 														href={alum.website}
@@ -208,7 +208,7 @@ const roleOptions = [
 												)}
 
 												{alum.website && alum.scholar && (
-													<span class="hidden px-3 text-gray-300 min-[390px]:inline">•</span>
+													<span class="hidden px-3 text-gray-300 md:inline">•</span>
 												)}
 
 												{alum.scholar && (

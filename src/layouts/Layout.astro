@@ -7,7 +7,7 @@ const currentYear = new Date().getFullYear();
 const pageTitle = `${title} | reAIM Lab`;
 const metaDescription =
 	description ||
-	"The reAIM Lab at Columbia University, led by Prof. Shalmali Joshi, focuses on Trustworthy Machine Learning for Healthcare.";
+	"The reAIM Lab at Columbia University develops reliable and trustworthy AI for health and medicine.";
 
 // Link previews and canonical tags need absolute URLs; `site` in
 // astro.config.mjs supplies the origin. build.format "file" leaves a .html
@@ -102,13 +102,14 @@ const navLinks = [
 				</div>
 
 				<button
+					type="button"
 					id="menu-btn"
 					class="focus-visible:ring-reaim-blue relative block rounded-sm focus:outline-none focus-visible:ring-2 lg:hidden"
 					aria-label="Toggle Navigation Menu"
 					aria-expanded="false"
 					aria-controls="mobile-menu"
 				>
-					<div class="space-y-2">
+					<span class="block space-y-2">
 						<span
 							id="line1"
 							class="block h-0.5 w-8 origin-center bg-gray-600 transition-transform duration-300"
@@ -119,7 +120,7 @@ const navLinks = [
 							id="line3"
 							class="block h-0.5 w-8 origin-center bg-gray-600 transition-transform duration-300"
 						></span>
-					</div>
+					</span>
 				</button>
 			</nav>
 		</div>
@@ -181,6 +182,7 @@ const navLinks = [
 						</nav>
 
 						<button
+							type="button"
 							id="back-to-top"
 							aria-label="Scroll back to top of page"
 							class="hover:text-reaim-blue flex items-center gap-1 rounded-sm px-2 py-1 text-sm font-bold tracking-wider text-gray-500 transition-colors"

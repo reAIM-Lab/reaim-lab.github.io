@@ -3,17 +3,23 @@ import Layout from "../layouts/Layout.astro";
 
 const news = [
 	{
+		date: "June 2026",
+		title: "FAccT Best Paper Award",
+		content:
+			'Apara and Sara\'s paper "A pipeline for enabling path-specific causal fairness in observational health data" received a <a href="https://facct-blog.github.io/2026-06-25/best-papers" class="font-bold text-reaim-blue hover:underline">Best Paper Award</a> at the 2026 ACM Conference on Fairness, Accountability, and Transparency (FAccT). Congratulations!'
+	},
+	{
 		date: "June 2025",
 		title: "Google Research Scholar Award",
 		content:
-			"Shalmali Joshi is grateful for support from the <a href='https://research.google/programs-and-events/research-scholar-program/recipients/' class='font-bold text-reaim-blue hover:underline'>Google Research Scholar Program</a>!"
+			`Shalmali Joshi is grateful for support from the <a href="https://research.google/programs-and-events/research-scholar-program/recipients/" class="font-bold text-reaim-blue hover:underline">Google Research Scholar Program</a>!`
 	},
 	{
 		date: "May 2025",
 		badge: "New Preprint!",
 		title: "Benchmarking EHR Foundation Models",
 		content:
-			"We benchmarked SOTA structured EHR foundation models on Columbia University Medical Center data. Read more about 'FoMoH' <a href='https://arxiv.org/abs/2505.16941' class='font-bold text-reaim-blue hover:underline'>here</a>!"
+			`We benchmarked SOTA structured EHR foundation models on Columbia University Medical Center data. Read more about 'FoMoH' <a href="https://arxiv.org/abs/2505.16941" class="font-bold text-reaim-blue hover:underline">here</a>!`
 	}
 ];
 ---
@@ -108,7 +114,7 @@ const news = [
 			{
 				news.map((item) => (
 					<div class="flex flex-col items-start gap-4 md:flex-row md:gap-8">
-						<div class="w-32 shrink-0 pt-1">
+						<div class="w-32 shrink-0">
 							<span class="text-sm font-bold tracking-wider text-gray-400 uppercase">
 								{item.date}
 							</span>

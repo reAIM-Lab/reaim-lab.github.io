@@ -9,6 +9,7 @@ interface Props {
 		title: string;
 		url?: string;
 		authors: string;
+		authorNote?: string;
 		venue: string;
 		year: number;
 		note?: string;
@@ -41,7 +42,7 @@ function formatAuthors(authorString: string) {
 		);
 	});
 
-	formatted = formatted.replace(/\*/g, '<sup>*</sup>');
+	formatted = formatted.replace(/\*{1,2}/g, (marker) => `<sup>${marker}</sup>`);
 
 	return formatted;
 }
@@ -77,6 +78,7 @@ const pillClass =
 </div>
 
 	<div class="text-lg leading-relaxed text-gray-700" set:html={formatAuthors(pub.authors)} />
+	{pub.authorNote && <div class="text-sm text-gray-500">{pub.authorNote}</div>}
 
 	<div class="text-lg text-gray-500 italic">
 		{pub.venue}

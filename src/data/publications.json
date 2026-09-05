@@ -79,6 +79,20 @@
     ]
   },
   {
+    "title": "FoMoH: A clinically meaningful foundation model evaluation for structured electronic health records",
+    "bibkey": "jeanselme2026fomohclinicallymeaningfulfoundation",
+    "authors": "Vincent Jeanselme*, Zilin Jing*, Aparajita Kashyap*, Chao Pang*, Florent Pollet*, Young Sang Choi**, Xinzhuo Jiang**, Yuta Kobayashi**, Yanwei Li**, Sara Matijevic**, Karthik Natarajan, Shalmali Joshi",
+    "authorNote": "* and ** indicate equal contribution within each group.",
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2505.16941",
+    "type": "preprint",
+    "links": [
+      { "label": "arXiv", "url": "https://arxiv.org/abs/2505.16941" },
+      { "label": "Code", "url": "https://github.com/reAIM-Lab/ehr_foundation_model_benchmark" }
+    ]
+  },
+  {
     "title": "Mind the data gap: Missingness Still Shapes Large Language Model Prognoses",
     "bibkey": "kobayashi2025mind",
     "authors": "Yuta Kobayashi, Vincent Jeanselme, Shalmali Joshi",
@@ -99,19 +113,6 @@
     "year": 2025,
     "url": "https://www.nature.com/articles/s41746-025-01963-x",
     "links": [{ "label": "Publisher", "url": "https://www.nature.com/articles/s41746-025-01963-x" }]
-  },
-  {
-    "title": "FoMoH: A clinically meaningful foundation model evaluation for structured electronic health records",
-    "bibkey": "pang2025fomoh",
-    "authors": "Chao Pang*, Vincent Jeanselme*, Young Sang Choi, Xinzhuo Jiang, Zilin Jing, Aparajita Kashyap, Yuta Kobayashi, Yanwei Li, Florent Pollet, Karthik Natarajan, Shalmali Joshi",
-    "venue": "arXiv preprint",
-    "year": 2025,
-    "url": "https://arxiv.org/abs/2505.16941",
-    "type": "preprint",
-    "links": [
-      { "label": "arXiv", "url": "https://arxiv.org/abs/2505.16941" },
-      { "label": "Code", "url": "https://github.com/reAIM-Lab/ehr_foundation_model_benchmark" }
-    ]
   },
   {
     "title": "\"Why did the model fail?\": attributing model performance changes to distribution shifts",

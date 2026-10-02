@@ -39,6 +39,17 @@ html.smooth-scroll {
   }
 }
 
+@media (min-width: 80rem) and (min-height: 67.5rem) {
+  .home-landing {
+    min-height: 100svh;
+  }
+
+  .home-hero {
+    min-height: clamp(37rem, 56svh, 38rem);
+    padding-block: 4rem;
+  }
+}
+
 /* Scroll-reveal ("emerge") animation.
    Gated on `.js-enabled` so content is always visible if JS is off or fails,
    and only applied when the user has not requested reduced motion. */

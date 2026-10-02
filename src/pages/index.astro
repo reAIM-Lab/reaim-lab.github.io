@@ -25,7 +25,8 @@ const news = [
 ---
 
 <Layout title="Home">
-	<section class="-mt-28 flex min-h-svh items-center py-28">
+	<div class="home-landing">
+	<section class="home-hero -mt-28 flex min-h-svh items-center py-28">
 		<div class="w-full">
 			<h1
 				class="mb-10 max-w-4xl text-4xl leading-[1.1] font-bold tracking-tight text-black sm:text-5xl md:text-5xl"
@@ -39,7 +40,7 @@ const news = [
 			</h1>
 
 			<div
-				class="grid items-start gap-10 lg:grid-cols-[minmax(0,42rem)_minmax(12rem,1fr)] lg:gap-16"
+				class="grid items-start gap-10 lg:grid-cols-[minmax(0,42rem)_14rem] lg:gap-12"
 			>
 				<div class="max-w-2xl">
 					<p class="mb-8 text-lg leading-relaxed font-light text-gray-800 md:text-lg">
@@ -66,7 +67,7 @@ const news = [
 				</div>
 
 				<nav
-					class="flex w-full flex-col items-start lg:max-w-56 lg:justify-self-end"
+					class="flex w-full flex-col items-start lg:max-w-56"
 					aria-label="Explore the reAIM Lab"
 				>
 					{
@@ -123,6 +124,7 @@ const news = [
 			}
 		</div>
 	</section>
+	</div>
 
 	<section class="reveal mb-20 pt-12">
 		<p class="mb-8 text-center text-sm font-bold tracking-widest text-gray-400 uppercase">

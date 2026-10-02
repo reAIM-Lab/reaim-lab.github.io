@@ -40,13 +40,17 @@ html.smooth-scroll {
 }
 
 @media (min-width: 80rem) and (min-height: 67.5rem) {
-  .home-landing {
-    min-height: 100svh;
-  }
-
   .home-hero {
     min-height: clamp(37rem, 56svh, 38rem);
-    padding-block: 4rem;
+    padding-block: 7.5rem 2.5rem;
+  }
+
+  .home-news {
+    margin-bottom: 3rem;
+  }
+
+  .home-support {
+    padding-top: 2rem;
   }
 }
 

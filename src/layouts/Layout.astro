@@ -82,24 +82,24 @@ const navLinks = [
 					reAIM
 				</a>
 
-				<div
-					class="hidden items-center space-x-8 text-base font-medium text-gray-600 lg:flex"
-				>
-					{
-						navLinks.map((link) => (
-							<a
-								href={link.href}
-								aria-current={currentPath === link.href ? "page" : undefined}
-								class:list={[
-									"hover:text-reaim-blue focus-visible:ring-reaim-blue transition-colors aria-[current=page]:font-bold focus:outline-none focus-visible:ring-2",
-									{ "text-reaim-blue": link.href === "/join" }
-								]}
-							>
-								{link.label}
-							</a>
-						))
-					}
-				</div>
+				{
+					currentPath !== "/" && (
+						<div class="hidden items-center space-x-8 text-base font-medium text-gray-600 lg:flex">
+							{navLinks.map((link) => (
+								<a
+									href={link.href}
+									aria-current={currentPath === link.href ? "page" : undefined}
+									class:list={[
+										"hover:text-reaim-blue focus-visible:ring-reaim-blue transition-colors aria-[current=page]:font-bold focus:outline-none focus-visible:ring-2",
+										{ "text-reaim-blue": link.href === "/join" }
+									]}
+								>
+									{link.label}
+								</a>
+							))}
+						</div>
+					)
+				}
 
 				<button
 					type="button"

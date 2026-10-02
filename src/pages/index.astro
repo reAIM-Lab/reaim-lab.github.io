@@ -25,9 +25,9 @@ const news = [
 ---
 
 <Layout title="Home">
-	<section class="pt-4 pb-12 md:py-20">
-		<div class="max-w-4xl">
-			<h1 class="mb-10 text-5xl leading-[1.1] font-bold tracking-tight text-black md:text-6xl">
+	<section class="-mt-28 flex min-h-svh items-center py-28">
+		<div class="w-full max-w-4xl">
+			<h1 class="mb-10 text-4xl leading-[1.1] font-bold tracking-tight text-black sm:text-5xl md:text-5xl">
 				We are the <br class="hidden md:block" />
 				<span class="text-reaim-blue">re</span>liable
 				<span class="text-reaim-blue">A</span>rtificial
@@ -36,7 +36,7 @@ const news = [
 				<span class="text-reaim-blue">M</span>edicine Lab.
 			</h1>
 
-			<p class="mb-8 max-w-3xl text-xl leading-relaxed font-light text-gray-800">
+			<p class="mb-8 max-w-2xl text-lg leading-relaxed font-light text-gray-800 md:text-lg">
 				Led by <a
 					href="/shalmalijoshi"
 					class="border-reaim-blue hover:text-reaim-blue border-b-2 font-bold text-black transition-colors"
@@ -49,7 +49,7 @@ const news = [
 				> at Columbia University in the City of New York.
 			</p>
 
-			<p class="max-w-3xl text-xl leading-relaxed text-gray-800">
+			<p class="max-w-2xl text-lg leading-relaxed text-gray-800 md:text-lg">
 				Our vision is to design AI and ML systems to improve scientific inference and predictive
 				capabilities in the biomedical sciences, discovery, and informatics, focused on challenges
 				of <span class="font-semibold text-black"
@@ -58,7 +58,7 @@ const news = [
 				learning, observational causal inference, and probabilistic modeling.
 			</p>
 
-			<p class="mt-6 text-xl">
+			<p class="mt-6 max-w-2xl text-base md:text-lg">
 				<a href="/research" class="text-reaim-blue font-bold transition-colors hover:underline">
 					Learn more about our research at reAIM &rarr;
 				</a>
@@ -72,10 +72,10 @@ const news = [
 				href="/publications"
 				class="group block rounded-2xl border border-gray-100 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
 			>
-				<h2 class="group-hover:text-reaim-blue mb-2 text-2xl font-bold text-black">
+				<h2 class="group-hover:text-reaim-blue mb-2 text-xl font-bold text-black md:text-xl">
 					Publications &rarr;
 				</h2>
-				<p class="text-lg text-gray-600">
+				<p class="text-base text-gray-600 md:text-base">
 					Read our latest papers, preprints, and conference proceedings.
 				</p>
 			</a>
@@ -84,10 +84,10 @@ const news = [
 				href="/group"
 				class="group block rounded-2xl border border-gray-100 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
 			>
-				<h2 class="group-hover:text-reaim-blue mb-2 text-2xl font-bold text-black">
+				<h2 class="group-hover:text-reaim-blue mb-2 text-xl font-bold text-black md:text-xl">
 					Our Group &rarr;
 				</h2>
-				<p class="text-lg text-gray-600">
+				<p class="text-base text-gray-600 md:text-base">
 					Meet the doctoral students, postdocs, and researchers behind reAIM.
 				</p>
 			</a>
@@ -96,8 +96,8 @@ const news = [
 				href="/join"
 				class="group block rounded-2xl border border-gray-100 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
 			>
-				<h2 class="mb-2 text-2xl font-bold text-black">Join Us &rarr;</h2>
-				<p class="text-lg text-gray-600">
+				<h2 class="mb-2 text-xl font-bold text-black md:text-xl">Join Us &rarr;</h2>
+				<p class="text-base text-gray-600 md:text-base">
 					Interested in working with us? Explore open positions for students and postdocs.
 				</p>
 			</a>
@@ -106,7 +106,7 @@ const news = [
 
 	<section class="reveal mb-24">
 		<div class="mb-8 flex items-center">
-			<h2 class="mr-4 text-3xl font-bold tracking-wide text-black uppercase">News</h2>
+			<h2 class="mr-4 text-2xl font-bold tracking-wide text-black uppercase md:text-2xl">News</h2>
 			<div class="h-1 flex-1 rounded-full bg-gray-100"></div>
 		</div>
 
@@ -125,8 +125,8 @@ const news = [
 									{item.badge}
 								</span>
 							)}
-							<h3 class="mb-2 text-xl font-bold text-black">{item.title}</h3>
-							<p class="text-xl text-gray-800" set:html={item.content} />
+							<h3 class="mb-2 text-lg font-bold text-black md:text-lg">{item.title}</h3>
+							<p class="text-lg text-gray-800 md:text-lg" set:html={item.content} />
 						</div>
 					</div>
 				))
@@ -143,21 +143,21 @@ const news = [
 		>
 			<a
 				href="https://www.vagelos.columbia.edu/departments-centers/centers-and-institutes/stavros-niarchos-foundation-center-precision-psychiatry-mental-health"
-				class="text-reaim-dark hover:text-reaim-blue max-w-[200px] text-center text-xl font-bold"
+				class="text-reaim-dark hover:text-reaim-blue max-w-[200px] text-center text-lg font-bold md:text-lg"
 			>
 				SNF Center for Precision Psychiatry
 			</a>
 			<a
 				href="https://research.google/programs-and-events/research-scholar-program/recipients/"
-				class="text-2xl font-bold text-gray-800 hover:text-blue-500">Google</a
+				class="text-xl font-bold text-gray-800 hover:text-blue-500 md:text-xl">Google</a
 			>
 			<a
 				href="https://www.nimh.nih.gov/"
-				class="text-2xl font-bold text-gray-800 hover:text-blue-700">NIMH</a
+				class="text-xl font-bold text-gray-800 hover:text-blue-700 md:text-xl">NIMH</a
 			>
 			<a
 				href="https://www.nlm.nih.gov/"
-				class="text-2xl font-bold text-gray-800 hover:text-blue-600">NLM</a
+				class="text-xl font-bold text-gray-800 hover:text-blue-600 md:text-xl">NLM</a
 			>
 		</div>
 	</section>

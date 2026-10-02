@@ -225,10 +225,10 @@ const navLinks = [
 >
 	<section class="pt-2 pb-12">
 		<div class="mb-4">
-			<h1 class="mb-1 text-4xl font-bold tracking-tight text-black md:text-5xl">
+			<h1 class="mb-1 text-4xl font-bold tracking-tight text-black md:text-4xl">
 				{courseInfo.title}
 			</h1>
-			<p class="mb-1 text-xl font-medium text-gray-600">{courseInfo.section}</p>
+			<p class="mb-1 text-lg font-medium text-gray-600 md:text-lg">{courseInfo.section}</p>
 			<p class="text-reaim-blue mb-0 text-2xl font-bold">
 				{courseInfo.code} • {courseInfo.semester}
 			</p>
@@ -269,7 +269,7 @@ const navLinks = [
 							>
 								Logistics
 							</h2>
-							<div class="space-y-3 text-xl text-gray-700">
+							<div class="space-y-3 text-lg text-gray-700 md:text-lg">
 								<div>
 									<p class="font-bold text-black">Lecture:</p>
 									<p>{courseInfo.lectureTime}</p>
@@ -294,7 +294,7 @@ const navLinks = [
 							>
 								Staff
 							</h2>
-							<ul class="space-y-4 text-xl text-gray-700">
+							<ul class="space-y-4 text-lg text-gray-700 md:text-lg">
 								<li>
 									<span class="font-bold text-black">Instructor:</span>
 									<a
@@ -302,7 +302,7 @@ const navLinks = [
 										class="text-reaim-blue font-bold hover:underline"
 										>{courseInfo.instructor.name}</a
 									><br />
-									<span class="text-lg text-gray-500"
+									<span class="text-base text-gray-500 md:text-base"
 										>Office Hours: {courseInfo.instructor.officeHours}</span
 									>
 								</li>
@@ -316,7 +316,7 @@ const navLinks = [
 												</a>
 												<br />
 											</>
-											<span class="text-lg text-gray-500">Office Hours: {ta.officeHours}</span>
+											<span class="text-base text-gray-500 md:text-base">Office Hours: {ta.officeHours}</span>
 										</li>
 									))
 								}
@@ -327,8 +327,8 @@ const navLinks = [
 			</section>
 
 			<section id="description" class="prose section-spy max-w-none scroll-mt-32 text-gray-800">
-				<h2 class="mb-4 text-3xl font-bold text-black">Course Description</h2>
-				<p class="mb-4 text-xl leading-relaxed">
+				<h2 class="mb-4 text-2xl font-bold text-black md:text-2xl">Course Description</h2>
+				<p class="mb-4 text-lg leading-relaxed md:text-lg">
 					Machine Learning (ML) has transformative potential for applications in health and
 					medicine. You will learn fundamentals of machine learning, deep learning, and modeling
 					clinical and biomedicine data using machine learning.
@@ -344,7 +344,7 @@ const navLinks = [
 							>
 								Prerequisites
 							</h3>
-							<ul class="mt-4 list-outside list-disc space-y-2 pl-5 text-xl text-gray-700">
+							<ul class="mt-4 list-outside list-disc space-y-2 pl-5 text-lg text-gray-700 md:text-lg">
 								<li>
 									Basic knowledge of probability, statistics, calculus, and linear algebra is
 									expected and required.
@@ -361,7 +361,7 @@ const navLinks = [
 							>
 								Learning Objectives
 							</h3>
-							<ul class="mt-4 list-outside list-disc space-y-2 pl-5 text-xl text-gray-700">
+							<ul class="mt-4 list-outside list-disc space-y-2 pl-5 text-lg text-gray-700 md:text-lg">
 								<li>
 									Learn foundations of major machine learning concepts and their relevance to health
 									and biomedicine data.
@@ -375,14 +375,14 @@ const navLinks = [
 			</section>
 
 			<section id="grading" class="section-spy scroll-mt-32">
-				<h2 class="mb-6 text-3xl font-bold text-black">Format &amp; Grading</h2>
+				<h2 class="mb-6 text-2xl font-bold text-black md:text-2xl">Format &amp; Grading</h2>
 				<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
 					<div class="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
 						<div class="text-reaim-blue mb-1 text-4xl font-bold">
 							40 <span class="text-2xl">points</span>
 						</div>
 						<div class="text-xl font-bold text-black">Problem Sets</div>
-						<p class="text-lg text-gray-500">
+						<p class="text-base text-gray-500 md:text-base">
 							4 homeworks (combination of numeric/conceptual/data-driven questions).
 						</p>
 					</div>
@@ -391,21 +391,21 @@ const navLinks = [
 							25 <span class="text-2xl">points</span>
 						</div>
 						<div class="text-xl font-bold text-black">Midterm</div>
-						<p class="text-lg text-gray-500">One mid-term exam.</p>
+						<p class="text-base text-gray-500 md:text-base">One mid-term exam.</p>
 					</div>
 					<div class="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
 						<div class="text-reaim-blue mb-1 text-4xl font-bold">
 							30 <span class="text-2xl">points</span>
 						</div>
 						<div class="text-xl font-bold text-black">Final Exam</div>
-						<p class="text-lg text-gray-500">One final exam.</p>
+						<p class="text-base text-gray-500 md:text-base">One final exam.</p>
 					</div>
 					<div class="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
 						<div class="text-reaim-blue mb-1 text-4xl font-bold">
 							5 <span class="text-2xl">points</span>
 						</div>
 						<div class="text-xl font-bold text-black">Participation</div>
-						<p class="text-lg text-gray-500">In-person lecture participation.</p>
+						<p class="text-base text-gray-500 md:text-base">In-person lecture participation.</p>
 					</div>
 				</div>
 			</section>
@@ -413,7 +413,7 @@ const navLinks = [
 			<section id="llm-policy" class="section-spy scroll-mt-32">
 				<div class="border-reaim-blue mt-8 border-l-4 py-2 pl-8">
 					<h3 class="mb-3 text-2xl font-bold text-black">Policy on Generative AI</h3>
-					<ul class="list-outside list-disc space-y-4 pl-5 text-xl text-gray-800">
+					<ul class="list-outside list-disc space-y-4 pl-5 text-lg text-gray-800 md:text-lg">
 						<li>
 							Use of generative AI for understanding concepts and reading material is allowed.
 						</li>
@@ -432,15 +432,15 @@ const navLinks = [
 			</section>
 
 			<section id="homeworks" class="section-spy scroll-mt-32">
-				<h2 class="mb-6 border-b border-gray-200 pb-2 text-3xl font-bold text-black">
+				<h2 class="mb-6 border-b border-gray-200 pb-2 text-2xl font-bold text-black md:text-2xl">
 					Homework Assignments
 				</h2>
 				<div class="space-y-4 rounded-2xl border border-blue-100 bg-blue-50/50 p-8">
-					<p class="text-xl text-gray-800">
+					<p class="text-lg text-gray-800 md:text-lg">
 						Homeworks will be assigned on Courseworks. Homeworks will be due 3 weeks after they are
 						assigned. We have ensured ample time for all homeworks.
 					</p>
-					<p class="text-xl text-gray-800">
+					<p class="text-lg text-gray-800 md:text-lg">
 						However, we are allowing <strong>two slack days</strong> usable over the semester. If you
 						are using a slack day for a homework, mention this on your homework submission (otherwise
 						the TAs will assume late submission). You are free to use the slack days for any of the homeworks.
@@ -449,13 +449,13 @@ const navLinks = [
 			</section>
 
 			<section id="exams" class="section-spy scroll-mt-32">
-				<h2 class="mb-6 border-b border-gray-200 pb-2 text-3xl font-bold text-black">Exams</h2>
+				<h2 class="mb-6 border-b border-gray-200 pb-2 text-2xl font-bold text-black md:text-2xl">Exams</h2>
 				<div class="rounded-2xl border border-gray-100 bg-white p-8">
-					<p class="text-xl leading-relaxed text-gray-800">
+					<p class="text-lg leading-relaxed text-gray-800 md:text-lg">
 						There will be one mid-term (25 points) and one final exam (30 points). Both exams will
 						be for the duration of the class.
 					</p>
-					<p class="mt-4 text-xl leading-relaxed text-gray-800">
+					<p class="mt-4 text-lg leading-relaxed text-gray-800 md:text-lg">
 						You will be allowed one Letter-sized cheat sheet for formulae only. You will return the
 						cheat sheet along with the exam for grading.
 					</p>
@@ -463,7 +463,7 @@ const navLinks = [
 			</section>
 
 			<section id="schedule" class="section-spy scroll-mt-32">
-				<h2 class="mb-6 border-b border-gray-200 pb-3 text-3xl font-bold text-black">Schedule</h2>
+				<h2 class="mb-6 border-b border-gray-200 pb-3 text-2xl font-bold text-black md:text-2xl">Schedule</h2>
 				<div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
 					<table class="w-full border-collapse text-left">
 						<thead

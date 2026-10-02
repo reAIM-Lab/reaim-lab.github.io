@@ -50,7 +50,7 @@ const roleOptions = [
 >
 	<section class="mb-12 px-4 pt-4">
 		<h1
-			class="mb-10 text-left text-5xl font-bold tracking-tight break-words text-black md:text-left md:text-6xl"
+			class="mb-10 text-left text-4xl font-bold tracking-tight break-words text-black sm:text-5xl md:text-left md:text-5xl"
 		>
 			Group
 		</h1>
@@ -58,7 +58,7 @@ const roleOptions = [
 		<div class="space-y-16">
 			<div class="reveal flex flex-col items-center md:items-start">
 				<h2
-					class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-3xl font-bold text-black"
+					class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-2xl font-bold text-black md:text-2xl"
 				>
 					Principal Investigator
 				</h2>
@@ -68,7 +68,7 @@ const roleOptions = [
 			{
 				postdocs.length > 0 && (
 					<div class="reveal flex flex-col items-center md:items-start">
-						<h2 class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-3xl font-bold text-black">
+						<h2 class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-2xl font-bold text-black md:text-2xl">
 							Postdoctoral Researchers
 						</h2>
 						<TeamGrid members={postdocs} />
@@ -79,7 +79,7 @@ const roleOptions = [
 			{
 				phdStudents.length > 0 && (
 					<div class="reveal flex flex-col items-center md:items-start">
-						<h2 class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-3xl font-bold text-black">
+						<h2 class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-2xl font-bold text-black md:text-2xl">
 							Doctoral Students
 						</h2>
 						<TeamGrid members={phdStudents} />
@@ -90,7 +90,7 @@ const roleOptions = [
 			{
 				others.length > 0 && (
 					<div class="reveal flex flex-col items-center md:items-start">
-						<h2 class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-3xl font-bold text-black">
+						<h2 class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-2xl font-bold text-black md:text-2xl">
 							Master's and Undergraduate Researchers
 						</h2>
 						<TeamGrid members={others} />
@@ -101,7 +101,7 @@ const roleOptions = [
 			{
 				visitors.length > 0 && (
 					<div class="reveal flex flex-col items-center md:items-start">
-						<h2 class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-3xl font-bold text-black">
+						<h2 class="mb-6 w-full border-b border-gray-200 pb-2 text-left text-2xl font-bold text-black md:text-2xl">
 							Visiting Researchers
 						</h2>
 						<TeamGrid members={visitors} />
@@ -113,9 +113,9 @@ const roleOptions = [
 				alumni.length > 0 && (
 					<div class="reveal flex flex-col items-center md:items-start">
 						<div class="mb-6 flex w-full flex-col gap-3 border-b border-gray-200 pb-2 sm:flex-row sm:items-center sm:justify-between">
-							<h2 class="text-left text-3xl font-bold text-black">Lab Alumni</h2>
+							<h2 class="text-left text-2xl font-bold text-black md:text-2xl">Lab Alumni</h2>
 
-							<div data-alumni-filter class="relative items-center gap-2 text-lg">
+							<div data-alumni-filter class="relative items-center gap-2 text-base md:text-base">
 								<span class="shrink-0 text-gray-600">Filter by role:</span>
 
 								<button
@@ -189,13 +189,13 @@ const roleOptions = [
 										class="hover:border-reaim-blue scroll-mt-28 overflow-hidden border-l-4 border-gray-200 pl-4 break-words transition-colors"
 									>
 										<div class="flex flex-col">
-											<div class="text-2xl leading-tight font-bold break-words text-black">
+											<div class="text-xl leading-tight font-bold break-words text-black md:text-xl">
 												{alum.name}{alum.suffix && `, ${alum.suffix}`}
 											</div>
 										</div>
 
 										{hasLinks && (
-											<div class="mt-2 flex flex-col gap-1 text-lg font-medium text-gray-600 md:flex-row md:items-center md:gap-0">
+											<div class="mt-2 flex flex-col gap-1 text-base font-medium text-gray-600 md:flex-row md:items-center md:gap-0 md:text-base">
 												{alum.website && (
 													<a
 														href={alum.website}
@@ -224,17 +224,17 @@ const roleOptions = [
 											</div>
 										)}
 										<div class={`${hasLinks ? "mt-3" : "mt-1"} space-y-1.5`}>
-											<div class="text-lg break-words text-gray-700 italic">{alum.thesis}</div>
+											<div class="text-base break-words text-gray-700 italic md:text-base">{alum.thesis}</div>
 
 											{alum.first_position && (
-												<div class="flex flex-col text-lg text-gray-600 sm:flex-row sm:gap-x-1.5">
+												<div class="flex flex-col text-base text-gray-600 sm:flex-row sm:gap-x-1.5 md:text-base">
 													<span class="shrink-0 font-bold text-black">First Position:</span>
 													<span class="break-words">{alum.first_position}</span>
 												</div>
 											)}
 
 											{alum.current_position && (
-												<div class="flex flex-col text-lg text-gray-600 sm:flex-row sm:gap-x-1.5">
+												<div class="flex flex-col text-base text-gray-600 sm:flex-row sm:gap-x-1.5 md:text-base">
 													<span class="shrink-0 font-bold text-black">Current Position:</span>
 													<span class="break-words">{alum.current_position}</span>
 												</div>
